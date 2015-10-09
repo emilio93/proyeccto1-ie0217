@@ -7,7 +7,133 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_r_b_tree_afeb364c5c14e3eccd0462f90c5757800}{}bool {\bfseries insert} (T data)\label{class_r_b_tree_afeb364c5c14e3eccd0462f90c5757800}
+\hyperlink{class_r_b_tree_a743575c444246d79b343bf7f8090eb9f}{R\+B\+Tree} (int key, T data)
+\item 
+bool \hyperlink{class_r_b_tree_a8f67ba964a14d252ff6851a46576399e}{insert} (\hyperlink{class_node}{Node}$<$ T $>$ $\ast$node)
+\item 
+int \hyperlink{class_r_b_tree_a02ef14a5c193082579beff0e00751c41}{exists} (\hyperlink{class_node}{Node}$<$ T $>$ $\ast$node)
+\item 
+bool \hyperlink{class_r_b_tree_aeac66fd25a34ec66d8c7822e7605f924}{exists} (\hyperlink{class_node}{Node}$<$ T $>$ $\ast$node)
+\item 
+T \hyperlink{class_r_b_tree_a3b2a1009c457ba28fffea83197d715b6}{extract} (\hyperlink{class_node}{Node}$<$ T $>$ $\ast$node)
+\item 
+bool \hyperlink{class_r_b_tree_ab5a8279632f153fd1e68d1f2caaabe58}{remove} (\hyperlink{class_node}{Node}$<$ T $>$ $\ast$node)
+\item 
+\hyperlink{class_node}{Node}$<$ T $>$ $\ast$ \hyperlink{class_r_b_tree_ac40b7ce97f66186cb7a1dfe988059bd5}{next} (\hyperlink{class_node}{Node}$<$ T $>$ $\ast$node)
+\item 
+\hyperlink{class_node}{Node}$<$ T $>$ $\ast$ \hyperlink{class_r_b_tree_a16156805af6fc45a834db9b13a7137d1}{previous} (\hyperlink{class_node}{Node}$<$ T $>$ $\ast$node)
+\item 
+\hyperlink{class_node}{Node}$<$ T $>$ $\ast$ \hyperlink{class_r_b_tree_a0039ecd4c4a9999f2e63689a5bd8311e}{first} (\hyperlink{class_node}{Node}$<$ T $>$ $\ast$node)
+\item 
+\hyperlink{class_node}{Node}$<$ T $>$ $\ast$ \hyperlink{class_r_b_tree_a3cd9a4d0626aacc83b928b8cfcae2343}{first} ()
+\item 
+\hyperlink{class_node}{Node}$<$ T $>$ $\ast$ \hyperlink{class_r_b_tree_a876cdcefe3be45bd7590e18ce13ac9a4}{last} (\hyperlink{class_node}{Node}$<$ T $>$ $\ast$node)
+\item 
+\hyperlink{class_node}{Node}$<$ T $>$ $\ast$ \hyperlink{class_r_b_tree_a9ec1524fd304ab708864f3ed5929fde4}{last} ()
+\item 
+\hyperlink{class_node}{Node}$<$ T $>$ $\ast$ \hyperlink{class_r_b_tree_abd85da46c4bb99c2e2f0086b71990e86}{sibling} (\hyperlink{class_node}{Node}$<$ T $>$ $\ast$node)
+\item 
+\hyperlink{class_node}{Node}$<$ T $>$ $\ast$ \hyperlink{class_r_b_tree_a0600be3a5c7d75359a63c8d19dc175ed}{parent} (\hyperlink{class_node}{Node}$<$ T $>$ $\ast$node)
+\item 
+\hyperlink{class_node}{Node}$<$ T $>$ $\ast$ \hyperlink{class_r_b_tree_abb9bd44c3ad32f37f072ae19f3183d8b}{grandpa} (\hyperlink{class_node}{Node}$<$ T $>$ $\ast$node)
+\item 
+\hyperlink{class_node}{Node}$<$ T $>$ $\ast$ \hyperlink{class_r_b_tree_afad4eef004c3b4ed37fe1ee89f95da54}{uncle} (\hyperlink{class_node}{Node}$<$ T $>$ $\ast$node)
+\item 
+\hyperlink{class_node}{Node}$<$ T $>$ $\ast$ \hyperlink{class_r_b_tree_aaf6d97fec88a9168eaad604a2ae12efe}{left\+Child} (\hyperlink{class_node}{Node}$<$ T $>$ $\ast$node)
+\item 
+\hyperlink{class_node}{Node}$<$ T $>$ $\ast$ \hyperlink{class_r_b_tree_a1dfb71e17e463bf14a112698242c7490}{right\+Child} (\hyperlink{class_node}{Node}$<$ T $>$ $\ast$node)
+\item 
+\hypertarget{class_r_b_tree_a3042bec64785fe28625ba45f9b815dee}{}rbtree {\bfseries rbtree\+\_\+create} ()\label{class_r_b_tree_a3042bec64785fe28625ba45f9b815dee}
+
+\item 
+\hypertarget{class_r_b_tree_a6982a1645674e8c58cac85bcf384e3a9}{}void $\ast$ {\bfseries rbtree\+\_\+lookup} (rbtree t, void $\ast$, compare\+\_\+func compare)\label{class_r_b_tree_a6982a1645674e8c58cac85bcf384e3a9}
+
+\item 
+\hypertarget{class_r_b_tree_acce8786d0f22883e5a7cf1d340bd9b22}{}void {\bfseries rbtree\+\_\+insert} (rbtree t, void $\ast$, void $\ast$, compare\+\_\+func compare)\label{class_r_b_tree_acce8786d0f22883e5a7cf1d340bd9b22}
+
+\item 
+\hypertarget{class_r_b_tree_af1f91e826a6e8ee11a3becd4934a9374}{}void {\bfseries rbtree\+\_\+delete} (rbtree t, void $\ast$, compare\+\_\+func compare)\label{class_r_b_tree_af1f91e826a6e8ee11a3becd4934a9374}
+
+\item 
+\hypertarget{class_r_b_tree_a400d1f6ee22ee84f0eaa4f9277dd0a30}{}node {\bfseries grandparent} (node n)\label{class_r_b_tree_a400d1f6ee22ee84f0eaa4f9277dd0a30}
+
+\item 
+\hypertarget{class_r_b_tree_abcb191cea5e9645e9aebb17e8fb6f459}{}node {\bfseries sibling} (node n)\label{class_r_b_tree_abcb191cea5e9645e9aebb17e8fb6f459}
+
+\item 
+\hypertarget{class_r_b_tree_a7a8df15a6f435312f6b42fc379423a88}{}node {\bfseries uncle} (node n)\label{class_r_b_tree_a7a8df15a6f435312f6b42fc379423a88}
+
+\item 
+\hypertarget{class_r_b_tree_a65f2b9fb6456c1e6eb818964a9bb191c}{}void {\bfseries verify\+\_\+properties} (rbtree t)\label{class_r_b_tree_a65f2b9fb6456c1e6eb818964a9bb191c}
+
+\item 
+\hypertarget{class_r_b_tree_aa847298039b69b38dbdca944b4374483}{}void {\bfseries verify\+\_\+property\+\_\+1} (node root)\label{class_r_b_tree_aa847298039b69b38dbdca944b4374483}
+
+\item 
+\hypertarget{class_r_b_tree_a3ea8197d0d76ae95b2c189b219bde9ef}{}void {\bfseries verify\+\_\+property\+\_\+2} (node root)\label{class_r_b_tree_a3ea8197d0d76ae95b2c189b219bde9ef}
+
+\item 
+\hypertarget{class_r_b_tree_af0021e0d85b14a21e4c8e1fc1ec98355}{}color {\bfseries node\+\_\+color} (node n)\label{class_r_b_tree_af0021e0d85b14a21e4c8e1fc1ec98355}
+
+\item 
+\hypertarget{class_r_b_tree_ac04878f0c0901928790835dafabdc773}{}void {\bfseries verify\+\_\+property\+\_\+4} (node root)\label{class_r_b_tree_ac04878f0c0901928790835dafabdc773}
+
+\item 
+\hypertarget{class_r_b_tree_a05f14266a4743861d17587d66aa44b65}{}void {\bfseries verify\+\_\+property\+\_\+5} (node root)\label{class_r_b_tree_a05f14266a4743861d17587d66aa44b65}
+
+\item 
+\hypertarget{class_r_b_tree_af58095a7f4c27cd3b64201ce9ac22260}{}void {\bfseries verify\+\_\+property\+\_\+5\+\_\+helper} (node n, int, int $\ast$)\label{class_r_b_tree_af58095a7f4c27cd3b64201ce9ac22260}
+
+\item 
+\hypertarget{class_r_b_tree_a6be6052010963ffac280ef822f0f1801}{}node {\bfseries new\+\_\+node} (void $\ast$key, void $\ast$, color, node, node)\label{class_r_b_tree_a6be6052010963ffac280ef822f0f1801}
+
+\item 
+\hypertarget{class_r_b_tree_afddecfdfff6f2963412a704a6e86764b}{}node {\bfseries lookup\+\_\+node} (rbtree t, void $\ast$, compare\+\_\+func compare)\label{class_r_b_tree_afddecfdfff6f2963412a704a6e86764b}
+
+\item 
+\hypertarget{class_r_b_tree_a06fca795bda083020075bdca75af2161}{}void {\bfseries rotate\+\_\+left} (rbtree t, node n)\label{class_r_b_tree_a06fca795bda083020075bdca75af2161}
+
+\item 
+\hypertarget{class_r_b_tree_ae069d153f85b6db88cea3bcd8144c75e}{}void {\bfseries rotate\+\_\+right} (rbtree t, node n)\label{class_r_b_tree_ae069d153f85b6db88cea3bcd8144c75e}
+
+\item 
+\hypertarget{class_r_b_tree_ad7e79eae67ee384b6d104929a437eed2}{}void {\bfseries replace\+\_\+node} (rbtree t, node oldn, node newn)\label{class_r_b_tree_ad7e79eae67ee384b6d104929a437eed2}
+
+\item 
+\hypertarget{class_r_b_tree_afc80ca583e442c890dc89ff3d58bb4ef}{}void {\bfseries insert\+\_\+case1} (rbtree t, node n)\label{class_r_b_tree_afc80ca583e442c890dc89ff3d58bb4ef}
+
+\item 
+\hypertarget{class_r_b_tree_af4ad17222bbc48e103e2cb458ff874d2}{}void {\bfseries insert\+\_\+case2} (rbtree t, node n)\label{class_r_b_tree_af4ad17222bbc48e103e2cb458ff874d2}
+
+\item 
+\hypertarget{class_r_b_tree_aee0e3ea7f0f49056f0e82db394ad8583}{}void {\bfseries insert\+\_\+case3} (rbtree t, node n)\label{class_r_b_tree_aee0e3ea7f0f49056f0e82db394ad8583}
+
+\item 
+\hypertarget{class_r_b_tree_aa009f1002c81b4db6363144f03421ba9}{}void {\bfseries insert\+\_\+case4} (rbtree t, node n)\label{class_r_b_tree_aa009f1002c81b4db6363144f03421ba9}
+
+\item 
+\hypertarget{class_r_b_tree_ae1f502b5b73b42b5884e047868e44da2}{}void {\bfseries insert\+\_\+case5} (rbtree t, node n)\label{class_r_b_tree_ae1f502b5b73b42b5884e047868e44da2}
+
+\item 
+\hypertarget{class_r_b_tree_aff4de6fa03e91db0be183c73f8d8f445}{}node {\bfseries maximum\+\_\+node} (node root)\label{class_r_b_tree_aff4de6fa03e91db0be183c73f8d8f445}
+
+\item 
+\hypertarget{class_r_b_tree_a5409045dc18a80b95c889c2298436269}{}void {\bfseries delete\+\_\+case1} (rbtree t, node n)\label{class_r_b_tree_a5409045dc18a80b95c889c2298436269}
+
+\item 
+\hypertarget{class_r_b_tree_a693e3566ba03c0f8a31b02ed9ecc5883}{}void {\bfseries delete\+\_\+case2} (rbtree t, node n)\label{class_r_b_tree_a693e3566ba03c0f8a31b02ed9ecc5883}
+
+\item 
+\hypertarget{class_r_b_tree_a30bd007f9b921a2c4dc16874f8fcdda9}{}void {\bfseries delete\+\_\+case3} (rbtree t, node n)\label{class_r_b_tree_a30bd007f9b921a2c4dc16874f8fcdda9}
+
+\item 
+\hypertarget{class_r_b_tree_a3d1a670dacddb38ae89394481bec828e}{}void {\bfseries delete\+\_\+case4} (rbtree t, node n)\label{class_r_b_tree_a3d1a670dacddb38ae89394481bec828e}
+
+\item 
+\hypertarget{class_r_b_tree_a63e4a6c82ea115b4c167b568ac385849}{}void {\bfseries delete\+\_\+case5} (rbtree t, node n)\label{class_r_b_tree_a63e4a6c82ea115b4c167b568ac385849}
+
+\item 
+\hypertarget{class_r_b_tree_a32da5ac7d5b3fe0649ee5dbe54268569}{}void {\bfseries delete\+\_\+case6} (rbtree t, node n)\label{class_r_b_tree_a32da5ac7d5b3fe0649ee5dbe54268569}
 
 \end{DoxyCompactItemize}
 
@@ -16,6 +142,274 @@
 \subsubsection*{template$<$typename T$>$class R\+B\+Tree$<$ T $>$}
 
 The \hyperlink{class_r_b_tree}{R\+B\+Tree}(Red-\/\+Black Tree) defines a collection of ordered elements of a multiset, each element is a node, with a given multiplicity and data. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_r_b_tree_a743575c444246d79b343bf7f8090eb9f}{}\index{R\+B\+Tree@{R\+B\+Tree}!R\+B\+Tree@{R\+B\+Tree}}
+\index{R\+B\+Tree@{R\+B\+Tree}!R\+B\+Tree@{R\+B\+Tree}}
+\subsubsection[{R\+B\+Tree(int key, T data)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf R\+B\+Tree}$<$ T $>$\+::{\bf R\+B\+Tree} (
+\begin{DoxyParamCaption}
+\item[{int}]{key, }
+\item[{T}]{data}
+\end{DoxyParamCaption}
+)}\label{class_r_b_tree_a743575c444246d79b343bf7f8090eb9f}
+Creates a red-\/black tree with the root \hyperlink{class_node}{Node} of the given key and data. 
+\begin{DoxyParams}{Parameters}
+{\em key} & The root nodes key. \\
+\hline
+{\em data} & The root nodes data. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_r_b_tree_a02ef14a5c193082579beff0e00751c41}{}\index{R\+B\+Tree@{R\+B\+Tree}!exists@{exists}}
+\index{exists@{exists}!R\+B\+Tree@{R\+B\+Tree}}
+\subsubsection[{exists(\+Node$<$ T $>$ $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ int {\bf R\+B\+Tree}$<$ T $>$\+::exists (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ T $>$ $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_r_b_tree_a02ef14a5c193082579beff0e00751c41}
+Determines wether an element exists in the tree, if it does, the function returns the multiplicity of the element, else it will return 0. 
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The multiplicity of the element, 0 meaning the element was not found. 
+\end{DoxyReturn}
+\hypertarget{class_r_b_tree_aeac66fd25a34ec66d8c7822e7605f924}{}\index{R\+B\+Tree@{R\+B\+Tree}!exists@{exists}}
+\index{exists@{exists}!R\+B\+Tree@{R\+B\+Tree}}
+\subsubsection[{exists(\+Node$<$ T $>$ $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf R\+B\+Tree}$<$ T $>$\+::exists (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ T $>$ $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_r_b_tree_aeac66fd25a34ec66d8c7822e7605f924}
+Determines wether an element exists in the tree, if it does, the function returns true. 
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the element is found, false else. 
+\end{DoxyReturn}
+\hypertarget{class_r_b_tree_a3b2a1009c457ba28fffea83197d715b6}{}\index{R\+B\+Tree@{R\+B\+Tree}!extract@{extract}}
+\index{extract@{extract}!R\+B\+Tree@{R\+B\+Tree}}
+\subsubsection[{extract(\+Node$<$ T $>$ $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T {\bf R\+B\+Tree}$<$ T $>$\+::extract (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ T $>$ $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_r_b_tree_a3b2a1009c457ba28fffea83197d715b6}
+Extracts an element from the tree if it\textquotesingle{}s found. 
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to extract. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The extracted data. 
+\end{DoxyReturn}
+\hypertarget{class_r_b_tree_a0039ecd4c4a9999f2e63689a5bd8311e}{}\index{R\+B\+Tree@{R\+B\+Tree}!first@{first}}
+\index{first@{first}!R\+B\+Tree@{R\+B\+Tree}}
+\subsubsection[{first(\+Node$<$ T $>$ $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Node}$<$T$>$$\ast$ {\bf R\+B\+Tree}$<$ T $>$\+::first (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ T $>$ $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_r_b_tree_a0039ecd4c4a9999f2e63689a5bd8311e}
+The first element of the subtree whose root is the given node. 
+\begin{DoxyParams}{Parameters}
+{\em node} & The root of the subtree. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The first node of the subtree. 
+\end{DoxyReturn}
+\hypertarget{class_r_b_tree_a3cd9a4d0626aacc83b928b8cfcae2343}{}\index{R\+B\+Tree@{R\+B\+Tree}!first@{first}}
+\index{first@{first}!R\+B\+Tree@{R\+B\+Tree}}
+\subsubsection[{first()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Node}$<$T$>$$\ast$ {\bf R\+B\+Tree}$<$ T $>$\+::first (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_r_b_tree_a3cd9a4d0626aacc83b928b8cfcae2343}
+The first element of the tree. \begin{DoxyReturn}{Returns}
+The first node of the tree. 
+\end{DoxyReturn}
+\hypertarget{class_r_b_tree_abb9bd44c3ad32f37f072ae19f3183d8b}{}\index{R\+B\+Tree@{R\+B\+Tree}!grandpa@{grandpa}}
+\index{grandpa@{grandpa}!R\+B\+Tree@{R\+B\+Tree}}
+\subsubsection[{grandpa(\+Node$<$ T $>$ $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Node}$<$T$>$$\ast$ {\bf R\+B\+Tree}$<$ T $>$\+::grandpa (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ T $>$ $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_r_b_tree_abb9bd44c3ad32f37f072ae19f3183d8b}
+Returns nodes grandparent. 
+\begin{DoxyParams}{Parameters}
+{\em node} & The reference node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The reference nodes grandparent. 
+\end{DoxyReturn}
+\hypertarget{class_r_b_tree_a8f67ba964a14d252ff6851a46576399e}{}\index{R\+B\+Tree@{R\+B\+Tree}!insert@{insert}}
+\index{insert@{insert}!R\+B\+Tree@{R\+B\+Tree}}
+\subsubsection[{insert(\+Node$<$ T $>$ $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf R\+B\+Tree}$<$ T $>$\+::insert (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ T $>$ $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_r_b_tree_a8f67ba964a14d252ff6851a46576399e}
+Inserts an element into the tree, indicates if data was inserted correctly by returning true. If element is already in the tree, the multiplicity of the element will be increased.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to insert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the insertion was made correctly. 
+\end{DoxyReturn}
+\hypertarget{class_r_b_tree_a876cdcefe3be45bd7590e18ce13ac9a4}{}\index{R\+B\+Tree@{R\+B\+Tree}!last@{last}}
+\index{last@{last}!R\+B\+Tree@{R\+B\+Tree}}
+\subsubsection[{last(\+Node$<$ T $>$ $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Node}$<$T$>$$\ast$ {\bf R\+B\+Tree}$<$ T $>$\+::last (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ T $>$ $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_r_b_tree_a876cdcefe3be45bd7590e18ce13ac9a4}
+The last element of the subtree whose root is the given node. 
+\begin{DoxyParams}{Parameters}
+{\em node} & The root of the subtree. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The last node of the subtree. 
+\end{DoxyReturn}
+\hypertarget{class_r_b_tree_a9ec1524fd304ab708864f3ed5929fde4}{}\index{R\+B\+Tree@{R\+B\+Tree}!last@{last}}
+\index{last@{last}!R\+B\+Tree@{R\+B\+Tree}}
+\subsubsection[{last()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Node}$<$T$>$$\ast$ {\bf R\+B\+Tree}$<$ T $>$\+::last (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_r_b_tree_a9ec1524fd304ab708864f3ed5929fde4}
+The last element of the tree. \begin{DoxyReturn}{Returns}
+The last node of the tree. 
+\end{DoxyReturn}
+\hypertarget{class_r_b_tree_aaf6d97fec88a9168eaad604a2ae12efe}{}\index{R\+B\+Tree@{R\+B\+Tree}!left\+Child@{left\+Child}}
+\index{left\+Child@{left\+Child}!R\+B\+Tree@{R\+B\+Tree}}
+\subsubsection[{left\+Child(\+Node$<$ T $>$ $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Node}$<$T$>$$\ast$ {\bf R\+B\+Tree}$<$ T $>$\+::left\+Child (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ T $>$ $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_r_b_tree_aaf6d97fec88a9168eaad604a2ae12efe}
+Returns nodes left child. 
+\begin{DoxyParams}{Parameters}
+{\em node} & The reference node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The reference nodes left child. 
+\end{DoxyReturn}
+\hypertarget{class_r_b_tree_ac40b7ce97f66186cb7a1dfe988059bd5}{}\index{R\+B\+Tree@{R\+B\+Tree}!next@{next}}
+\index{next@{next}!R\+B\+Tree@{R\+B\+Tree}}
+\subsubsection[{next(\+Node$<$ T $>$ $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Node}$<$T$>$$\ast$ {\bf R\+B\+Tree}$<$ T $>$\+::next (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ T $>$ $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_r_b_tree_ac40b7ce97f66186cb7a1dfe988059bd5}
+Returns the next element in the tree. 
+\begin{DoxyParams}{Parameters}
+{\em node} & The reference node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The node following the reference node. 
+\end{DoxyReturn}
+\hypertarget{class_r_b_tree_a0600be3a5c7d75359a63c8d19dc175ed}{}\index{R\+B\+Tree@{R\+B\+Tree}!parent@{parent}}
+\index{parent@{parent}!R\+B\+Tree@{R\+B\+Tree}}
+\subsubsection[{parent(\+Node$<$ T $>$ $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Node}$<$T$>$$\ast$ {\bf R\+B\+Tree}$<$ T $>$\+::parent (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ T $>$ $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_r_b_tree_a0600be3a5c7d75359a63c8d19dc175ed}
+Returns nodes parent. 
+\begin{DoxyParams}{Parameters}
+{\em node} & The reference node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The reference nodes parent. 
+\end{DoxyReturn}
+\hypertarget{class_r_b_tree_a16156805af6fc45a834db9b13a7137d1}{}\index{R\+B\+Tree@{R\+B\+Tree}!previous@{previous}}
+\index{previous@{previous}!R\+B\+Tree@{R\+B\+Tree}}
+\subsubsection[{previous(\+Node$<$ T $>$ $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Node}$<$T$>$$\ast$ {\bf R\+B\+Tree}$<$ T $>$\+::previous (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ T $>$ $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_r_b_tree_a16156805af6fc45a834db9b13a7137d1}
+Returns the previous element in the tree. 
+\begin{DoxyParams}{Parameters}
+{\em node} & The reference node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The node preceding the reference node. 
+\end{DoxyReturn}
+\hypertarget{class_r_b_tree_ab5a8279632f153fd1e68d1f2caaabe58}{}\index{R\+B\+Tree@{R\+B\+Tree}!remove@{remove}}
+\index{remove@{remove}!R\+B\+Tree@{R\+B\+Tree}}
+\subsubsection[{remove(\+Node$<$ T $>$ $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf R\+B\+Tree}$<$ T $>$\+::remove (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ T $>$ $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_r_b_tree_ab5a8279632f153fd1e68d1f2caaabe58}
+Removes an element from the tree, this will remove the element 
+\begin{DoxyParams}{Parameters}
+{\em data} & Data to search and remove. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if element was removed. 
+\end{DoxyReturn}
+\hypertarget{class_r_b_tree_a1dfb71e17e463bf14a112698242c7490}{}\index{R\+B\+Tree@{R\+B\+Tree}!right\+Child@{right\+Child}}
+\index{right\+Child@{right\+Child}!R\+B\+Tree@{R\+B\+Tree}}
+\subsubsection[{right\+Child(\+Node$<$ T $>$ $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Node}$<$T$>$$\ast$ {\bf R\+B\+Tree}$<$ T $>$\+::right\+Child (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ T $>$ $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_r_b_tree_a1dfb71e17e463bf14a112698242c7490}
+Returns nodes right child. 
+\begin{DoxyParams}{Parameters}
+{\em node} & The reference node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The reference nodes right child. 
+\end{DoxyReturn}
+\hypertarget{class_r_b_tree_abd85da46c4bb99c2e2f0086b71990e86}{}\index{R\+B\+Tree@{R\+B\+Tree}!sibling@{sibling}}
+\index{sibling@{sibling}!R\+B\+Tree@{R\+B\+Tree}}
+\subsubsection[{sibling(\+Node$<$ T $>$ $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Node}$<$T$>$$\ast$ {\bf R\+B\+Tree}$<$ T $>$\+::sibling (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ T $>$ $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_r_b_tree_abd85da46c4bb99c2e2f0086b71990e86}
+Returns the other parents child. 
+\begin{DoxyParams}{Parameters}
+{\em node} & The reference node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The reference nodes sibling. 
+\end{DoxyReturn}
+\hypertarget{class_r_b_tree_afad4eef004c3b4ed37fe1ee89f95da54}{}\index{R\+B\+Tree@{R\+B\+Tree}!uncle@{uncle}}
+\index{uncle@{uncle}!R\+B\+Tree@{R\+B\+Tree}}
+\subsubsection[{uncle(\+Node$<$ T $>$ $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Node}$<$T$>$$\ast$ {\bf R\+B\+Tree}$<$ T $>$\+::uncle (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ T $>$ $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_r_b_tree_afad4eef004c3b4ed37fe1ee89f95da54}
+Returns nodes uncle, ie, the parents sibling. 
+\begin{DoxyParams}{Parameters}
+{\em node} & The reference node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The reference nodes uncle. 
+\end{DoxyReturn}
+
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

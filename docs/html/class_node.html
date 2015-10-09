@@ -94,12 +94,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0692b16d246460bf94c18d49592facdd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a0692b16d246460bf94c18d49592facdd">Node</a> (T data)</td></tr>
-<tr class="separator:a0692b16d246460bf94c18d49592facdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7349325d564e6c20f471aaa013d00b59"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a7349325d564e6c20f471aaa013d00b59">Node</a> (T data, <a class="el" href="class_node.html">Node</a>&lt; T &gt; *parent)</td></tr>
-<tr class="separator:a7349325d564e6c20f471aaa013d00b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40d6e9db35a69683afc2a960f96c1109"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a40d6e9db35a69683afc2a960f96c1109">Node</a> (int key, T data)</td></tr>
+<tr class="separator:a40d6e9db35a69683afc2a960f96c1109"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e3be75932d110fb2a52a3c297159f75"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a2e3be75932d110fb2a52a3c297159f75">Node</a> (int key, T data, <a class="el" href="class_node.html">Node</a>&lt; T &gt; *parent)</td></tr>
+<tr class="separator:a2e3be75932d110fb2a52a3c297159f75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fc413278a0bd22eb84e03c0ae90e22a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a5fc413278a0bd22eb84e03c0ae90e22a">~Node</a> (void)</td></tr>
 <tr class="separator:a5fc413278a0bd22eb84e03c0ae90e22a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ff3a3dd66edef87867616d1bc44838f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a5ff3a3dd66edef87867616d1bc44838f">getKey</a> (void)</td></tr>
+<tr class="separator:a5ff3a3dd66edef87867616d1bc44838f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad89031c2899fe91646652ce4c2e79ab6"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#ad89031c2899fe91646652ce4c2e79ab6">getData</a> (void)</td></tr>
 <tr class="separator:ad89031c2899fe91646652ce4c2e79ab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab83eb1cc81f91a5641693eb22712f8c8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#ab83eb1cc81f91a5641693eb22712f8c8">getMultiplicity</a> (void)</td></tr>
@@ -132,9 +134,9 @@ Public Member Functions</h2></td></tr>
 class Node&lt; T &gt;</h3>
 
 <p>The node class defines a multiset element.</p>
-<p>The node class defines a multiset element within it's red-black tree implementation. It contains the data and the multiplicity, which are related to the multiset concept. It also contains the tree elements which are, color, left child and right child. In addition, this implementation will know it's parent <a class="el" href="class_node.html">Node</a>, (kind of like a doubly linked list). </p>
+<p>The node class defines a multiset element within it's red-black tree implementation. It contains the data and the multiplicity, which are related to the multiset concept. It also contains the tree elements which are, key, color, left child and right child. In addition, this implementation will know it's parent <a class="el" href="class_node.html">Node</a>, (kind of like a doubly linked list). </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a0692b16d246460bf94c18d49592facdd"></a>
+<a class="anchor" id="a40d6e9db35a69683afc2a960f96c1109"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -143,9 +145,19 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="class_node.html">Node</a>&lt; T &gt;::<a class="el" href="class_node.html">Node</a> </td>
           <td>(</td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -158,7 +170,7 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a7349325d564e6c20f471aaa013d00b59"></a>
+<a class="anchor" id="a2e3be75932d110fb2a52a3c297159f75"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -167,6 +179,12 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="class_node.html">Node</a>&lt; T &gt;::<a class="el" href="class_node.html">Node</a> </td>
           <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">T&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
@@ -315,6 +333,25 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 <p>Returns data in the node. </p><dl class="section return"><dt>Returns</dt><dd>The data in the node. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5ff3a3dd66edef87867616d1bc44838f"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_node.html">Node</a>&lt; T &gt;::getKey </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the Nodes key. </p><dl class="section return"><dt>Returns</dt><dd>The Nodes key. </dd></dl>
 
 </div>
 </div>

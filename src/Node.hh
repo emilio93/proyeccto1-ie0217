@@ -99,19 +99,19 @@ class Node{
          * @breif Returns the parent node.
          * @return The parent node.
          */
-        const Node * getParent(void);
+        Node * getParent(void);
 
         /**
          * @breif Returns the left child node.
          * @return The left child node.
          */
-        const Node * getLeft(void);
+        Node * getLeft(void);
 
         /**
          * @breif Returns right child node.
          * @return The right child node.
          */
-        const Node * getRight(void);
+        Node * getRight(void);
 
         /**
          * @breif Returns the nodes color.
@@ -155,10 +155,34 @@ class Node{
         void addLeft(Node<T> * left);
 
         /**
+         * @breif Sets the child node on the left side;
+         * @param left The pointer to the node to add.
+         */
+        void setLeft(Node<T> * left);
+
+        /**
          * @breif Adds a child node on the right side;
          * @param left The pointer to the node to add.
          */
         void addRight(Node<T> * right);
+
+        /**
+         * @breif Sets the child node on the right side;
+         * @param right The pointer to the node to add.
+         */
+        void setRight(Node<T> * right);
+
+        /**
+         * @breif Determines wheter Node is a left Node.
+         * @return  True if left Node.
+         */
+        bool isLeft(void);
+
+        /**
+         * @breif Determines wheter Node is a right Node.
+         * @return  True if right Node.
+         */
+        bool isRight(void);
 };
 
 
@@ -173,6 +197,8 @@ Node<T>::Node(int key, T data) {
     this->key = key;
     this->data = data;
     this->parent = NULL;
+    this->left = NULL;
+    this->right = NULL;
     this->color = RED;
 }
 
@@ -181,7 +207,9 @@ Node<T>::Node(int key, T data, Node<T> * parent) {
     this->key = key;
     this->data = data;
     this->parent = parent;
-    this->color = this->Colors.RED;
+    this->left = NULL;
+    this->right = NULL;
+    this->color = RED;
     this->multiplicity = 1;
 }
 
@@ -207,22 +235,23 @@ int Node<T>::getMultiplicity(void) {
 }
 
 template<typename T>
-const Node<T> * Node<T>::getParent(void) {
+Node<T> * Node<T>::getParent(void) {
     return this->parent;
 }
 
 template<typename T>
-const Node<T> * Node<T>::getLeft(void) {
+Node<T> * Node<T>::getLeft(void) {
     return this->left;
 }
 
 template<typename T>
-const Node<T> * Node<T>::getRight(void) {
+Node<T> * Node<T>::getRight(void) {
     return this->right;
 }
 
 template<typename T>
 Colors Node<T>::getColor(void) {
+    if (this == NULL) return BLACK;//it's a leaf, it's BLACKKKKKK
     return this->color;
 }
 
@@ -259,11 +288,33 @@ const T * Node<T>::read(void) {
 
 template<typename T>
 void Node<T>::addLeft(Node<T> * left) {
+    if (this->left == NULL) this->left = left;
+}
+
+template<typename T>
+void Node<T>::setLeft(Node<T> * left) {
     this->left = left;
 }
 
 template<typename T>
 void Node<T>::addRight(Node<T> * right) {
+    if (this->right == NULL) this->right = right;
+}
+
+template<typename T>
+void Node<T>::setRight(Node<T> * right) {
     this->right = right;
 }
+
+template<typename T>
+bool Node<T>::isLeft(void) {
+    return this->parent->leftChild == this;
+}
+
+template<typename T>
+bool Node<T>::isRight(void) {
+    return this->parent->rightChild == this;
+}
+
+
 #endif

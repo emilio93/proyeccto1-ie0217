@@ -94,16 +94,591 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afeb364c5c14e3eccd0462f90c5757800"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afeb364c5c14e3eccd0462f90c5757800"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>insert</b> (T data)</td></tr>
-<tr class="separator:afeb364c5c14e3eccd0462f90c5757800"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a743575c444246d79b343bf7f8090eb9f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#a743575c444246d79b343bf7f8090eb9f">RBTree</a> (int key, T data)</td></tr>
+<tr class="separator:a743575c444246d79b343bf7f8090eb9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f67ba964a14d252ff6851a46576399e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#a8f67ba964a14d252ff6851a46576399e">insert</a> (<a class="el" href="class_node.html">Node</a>&lt; T &gt; *node)</td></tr>
+<tr class="separator:a8f67ba964a14d252ff6851a46576399e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02ef14a5c193082579beff0e00751c41"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#a02ef14a5c193082579beff0e00751c41">exists</a> (<a class="el" href="class_node.html">Node</a>&lt; T &gt; *node)</td></tr>
+<tr class="separator:a02ef14a5c193082579beff0e00751c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeac66fd25a34ec66d8c7822e7605f924"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#aeac66fd25a34ec66d8c7822e7605f924">exists</a> (<a class="el" href="class_node.html">Node</a>&lt; T &gt; *node)</td></tr>
+<tr class="separator:aeac66fd25a34ec66d8c7822e7605f924"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b2a1009c457ba28fffea83197d715b6"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#a3b2a1009c457ba28fffea83197d715b6">extract</a> (<a class="el" href="class_node.html">Node</a>&lt; T &gt; *node)</td></tr>
+<tr class="separator:a3b2a1009c457ba28fffea83197d715b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5a8279632f153fd1e68d1f2caaabe58"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#ab5a8279632f153fd1e68d1f2caaabe58">remove</a> (<a class="el" href="class_node.html">Node</a>&lt; T &gt; *node)</td></tr>
+<tr class="separator:ab5a8279632f153fd1e68d1f2caaabe58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac40b7ce97f66186cb7a1dfe988059bd5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#ac40b7ce97f66186cb7a1dfe988059bd5">next</a> (<a class="el" href="class_node.html">Node</a>&lt; T &gt; *node)</td></tr>
+<tr class="separator:ac40b7ce97f66186cb7a1dfe988059bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16156805af6fc45a834db9b13a7137d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#a16156805af6fc45a834db9b13a7137d1">previous</a> (<a class="el" href="class_node.html">Node</a>&lt; T &gt; *node)</td></tr>
+<tr class="separator:a16156805af6fc45a834db9b13a7137d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0039ecd4c4a9999f2e63689a5bd8311e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#a0039ecd4c4a9999f2e63689a5bd8311e">first</a> (<a class="el" href="class_node.html">Node</a>&lt; T &gt; *node)</td></tr>
+<tr class="separator:a0039ecd4c4a9999f2e63689a5bd8311e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cd9a4d0626aacc83b928b8cfcae2343"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#a3cd9a4d0626aacc83b928b8cfcae2343">first</a> ()</td></tr>
+<tr class="separator:a3cd9a4d0626aacc83b928b8cfcae2343"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a876cdcefe3be45bd7590e18ce13ac9a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#a876cdcefe3be45bd7590e18ce13ac9a4">last</a> (<a class="el" href="class_node.html">Node</a>&lt; T &gt; *node)</td></tr>
+<tr class="separator:a876cdcefe3be45bd7590e18ce13ac9a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ec1524fd304ab708864f3ed5929fde4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#a9ec1524fd304ab708864f3ed5929fde4">last</a> ()</td></tr>
+<tr class="separator:a9ec1524fd304ab708864f3ed5929fde4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd85da46c4bb99c2e2f0086b71990e86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#abd85da46c4bb99c2e2f0086b71990e86">sibling</a> (<a class="el" href="class_node.html">Node</a>&lt; T &gt; *node)</td></tr>
+<tr class="separator:abd85da46c4bb99c2e2f0086b71990e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0600be3a5c7d75359a63c8d19dc175ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#a0600be3a5c7d75359a63c8d19dc175ed">parent</a> (<a class="el" href="class_node.html">Node</a>&lt; T &gt; *node)</td></tr>
+<tr class="separator:a0600be3a5c7d75359a63c8d19dc175ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb9bd44c3ad32f37f072ae19f3183d8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#abb9bd44c3ad32f37f072ae19f3183d8b">grandpa</a> (<a class="el" href="class_node.html">Node</a>&lt; T &gt; *node)</td></tr>
+<tr class="separator:abb9bd44c3ad32f37f072ae19f3183d8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afad4eef004c3b4ed37fe1ee89f95da54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#afad4eef004c3b4ed37fe1ee89f95da54">uncle</a> (<a class="el" href="class_node.html">Node</a>&lt; T &gt; *node)</td></tr>
+<tr class="separator:afad4eef004c3b4ed37fe1ee89f95da54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf6d97fec88a9168eaad604a2ae12efe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#aaf6d97fec88a9168eaad604a2ae12efe">leftChild</a> (<a class="el" href="class_node.html">Node</a>&lt; T &gt; *node)</td></tr>
+<tr class="separator:aaf6d97fec88a9168eaad604a2ae12efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dfb71e17e463bf14a112698242c7490"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#a1dfb71e17e463bf14a112698242c7490">rightChild</a> (<a class="el" href="class_node.html">Node</a>&lt; T &gt; *node)</td></tr>
+<tr class="separator:a1dfb71e17e463bf14a112698242c7490"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3042bec64785fe28625ba45f9b815dee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3042bec64785fe28625ba45f9b815dee"></a>
+rbtree&#160;</td><td class="memItemRight" valign="bottom"><b>rbtree_create</b> ()</td></tr>
+<tr class="separator:a3042bec64785fe28625ba45f9b815dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6982a1645674e8c58cac85bcf384e3a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6982a1645674e8c58cac85bcf384e3a9"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><b>rbtree_lookup</b> (rbtree t, void *, compare_func compare)</td></tr>
+<tr class="separator:a6982a1645674e8c58cac85bcf384e3a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acce8786d0f22883e5a7cf1d340bd9b22"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acce8786d0f22883e5a7cf1d340bd9b22"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>rbtree_insert</b> (rbtree t, void *, void *, compare_func compare)</td></tr>
+<tr class="separator:acce8786d0f22883e5a7cf1d340bd9b22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1f91e826a6e8ee11a3becd4934a9374"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1f91e826a6e8ee11a3becd4934a9374"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>rbtree_delete</b> (rbtree t, void *, compare_func compare)</td></tr>
+<tr class="separator:af1f91e826a6e8ee11a3becd4934a9374"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a400d1f6ee22ee84f0eaa4f9277dd0a30"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a400d1f6ee22ee84f0eaa4f9277dd0a30"></a>
+node&#160;</td><td class="memItemRight" valign="bottom"><b>grandparent</b> (node n)</td></tr>
+<tr class="separator:a400d1f6ee22ee84f0eaa4f9277dd0a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcb191cea5e9645e9aebb17e8fb6f459"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abcb191cea5e9645e9aebb17e8fb6f459"></a>
+node&#160;</td><td class="memItemRight" valign="bottom"><b>sibling</b> (node n)</td></tr>
+<tr class="separator:abcb191cea5e9645e9aebb17e8fb6f459"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a8df15a6f435312f6b42fc379423a88"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a8df15a6f435312f6b42fc379423a88"></a>
+node&#160;</td><td class="memItemRight" valign="bottom"><b>uncle</b> (node n)</td></tr>
+<tr class="separator:a7a8df15a6f435312f6b42fc379423a88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65f2b9fb6456c1e6eb818964a9bb191c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65f2b9fb6456c1e6eb818964a9bb191c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>verify_properties</b> (rbtree t)</td></tr>
+<tr class="separator:a65f2b9fb6456c1e6eb818964a9bb191c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa847298039b69b38dbdca944b4374483"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa847298039b69b38dbdca944b4374483"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>verify_property_1</b> (node root)</td></tr>
+<tr class="separator:aa847298039b69b38dbdca944b4374483"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ea8197d0d76ae95b2c189b219bde9ef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ea8197d0d76ae95b2c189b219bde9ef"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>verify_property_2</b> (node root)</td></tr>
+<tr class="separator:a3ea8197d0d76ae95b2c189b219bde9ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0021e0d85b14a21e4c8e1fc1ec98355"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0021e0d85b14a21e4c8e1fc1ec98355"></a>
+color&#160;</td><td class="memItemRight" valign="bottom"><b>node_color</b> (node n)</td></tr>
+<tr class="separator:af0021e0d85b14a21e4c8e1fc1ec98355"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac04878f0c0901928790835dafabdc773"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac04878f0c0901928790835dafabdc773"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>verify_property_4</b> (node root)</td></tr>
+<tr class="separator:ac04878f0c0901928790835dafabdc773"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05f14266a4743861d17587d66aa44b65"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05f14266a4743861d17587d66aa44b65"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>verify_property_5</b> (node root)</td></tr>
+<tr class="separator:a05f14266a4743861d17587d66aa44b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af58095a7f4c27cd3b64201ce9ac22260"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af58095a7f4c27cd3b64201ce9ac22260"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>verify_property_5_helper</b> (node n, int, int *)</td></tr>
+<tr class="separator:af58095a7f4c27cd3b64201ce9ac22260"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6be6052010963ffac280ef822f0f1801"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6be6052010963ffac280ef822f0f1801"></a>
+node&#160;</td><td class="memItemRight" valign="bottom"><b>new_node</b> (void *key, void *, color, node, node)</td></tr>
+<tr class="separator:a6be6052010963ffac280ef822f0f1801"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afddecfdfff6f2963412a704a6e86764b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afddecfdfff6f2963412a704a6e86764b"></a>
+node&#160;</td><td class="memItemRight" valign="bottom"><b>lookup_node</b> (rbtree t, void *, compare_func compare)</td></tr>
+<tr class="separator:afddecfdfff6f2963412a704a6e86764b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06fca795bda083020075bdca75af2161"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06fca795bda083020075bdca75af2161"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>rotate_left</b> (rbtree t, node n)</td></tr>
+<tr class="separator:a06fca795bda083020075bdca75af2161"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae069d153f85b6db88cea3bcd8144c75e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae069d153f85b6db88cea3bcd8144c75e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>rotate_right</b> (rbtree t, node n)</td></tr>
+<tr class="separator:ae069d153f85b6db88cea3bcd8144c75e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7e79eae67ee384b6d104929a437eed2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad7e79eae67ee384b6d104929a437eed2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>replace_node</b> (rbtree t, node oldn, node newn)</td></tr>
+<tr class="separator:ad7e79eae67ee384b6d104929a437eed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc80ca583e442c890dc89ff3d58bb4ef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc80ca583e442c890dc89ff3d58bb4ef"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>insert_case1</b> (rbtree t, node n)</td></tr>
+<tr class="separator:afc80ca583e442c890dc89ff3d58bb4ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4ad17222bbc48e103e2cb458ff874d2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af4ad17222bbc48e103e2cb458ff874d2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>insert_case2</b> (rbtree t, node n)</td></tr>
+<tr class="separator:af4ad17222bbc48e103e2cb458ff874d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee0e3ea7f0f49056f0e82db394ad8583"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee0e3ea7f0f49056f0e82db394ad8583"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>insert_case3</b> (rbtree t, node n)</td></tr>
+<tr class="separator:aee0e3ea7f0f49056f0e82db394ad8583"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa009f1002c81b4db6363144f03421ba9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa009f1002c81b4db6363144f03421ba9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>insert_case4</b> (rbtree t, node n)</td></tr>
+<tr class="separator:aa009f1002c81b4db6363144f03421ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1f502b5b73b42b5884e047868e44da2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae1f502b5b73b42b5884e047868e44da2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>insert_case5</b> (rbtree t, node n)</td></tr>
+<tr class="separator:ae1f502b5b73b42b5884e047868e44da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff4de6fa03e91db0be183c73f8d8f445"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff4de6fa03e91db0be183c73f8d8f445"></a>
+node&#160;</td><td class="memItemRight" valign="bottom"><b>maximum_node</b> (node root)</td></tr>
+<tr class="separator:aff4de6fa03e91db0be183c73f8d8f445"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5409045dc18a80b95c889c2298436269"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5409045dc18a80b95c889c2298436269"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>delete_case1</b> (rbtree t, node n)</td></tr>
+<tr class="separator:a5409045dc18a80b95c889c2298436269"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a693e3566ba03c0f8a31b02ed9ecc5883"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a693e3566ba03c0f8a31b02ed9ecc5883"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>delete_case2</b> (rbtree t, node n)</td></tr>
+<tr class="separator:a693e3566ba03c0f8a31b02ed9ecc5883"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30bd007f9b921a2c4dc16874f8fcdda9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30bd007f9b921a2c4dc16874f8fcdda9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>delete_case3</b> (rbtree t, node n)</td></tr>
+<tr class="separator:a30bd007f9b921a2c4dc16874f8fcdda9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d1a670dacddb38ae89394481bec828e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d1a670dacddb38ae89394481bec828e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>delete_case4</b> (rbtree t, node n)</td></tr>
+<tr class="separator:a3d1a670dacddb38ae89394481bec828e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63e4a6c82ea115b4c167b568ac385849"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a63e4a6c82ea115b4c167b568ac385849"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>delete_case5</b> (rbtree t, node n)</td></tr>
+<tr class="separator:a63e4a6c82ea115b4c167b568ac385849"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32da5ac7d5b3fe0649ee5dbe54268569"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a32da5ac7d5b3fe0649ee5dbe54268569"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>delete_case6</b> (rbtree t, node n)</td></tr>
+<tr class="separator:a32da5ac7d5b3fe0649ee5dbe54268569"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class RBTree&lt; T &gt;</h3>
 
 <p>The <a class="el" href="class_r_b_tree.html">RBTree</a>(Red-Black Tree) defines a collection of ordered elements of a multiset, each element is a node, with a given multiplicity and data. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a743575c444246d79b343bf7f8090eb9f"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_r_b_tree.html">RBTree</a>&lt; T &gt;::<a class="el" href="class_r_b_tree.html">RBTree</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a red-black tree with the root <a class="el" href="class_node.html">Node</a> of the given key and data. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The root nodes key. </td></tr>
+    <tr><td class="paramname">data</td><td>The root nodes data. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a02ef14a5c193082579beff0e00751c41"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_r_b_tree.html">RBTree</a>&lt; T &gt;::exists </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Determines wether an element exists in the tree, if it does, the function returns the multiplicity of the element, else it will return 0. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>The data to search for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The multiplicity of the element, 0 meaning the element was not found. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aeac66fd25a34ec66d8c7822e7605f924"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_r_b_tree.html">RBTree</a>&lt; T &gt;::exists </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Determines wether an element exists in the tree, if it does, the function returns true. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>The data to search for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the element is found, false else. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3b2a1009c457ba28fffea83197d715b6"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="class_r_b_tree.html">RBTree</a>&lt; T &gt;::extract </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Extracts an element from the tree if it's found. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>The data to extract. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The extracted data. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0039ecd4c4a9999f2e63689a5bd8311e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_node.html">Node</a>&lt;T&gt;* <a class="el" href="class_r_b_tree.html">RBTree</a>&lt; T &gt;::first </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The first element of the subtree whose root is the given node. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>The root of the subtree. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The first node of the subtree. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3cd9a4d0626aacc83b928b8cfcae2343"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_node.html">Node</a>&lt;T&gt;* <a class="el" href="class_r_b_tree.html">RBTree</a>&lt; T &gt;::first </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The first element of the tree. </p><dl class="section return"><dt>Returns</dt><dd>The first node of the tree. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abb9bd44c3ad32f37f072ae19f3183d8b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_node.html">Node</a>&lt;T&gt;* <a class="el" href="class_r_b_tree.html">RBTree</a>&lt; T &gt;::grandpa </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns nodes grandparent. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>The reference node. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The reference nodes grandparent. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8f67ba964a14d252ff6851a46576399e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_r_b_tree.html">RBTree</a>&lt; T &gt;::insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Inserts an element into the tree, indicates if data was inserted correctly by returning true. If element is already in the tree, the multiplicity of the element will be increased.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>The data to insert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the insertion was made correctly. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a876cdcefe3be45bd7590e18ce13ac9a4"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_node.html">Node</a>&lt;T&gt;* <a class="el" href="class_r_b_tree.html">RBTree</a>&lt; T &gt;::last </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The last element of the subtree whose root is the given node. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>The root of the subtree. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The last node of the subtree. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9ec1524fd304ab708864f3ed5929fde4"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_node.html">Node</a>&lt;T&gt;* <a class="el" href="class_r_b_tree.html">RBTree</a>&lt; T &gt;::last </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The last element of the tree. </p><dl class="section return"><dt>Returns</dt><dd>The last node of the tree. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aaf6d97fec88a9168eaad604a2ae12efe"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_node.html">Node</a>&lt;T&gt;* <a class="el" href="class_r_b_tree.html">RBTree</a>&lt; T &gt;::leftChild </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns nodes left child. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>The reference node. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The reference nodes left child. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac40b7ce97f66186cb7a1dfe988059bd5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_node.html">Node</a>&lt;T&gt;* <a class="el" href="class_r_b_tree.html">RBTree</a>&lt; T &gt;::next </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the next element in the tree. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>The reference node. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The node following the reference node. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0600be3a5c7d75359a63c8d19dc175ed"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_node.html">Node</a>&lt;T&gt;* <a class="el" href="class_r_b_tree.html">RBTree</a>&lt; T &gt;::parent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns nodes parent. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>The reference node. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The reference nodes parent. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a16156805af6fc45a834db9b13a7137d1"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_node.html">Node</a>&lt;T&gt;* <a class="el" href="class_r_b_tree.html">RBTree</a>&lt; T &gt;::previous </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the previous element in the tree. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>The reference node. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The node preceding the reference node. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab5a8279632f153fd1e68d1f2caaabe58"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_r_b_tree.html">RBTree</a>&lt; T &gt;::remove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Removes an element from the tree, this will remove the element </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>Data to search and remove. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if element was removed. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1dfb71e17e463bf14a112698242c7490"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_node.html">Node</a>&lt;T&gt;* <a class="el" href="class_r_b_tree.html">RBTree</a>&lt; T &gt;::rightChild </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns nodes right child. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>The reference node. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The reference nodes right child. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abd85da46c4bb99c2e2f0086b71990e86"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_node.html">Node</a>&lt;T&gt;* <a class="el" href="class_r_b_tree.html">RBTree</a>&lt; T &gt;::sibling </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the other parents child. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>The reference node. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The reference nodes sibling. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afad4eef004c3b4ed37fe1ee89f95da54"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_node.html">Node</a>&lt;T&gt;* <a class="el" href="class_r_b_tree.html">RBTree</a>&lt; T &gt;::uncle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns nodes uncle, ie, the parents sibling. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>The reference node. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The reference nodes uncle. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/<a class="el" href="_r_b_tree_8hh_source.html">RBTree.hh</a></li>
 </ul>
 </div><!-- contents -->
