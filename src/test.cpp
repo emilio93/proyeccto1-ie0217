@@ -39,13 +39,13 @@ int main(void) {
     Node<int> * a = new Node<int>(13,5);
     Node<int> * b = new Node<int>(18,5);
     Node<int> * c = new Node<int>(17,5);
-    Node<int> * d = new Node<int>(1,5);
+    Node<int> * d = new Node<int>(1,89);
     Node<int> * e = new Node<int>(11,5);
     Node<int> * f = new Node<int>(15,5);
     Node<int> * g = new Node<int>(25,5);
     Node<int> * h = new Node<int>(6,5);
     Node<int> * i = new Node<int>(22,5);
-    Node<int> * j = new Node<int>(27,5);
+    Node<int> * j = new Node<int>(27,255);
 
     /*
          a
@@ -73,11 +73,25 @@ int main(void) {
     g->addLeft(i);
     g->addRight(j);
 
+    a->recolor();
+    b->recolor();
+    cout << whichColor(a) << endl;
+    cout << whichColor(b) << endl;
 
     RBTree<int> * rbt = new RBTree<int>(a);
 
     if (rbt->rule1()) { cout << "rule 1 ok" << endl; }
+    else { cout << "rule 1 NOT ok" << endl; }
+
+    if (rbt->rule2()) { cout << "rule 2 ok" << endl; }
+    else { cout << "rule 2 NOT ok" << endl; }
 
     if (rbt->rule4()) { cout << "rule 4 ok" << endl; }
     else { cout << "rule 4 NOT ok" << endl; }
+
+    if (rbt->rule5()) { cout << "rule 5 ok" << endl; }
+    else { cout << "rule 5 NOT ok" << endl; }
+
+    cout << "last is " << rbt->last()->getData() << endl;
+    cout << "first is " << rbt->first()->getData() << endl;
 }

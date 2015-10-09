@@ -73,8 +73,23 @@ class RBTree{
         //Leaves are null, therefore cannot have a color, we assume theyre black.
         //bool rule3(Node<T> * rootNode);
 
+        /**
+         * Checks 4th rbtree rule on a node.
+         * @param  node Node to check.
+         */
         bool rule4(Node<T> * node);
+
+        /**
+         * Checks 5th rbtree rule on a node.
+         * @param  node Node to check.
+         */
         bool rule5(Node<T> * rootNode);
+
+        /**
+         * Checks 5th rbtree rule on a node.
+         * @param  node Node to check.
+         */
+        bool rule5(Node<T> * rootNode, int count, int * count2);
 
     public:
 
@@ -92,6 +107,11 @@ class RBTree{
          * Checks 4th rbtree rule on the tree.
          */
         bool rule4(void);
+
+        /**
+         * Checks 5th rbtree rule on the tree.
+         */
+        bool rule5(void);
 
         /**
          * @breif Creates a red-black tree with the root Node of the given key
@@ -123,14 +143,14 @@ class RBTree{
          * @return      The multiplicity of the element, 0 meaning the
          *              element was not found.
          */
-        int exists(Node<T> * node);
+        int exists(int key);
 
         /**
          * @breif Extracts an element from the tree if it's found.
          * @param  data The data to extract.
          * @return      The extracted data.
          */
-        T extract(Node<T> * node);
+        T extract(int key);
 
         /**
          * @breif Removes an element from the tree, this will remove the element
@@ -222,7 +242,7 @@ class RBTree{
 
 
 /*
-        rbtree rbtree_create();
+X        rbtree rbtree_create();
         void* rbtree_lookup(rbtree t, void* , compare_func compare);
         void rbtree_insert(rbtree t, void* , void* , compare_func compare);
         void rbtree_delete(rbtree t, void* , compare_func compare);
@@ -230,17 +250,17 @@ class RBTree{
         node sibling(node n);
         node uncle(node n);
         void verify_properties(rbtree t);
-        void verify_property_1(node root);
-        void verify_property_2(node root);
-        color node_color(node n);
-        void verify_property_4(node root);
-        void verify_property_5(node root);
-        void verify_property_5_helper(node n, int , int*);
-        node new_node(void* key, void* , color , node , node);
+X        void verify_property_1(node root);
+X        void verify_property_2(node root);
+X        color node_color(node n);
+X        void verify_property_4(node root);
+X        void verify_property_5(node root);
+X        void verify_property_5_helper(node n, int , int*);
+X        node new_node(void* key, void* , color , node , node);
         node lookup_node(rbtree t, void* , compare_func compare);
         void rotate_left(rbtree t, node n);
         void rotate_right(rbtree t, node n);
-        void replace_node(rbtree t, node oldn, node newn);
+X        void replace_node(rbtree t, node oldn, node newn);
         void insert_case1(rbtree t, node n);
         void insert_case2(rbtree t, node n);
         void insert_case3(rbtree t, node n);
@@ -347,5 +367,113 @@ template<typename T>
 bool RBTree<T>::rule4(void) {
     return this->rule4(this->root);
 }
+
+template<typename T>
+bool RBTree<T>::rule5(Node<T> * node) {
+    int pathCount = -1;
+    return this->rule5(node, 0, &pathCount);
+}
+
+template<typename T>
+bool RBTree<T>::rule5(void) {
+    return this->rule5(this->root);
+}
+
+template<typename T>
+bool RBTree<T>::rule5(Node<T> * node, int blackCount, int * pathCount) {
+    bool a = true;
+    if (node->getColor() == BLACK) { blackCount++; }
+    if (node == NULL)
+    {
+        if (*pathCount == -1) {
+            *pathCount = blackCount;
+        }
+        else {
+            if (blackCount != *pathCount) {
+                a = false;
+            }
+        }
+        return true;
+    }
+    bool b = true;
+    bool c = true;
+    if (node->getLeft() != NULL) { b = this->rule5(node->getLeft(), blackCount, pathCount); }
+    if (node->getRight() != NULL) { c = this->rule5(node->getRight(), blackCount, pathCount); }
+
+    return a && b && c;
+}
+
+template<typename T>
+int RBTree<T>::exists(int key) {
+    Node<T> * node = this->root;
+    while (node != NULL) {
+        if (node->getKey() == key) {
+            return node->getMultiplicity();
+        } else if (node->getKey() == key < 0) {
+            node = node->left;
+        } else {
+            node = node->right;
+        }
+    }
+    return node->getMultiplicity();
+}
+
+template<typename T>
+T RBTree<T>::extract(int key) {
+    Node<T> * node = this->root;
+    while (node != NULL) {
+        if (node->getKey() == key) {
+            return node->getData();
+        } else if (node->getKey() == key < 0) {
+            node = node->left;
+        } else {
+            node = node->right;
+        }
+    }
+    return node->getData();
+}
+
+template<typename T>
+Node<T> * RBTree<T>::next(Node<T> * node) {
+    if (node->isLeft()) {
+        if (node->getRight() != NULL) {
+            return node->getParent();
+        } else {
+            return this->first(node->getRight());
+        }
+    }
+}
+
+template<typename T>
+Node<T> * RBTree<T>::previous(Node<T> * node) {
+    if (node->isRight()) {
+        if (node->getLeft() != NULL) {
+            return node->getParent();
+        } else {
+            return this->last(node->getLeft());
+        }
+    }
+}
+
+template<typename T>
+Node<T> * RBTree<T>::first(Node<T> * node) {
+    return node->getLeft() == NULL ? node : this->first(node->getLeft());
+}
+
+template<typename T>
+Node<T> * RBTree<T>::first() {
+    return this->first(this->root);
+}
+
+template<typename T>
+Node<T> * RBTree<T>::last(Node<T> * node) {
+    return node->getRight() == NULL ? node : this->last(node->getRight());
+}
+
+template<typename T>
+Node<T> * RBTree<T>::last() {
+    return this->last(this->root);
+}
+
 
 #endif

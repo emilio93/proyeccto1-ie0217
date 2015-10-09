@@ -19,11 +19,11 @@ T \hyperlink{class_node_ad89031c2899fe91646652ce4c2e79ab6}{get\+Data} (void)
 \item 
 int \hyperlink{class_node_ab83eb1cc81f91a5641693eb22712f8c8}{get\+Multiplicity} (void)
 \item 
-const \hyperlink{class_node}{Node} $\ast$ \hyperlink{class_node_a6a6c7c5376ee83e972ef5455b45143d5}{get\+Parent} (void)
+\hyperlink{class_node}{Node} $\ast$ \hyperlink{class_node_ad6543650b2b521ced0456014d0344e3c}{get\+Parent} (void)
 \item 
-const \hyperlink{class_node}{Node} $\ast$ \hyperlink{class_node_ac7fe9e26d77f45acdbf919adca86e843}{get\+Left} (void)
+\hyperlink{class_node}{Node} $\ast$ \hyperlink{class_node_a2ab0ff5c5d882b57577c077ee897397e}{get\+Left} (void)
 \item 
-const \hyperlink{class_node}{Node} $\ast$ \hyperlink{class_node_a8dcc0a75395710d8c887d52daf72f2c8}{get\+Right} (void)
+\hyperlink{class_node}{Node} $\ast$ \hyperlink{class_node_a19f6f466f04ca1dc6a314b25c3d13c99}{get\+Right} (void)
 \item 
 Colors \hyperlink{class_node_a9c209bbcd6a8c1e07914a0c6bea3a6f4}{get\+Color} (void)
 \item 
@@ -39,7 +39,15 @@ const T $\ast$ \hyperlink{class_node_a565b1a8bbc88c67b5dbc6a78a11a4ba2}{read} (v
 \item 
 void \hyperlink{class_node_a78c42d0d8acc20440279aa851c02b38e}{add\+Left} (\hyperlink{class_node}{Node}$<$ T $>$ $\ast$left)
 \item 
+void \hyperlink{class_node_a5d10f30efdc1d5af2f1e906cb30609c6}{set\+Left} (\hyperlink{class_node}{Node}$<$ T $>$ $\ast$left)
+\item 
 void \hyperlink{class_node_ae0a74454b02ab98b6c373dea65ac441e}{add\+Right} (\hyperlink{class_node}{Node}$<$ T $>$ $\ast$right)
+\item 
+void \hyperlink{class_node_a91c3e21d17faf184c2dc23340d62f197}{set\+Right} (\hyperlink{class_node}{Node}$<$ T $>$ $\ast$right)
+\item 
+bool \hyperlink{class_node_a614f99e8df6aebb91c9e17e204a8c170}{is\+Left} (void)
+\item 
+bool \hyperlink{class_node_ac8eeb9f7717618589d939491d87a04bf}{is\+Right} (void)
 \end{DoxyCompactItemize}
 
 
@@ -151,13 +159,13 @@ The data in the node.
 Returns the Nodes key. \begin{DoxyReturn}{Returns}
 The Nodes key. 
 \end{DoxyReturn}
-\hypertarget{class_node_ac7fe9e26d77f45acdbf919adca86e843}{}\index{Node@{Node}!get\+Left@{get\+Left}}
+\hypertarget{class_node_a2ab0ff5c5d882b57577c077ee897397e}{}\index{Node@{Node}!get\+Left@{get\+Left}}
 \index{get\+Left@{get\+Left}!Node@{Node}}
-\subsubsection[{get\+Left(void)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ const {\bf Node}$<$ T $>$ $\ast$ {\bf Node}$<$ T $>$\+::get\+Left (
+\subsubsection[{get\+Left(void)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Node}$<$ T $>$ $\ast$ {\bf Node}$<$ T $>$\+::get\+Left (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
-)}\label{class_node_ac7fe9e26d77f45acdbf919adca86e843}
+)}\label{class_node_a2ab0ff5c5d882b57577c077ee897397e}
 Returns the left child node. \begin{DoxyReturn}{Returns}
 The left child node. 
 \end{DoxyReturn}
@@ -171,25 +179,45 @@ The left child node.
 Returns the multiplicity of the node. \begin{DoxyReturn}{Returns}
 The multiplicity of the node. 
 \end{DoxyReturn}
-\hypertarget{class_node_a6a6c7c5376ee83e972ef5455b45143d5}{}\index{Node@{Node}!get\+Parent@{get\+Parent}}
+\hypertarget{class_node_ad6543650b2b521ced0456014d0344e3c}{}\index{Node@{Node}!get\+Parent@{get\+Parent}}
 \index{get\+Parent@{get\+Parent}!Node@{Node}}
-\subsubsection[{get\+Parent(void)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ const {\bf Node}$<$ T $>$ $\ast$ {\bf Node}$<$ T $>$\+::get\+Parent (
+\subsubsection[{get\+Parent(void)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Node}$<$ T $>$ $\ast$ {\bf Node}$<$ T $>$\+::get\+Parent (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
-)}\label{class_node_a6a6c7c5376ee83e972ef5455b45143d5}
+)}\label{class_node_ad6543650b2b521ced0456014d0344e3c}
 Returns the parent node. \begin{DoxyReturn}{Returns}
 The parent node. 
 \end{DoxyReturn}
-\hypertarget{class_node_a8dcc0a75395710d8c887d52daf72f2c8}{}\index{Node@{Node}!get\+Right@{get\+Right}}
+\hypertarget{class_node_a19f6f466f04ca1dc6a314b25c3d13c99}{}\index{Node@{Node}!get\+Right@{get\+Right}}
 \index{get\+Right@{get\+Right}!Node@{Node}}
-\subsubsection[{get\+Right(void)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ const {\bf Node}$<$ T $>$ $\ast$ {\bf Node}$<$ T $>$\+::get\+Right (
+\subsubsection[{get\+Right(void)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Node}$<$ T $>$ $\ast$ {\bf Node}$<$ T $>$\+::get\+Right (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
-)}\label{class_node_a8dcc0a75395710d8c887d52daf72f2c8}
+)}\label{class_node_a19f6f466f04ca1dc6a314b25c3d13c99}
 Returns right child node. \begin{DoxyReturn}{Returns}
 The right child node. 
+\end{DoxyReturn}
+\hypertarget{class_node_a614f99e8df6aebb91c9e17e204a8c170}{}\index{Node@{Node}!is\+Left@{is\+Left}}
+\index{is\+Left@{is\+Left}!Node@{Node}}
+\subsubsection[{is\+Left(void)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf Node}$<$ T $>$\+::is\+Left (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{class_node_a614f99e8df6aebb91c9e17e204a8c170}
+Determines wheter \hyperlink{class_node}{Node} is a left \hyperlink{class_node}{Node}. \begin{DoxyReturn}{Returns}
+True if left \hyperlink{class_node}{Node}. 
+\end{DoxyReturn}
+\hypertarget{class_node_ac8eeb9f7717618589d939491d87a04bf}{}\index{Node@{Node}!is\+Right@{is\+Right}}
+\index{is\+Right@{is\+Right}!Node@{Node}}
+\subsubsection[{is\+Right(void)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf Node}$<$ T $>$\+::is\+Right (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{class_node_ac8eeb9f7717618589d939491d87a04bf}
+Determines wheter \hyperlink{class_node}{Node} is a right \hyperlink{class_node}{Node}. \begin{DoxyReturn}{Returns}
+True if right \hyperlink{class_node}{Node}. 
 \end{DoxyReturn}
 \hypertarget{class_node_a565b1a8bbc88c67b5dbc6a78a11a4ba2}{}\index{Node@{Node}!read@{read}}
 \index{read@{read}!Node@{Node}}
@@ -230,6 +258,30 @@ Changes the \hyperlink{class_node}{Node}\textquotesingle{}s color to a specific 
 Removes an element, this is, decreases the multiplicity, when it reaches 0, it indicates returning true. \begin{DoxyReturn}{Returns}
 True if the multipliciti reaches 0, ie, the \hyperlink{class_node}{Node} must be deleted. 
 \end{DoxyReturn}
+\hypertarget{class_node_a5d10f30efdc1d5af2f1e906cb30609c6}{}\index{Node@{Node}!set\+Left@{set\+Left}}
+\index{set\+Left@{set\+Left}!Node@{Node}}
+\subsubsection[{set\+Left(\+Node$<$ T $>$ $\ast$left)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Node}$<$ T $>$\+::set\+Left (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ T $>$ $\ast$}]{left}
+\end{DoxyParamCaption}
+)}\label{class_node_a5d10f30efdc1d5af2f1e906cb30609c6}
+Sets the child node on the left side; 
+\begin{DoxyParams}{Parameters}
+{\em left} & The pointer to the node to add. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_node_a91c3e21d17faf184c2dc23340d62f197}{}\index{Node@{Node}!set\+Right@{set\+Right}}
+\index{set\+Right@{set\+Right}!Node@{Node}}
+\subsubsection[{set\+Right(\+Node$<$ T $>$ $\ast$right)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Node}$<$ T $>$\+::set\+Right (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ T $>$ $\ast$}]{right}
+\end{DoxyParamCaption}
+)}\label{class_node_a91c3e21d17faf184c2dc23340d62f197}
+Sets the child node on the right side; 
+\begin{DoxyParams}{Parameters}
+{\em right} & The pointer to the node to add. \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
