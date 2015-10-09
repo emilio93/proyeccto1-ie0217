@@ -7,6 +7,8 @@ TARGET = main
 
 $(TARGET) : $(OBJS)
 	$(CC) $(LFLAGS) $(OBJS) -o $(TARGET)
+docs :
+	doxygen
 clean :
 	rm -f *.o $(TARGET)
 cleanWin :

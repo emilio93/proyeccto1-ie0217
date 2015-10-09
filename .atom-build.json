@@ -4,6 +4,12 @@
     "cmd": "make",
     "sh": false,
     "targets": {
+        "docs": {
+            "cwd": "{PROJECT_PATH}",
+            "cmd": "doxygen",
+            "args": [],
+            "sh": false
+        },
         "clean": {
             "cwd": "{FILE_ACTIVE_PATH}",
             "cmd": "make",

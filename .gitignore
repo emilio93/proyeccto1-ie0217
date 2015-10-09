@@ -1,10 +1,10 @@
 
 #ignored folders
-oldstuff/
-docs/
+    oldstuff/
+    docs/
 
 #ignored file extensions
-*.exe
+    *.exe
 
 #ignored files
 
