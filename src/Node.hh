@@ -6,15 +6,22 @@
 
 template<typename T>
 /**
- * @breif The node class defines a multiset element within it's red-black tree
- *        implementation. It contains the data and the multiplicity, which are
- *        related to the multiset concept. It also contains the tree elements
- *        which are, color, left child and right child.
- *        In addition, this implementation will know it's parent Node, (kind of
- *        like a doubly linked list).
+ * @breif The node class defines a multiset element.
+ *
+ * The node class defines a multiset element within it's red-black tree
+ * implementation. It contains the data and the multiplicity, which are
+ * related to the multiset concept. It also contains the tree elements
+ * which are, key, color, left child and right child. In addition, this
+ * implementation will know it's parent Node, (kind of like a doubly
+ * linked list).
  */
 class Node{
     private:
+        /**
+         * @breif The key of the Node defines it's position in the tree.
+         */
+        int key;
+
         /**
          * @breif This is the data contained in the Node. Keep in mind that
          *        this class should have a way to be compared in order to arrange
@@ -55,7 +62,7 @@ class Node{
          *        the root node.
          * @param data The data which the node will contain.
          */
-        Node(T data);
+        Node(int key, T data);
 
         /**
          * @breif Creates a Node with data. By default, the Node's color is red.
@@ -63,12 +70,18 @@ class Node{
          * @param data The data which the node will contain.
          * @param parent The parent node.
          */
-        Node(T data, Node<T> * parent);
+        Node(int key, T data, Node<T> * parent);
 
         /**
          * @breif Destructs the Node.
          */
         ~Node(void);
+
+        /**
+         * @breif Returns the Nodes key.
+         * @return The Nodes key.
+         */
+        int getKey(void);
 
         /**
          * @breif Returns data in the node.
@@ -156,23 +169,56 @@ class Node{
  ******************************/
 
 template<typename T>
-Node<T>::Node(T data) {
+Node<T>::Node(int key, T data) {
+    this->key = key;
     this->data = data;
     this->parent = NULL;
     this->color = RED;
 }
 
 template<typename T>
-Node<T>::Node(T data, Node<T> * parent) {
+Node<T>::Node(int key, T data, Node<T> * parent) {
+    this->key = key;
     this->data = data;
     this->parent = parent;
     this->color = this->Colors.RED;
     this->multiplicity = 1;
 }
 
+
 template<typename T>
 Node<T>::~Node(void) {
     int a = 1;
+}
+
+template<typename T>
+int Node<T>::getKey(void) {
+    return this->key;
+}
+
+template<typename T>
+T Node<T>::getData(void) {
+    return this->data;
+}
+
+template<typename T>
+int Node<T>::getMultiplicity(void) {
+    return this->multiplicity;
+}
+
+template<typename T>
+const Node<T> * Node<T>::getParent(void) {
+    return this->parent;
+}
+
+template<typename T>
+const Node<T> * Node<T>::getLeft(void) {
+    return this->left;
+}
+
+template<typename T>
+const Node<T> * Node<T>::getRight(void) {
+    return this->right;
 }
 
 template<typename T>

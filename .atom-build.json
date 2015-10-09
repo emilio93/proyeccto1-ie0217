@@ -21,6 +21,11 @@
             "cmd": "make",
             "args": ["cleanWin"],
             "sh": false
+        },
+        "LaTeX": {
+            "cwd":"{FILE_ACTIVE_PATH}",
+            "cmd": "make",
+            "sh":false
         }
     }
 }

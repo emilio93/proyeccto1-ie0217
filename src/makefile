@@ -1,5 +1,5 @@
 CC = g++
-OBJS = main.cpp RBTree.cpp
+OBJS = main.cpp
 DEBUG = -g
 CFLAGS = -Wall -c $(DEBUG) -pedantic
 LFLAGS = -Wall $(DEBUG) -pedantic

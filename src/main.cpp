@@ -13,7 +13,7 @@ string whichColor(Node<T> * n) { return n->getColor() == RED? "RED": "BLACK"; }
  */
 int main(void) {
     cout << "hola" << endl;
-    Node<int> * n = new Node<int>(5);
+    Node<int> * n = new Node<int>(5,5);
     cout << "Recoloreado a " << whichColor(n) << endl;
     n->recolor();
     cout << "Recoloreado a " << whichColor(n) << endl;

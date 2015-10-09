@@ -104,12 +104,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad89031c2899fe91646652ce4c2e79ab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab83eb1cc81f91a5641693eb22712f8c8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#ab83eb1cc81f91a5641693eb22712f8c8">getMultiplicity</a> (void)</td></tr>
 <tr class="separator:ab83eb1cc81f91a5641693eb22712f8c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c66ccb05ba8d8298b5e366e456d0938"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a6c66ccb05ba8d8298b5e366e456d0938">getParent</a> (void)</td></tr>
-<tr class="separator:a6c66ccb05ba8d8298b5e366e456d0938"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9b2793e1b2b50e722510c9d6426952b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#aa9b2793e1b2b50e722510c9d6426952b">getLeft</a> (void)</td></tr>
-<tr class="separator:aa9b2793e1b2b50e722510c9d6426952b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bfe77dd9f9ede06efbb2176f0589e67"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a2bfe77dd9f9ede06efbb2176f0589e67">getRight</a> (void)</td></tr>
-<tr class="separator:a2bfe77dd9f9ede06efbb2176f0589e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a6c7c5376ee83e972ef5455b45143d5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a6a6c7c5376ee83e972ef5455b45143d5">getParent</a> (void)</td></tr>
+<tr class="separator:a6a6c7c5376ee83e972ef5455b45143d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7fe9e26d77f45acdbf919adca86e843"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#ac7fe9e26d77f45acdbf919adca86e843">getLeft</a> (void)</td></tr>
+<tr class="separator:ac7fe9e26d77f45acdbf919adca86e843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dcc0a75395710d8c887d52daf72f2c8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a8dcc0a75395710d8c887d52daf72f2c8">getRight</a> (void)</td></tr>
+<tr class="separator:a8dcc0a75395710d8c887d52daf72f2c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c209bbcd6a8c1e07914a0c6bea3a6f4"><td class="memItemLeft" align="right" valign="top">Colors&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a9c209bbcd6a8c1e07914a0c6bea3a6f4">getColor</a> (void)</td></tr>
 <tr class="separator:a9c209bbcd6a8c1e07914a0c6bea3a6f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a431de433a18f187a322ff5fe3ce39c9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a431de433a18f187a322ff5fe3ce39c9c">recolor</a> (void)</td></tr>
@@ -131,6 +131,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class Node&lt; T &gt;</h3>
 
+<p>The node class defines a multiset element.</p>
 <p>The node class defines a multiset element within it's red-black tree implementation. It contains the data and the multiplicity, which are related to the multiset concept. It also contains the tree elements which are, color, left child and right child. In addition, this implementation will know it's parent <a class="el" href="class_node.html">Node</a>, (kind of like a doubly linked list). </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a0692b16d246460bf94c18d49592facdd"></a>
@@ -302,7 +303,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T&gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">T <a class="el" href="class_node.html">Node</a>&lt; T &gt;::getData </td>
@@ -317,14 +318,14 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="aa9b2793e1b2b50e722510c9d6426952b"></a>
+<a class="anchor" id="ac7fe9e26d77f45acdbf919adca86e843"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T&gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_node.html">Node</a>* <a class="el" href="class_node.html">Node</a>&lt; T &gt;::getLeft </td>
+          <td class="memname">const <a class="el" href="class_node.html">Node</a>&lt; T &gt; * <a class="el" href="class_node.html">Node</a>&lt; T &gt;::getLeft </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -340,7 +341,7 @@ template&lt;typename T&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T&gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">int <a class="el" href="class_node.html">Node</a>&lt; T &gt;::getMultiplicity </td>
@@ -355,14 +356,14 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a6c66ccb05ba8d8298b5e366e456d0938"></a>
+<a class="anchor" id="a6a6c7c5376ee83e972ef5455b45143d5"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T&gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_node.html">Node</a>* <a class="el" href="class_node.html">Node</a>&lt; T &gt;::getParent </td>
+          <td class="memname">const <a class="el" href="class_node.html">Node</a>&lt; T &gt; * <a class="el" href="class_node.html">Node</a>&lt; T &gt;::getParent </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -374,14 +375,14 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a2bfe77dd9f9ede06efbb2176f0589e67"></a>
+<a class="anchor" id="a8dcc0a75395710d8c887d52daf72f2c8"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T&gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_node.html">Node</a>* <a class="el" href="class_node.html">Node</a>&lt; T &gt;::getRight </td>
+          <td class="memname">const <a class="el" href="class_node.html">Node</a>&lt; T &gt; * <a class="el" href="class_node.html">Node</a>&lt; T &gt;::getRight </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>

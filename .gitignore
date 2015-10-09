@@ -2,10 +2,25 @@
 #ignored folders
     oldstuff/
     docs/
+    #presentation/Recursos/
 
 #ignored file extensions
     *.exe
+    *.aux
+    *.log
+    *.nav
+    *.out
+    *.snm
+    *.toc
+    *.vrb
+    *.bbl
+    *.blg
+    *.eps
+    *.ai
 
 #ignored files
-
+    Presentacion.pdf
+    personas.jpg
+    
 #allowed files
+    !presentation/Recursos/ppl/*.pdf

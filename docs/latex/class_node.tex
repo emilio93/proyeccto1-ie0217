@@ -17,11 +17,11 @@ T \hyperlink{class_node_ad89031c2899fe91646652ce4c2e79ab6}{get\+Data} (void)
 \item 
 int \hyperlink{class_node_ab83eb1cc81f91a5641693eb22712f8c8}{get\+Multiplicity} (void)
 \item 
-const \hyperlink{class_node}{Node} $\ast$ \hyperlink{class_node_a6c66ccb05ba8d8298b5e366e456d0938}{get\+Parent} (void)
+const \hyperlink{class_node}{Node} $\ast$ \hyperlink{class_node_a6a6c7c5376ee83e972ef5455b45143d5}{get\+Parent} (void)
 \item 
-const \hyperlink{class_node}{Node} $\ast$ \hyperlink{class_node_aa9b2793e1b2b50e722510c9d6426952b}{get\+Left} (void)
+const \hyperlink{class_node}{Node} $\ast$ \hyperlink{class_node_ac7fe9e26d77f45acdbf919adca86e843}{get\+Left} (void)
 \item 
-const \hyperlink{class_node}{Node} $\ast$ \hyperlink{class_node_a2bfe77dd9f9ede06efbb2176f0589e67}{get\+Right} (void)
+const \hyperlink{class_node}{Node} $\ast$ \hyperlink{class_node_a8dcc0a75395710d8c887d52daf72f2c8}{get\+Right} (void)
 \item 
 Colors \hyperlink{class_node_a9c209bbcd6a8c1e07914a0c6bea3a6f4}{get\+Color} (void)
 \item 
@@ -43,6 +43,8 @@ void \hyperlink{class_node_ae0a74454b02ab98b6c373dea65ac441e}{add\+Right} (\hype
 
 \subsection{Detailed Description}
 \subsubsection*{template$<$typename T$>$class Node$<$ T $>$}
+
+The node class defines a multiset element.
 
 The node class defines a multiset element within it\textquotesingle{}s red-\/black tree implementation. It contains the data and the multiplicity, which are related to the multiset concept. It also contains the tree elements which are, color, left child and right child. In addition, this implementation will know it\textquotesingle{}s parent \hyperlink{class_node}{Node}, (kind of like a doubly linked list). 
 
@@ -127,7 +129,7 @@ The color of the current node.
 \end{DoxyReturn}
 \hypertarget{class_node_ad89031c2899fe91646652ce4c2e79ab6}{}\index{Node@{Node}!get\+Data@{get\+Data}}
 \index{get\+Data@{get\+Data}!Node@{Node}}
-\subsubsection[{get\+Data(void)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T {\bf Node}$<$ T $>$\+::get\+Data (
+\subsubsection[{get\+Data(void)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T {\bf Node}$<$ T $>$\+::get\+Data (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
@@ -135,19 +137,19 @@ The color of the current node.
 Returns data in the node. \begin{DoxyReturn}{Returns}
 The data in the node. 
 \end{DoxyReturn}
-\hypertarget{class_node_aa9b2793e1b2b50e722510c9d6426952b}{}\index{Node@{Node}!get\+Left@{get\+Left}}
+\hypertarget{class_node_ac7fe9e26d77f45acdbf919adca86e843}{}\index{Node@{Node}!get\+Left@{get\+Left}}
 \index{get\+Left@{get\+Left}!Node@{Node}}
-\subsubsection[{get\+Left(void)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ const {\bf Node}$\ast$ {\bf Node}$<$ T $>$\+::get\+Left (
+\subsubsection[{get\+Left(void)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ const {\bf Node}$<$ T $>$ $\ast$ {\bf Node}$<$ T $>$\+::get\+Left (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
-)}\label{class_node_aa9b2793e1b2b50e722510c9d6426952b}
+)}\label{class_node_ac7fe9e26d77f45acdbf919adca86e843}
 Returns the left child node. \begin{DoxyReturn}{Returns}
 The left child node. 
 \end{DoxyReturn}
 \hypertarget{class_node_ab83eb1cc81f91a5641693eb22712f8c8}{}\index{Node@{Node}!get\+Multiplicity@{get\+Multiplicity}}
 \index{get\+Multiplicity@{get\+Multiplicity}!Node@{Node}}
-\subsubsection[{get\+Multiplicity(void)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ int {\bf Node}$<$ T $>$\+::get\+Multiplicity (
+\subsubsection[{get\+Multiplicity(void)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ int {\bf Node}$<$ T $>$\+::get\+Multiplicity (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
@@ -155,23 +157,23 @@ The left child node.
 Returns the multiplicity of the node. \begin{DoxyReturn}{Returns}
 The multiplicity of the node. 
 \end{DoxyReturn}
-\hypertarget{class_node_a6c66ccb05ba8d8298b5e366e456d0938}{}\index{Node@{Node}!get\+Parent@{get\+Parent}}
+\hypertarget{class_node_a6a6c7c5376ee83e972ef5455b45143d5}{}\index{Node@{Node}!get\+Parent@{get\+Parent}}
 \index{get\+Parent@{get\+Parent}!Node@{Node}}
-\subsubsection[{get\+Parent(void)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ const {\bf Node}$\ast$ {\bf Node}$<$ T $>$\+::get\+Parent (
+\subsubsection[{get\+Parent(void)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ const {\bf Node}$<$ T $>$ $\ast$ {\bf Node}$<$ T $>$\+::get\+Parent (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
-)}\label{class_node_a6c66ccb05ba8d8298b5e366e456d0938}
+)}\label{class_node_a6a6c7c5376ee83e972ef5455b45143d5}
 Returns the parent node. \begin{DoxyReturn}{Returns}
 The parent node. 
 \end{DoxyReturn}
-\hypertarget{class_node_a2bfe77dd9f9ede06efbb2176f0589e67}{}\index{Node@{Node}!get\+Right@{get\+Right}}
+\hypertarget{class_node_a8dcc0a75395710d8c887d52daf72f2c8}{}\index{Node@{Node}!get\+Right@{get\+Right}}
 \index{get\+Right@{get\+Right}!Node@{Node}}
-\subsubsection[{get\+Right(void)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ const {\bf Node}$\ast$ {\bf Node}$<$ T $>$\+::get\+Right (
+\subsubsection[{get\+Right(void)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ const {\bf Node}$<$ T $>$ $\ast$ {\bf Node}$<$ T $>$\+::get\+Right (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
-)}\label{class_node_a2bfe77dd9f9ede06efbb2176f0589e67}
+)}\label{class_node_a8dcc0a75395710d8c887d52daf72f2c8}
 Returns right child node. \begin{DoxyReturn}{Returns}
 The right child node. 
 \end{DoxyReturn}

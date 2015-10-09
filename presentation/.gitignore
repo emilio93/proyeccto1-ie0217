@@ -1,0 +1,20 @@
+#ignored folders
+
+#ignored file extensions
+    *.exe
+    *.aux
+    *.log
+    *.nav
+    *.out
+    *.snm
+    *.toc
+    *.vrb
+    *.bbl
+    *.blg
+    *.eps
+
+#ignored files
+    Presentacion.pdf
+
+#allowed files
+    !Recursos/ppl/*.pdf
