@@ -46,14 +46,14 @@ class RBTree{
          * @param rbt The tree to rotate.
          * @param node The pivot.
          */
-        void rotateLeft(RBTree rbt, Node<T> * node);
+        void rotateLeft(RBTree * rbt, Node<T> * node);
 
         /**
          * @breif Makes a right rotation on a given node.
          * @param rbt The tree to rotate.
          * @param node The pivot.
          */
-        void rotateRight(RBTree rbt, Node<T> * node);
+        void rotateRight(RBTree * rbt, Node<T> * node);
 
         /**
          * Replaces a node.
@@ -61,7 +61,7 @@ class RBTree{
          * @param oldNode The node to remove.
          * @param newNode The node to place.
          */
-        void replaceNode(RBTree rbt, Node<T> *oldNode, Node<T> * newNode);
+        void replaceNode(RBTree * rbt, Node<T> *oldNode, Node<T> * newNode);
 
         /**
          * Checks 1st rbtree rule on a node.
@@ -87,9 +87,11 @@ class RBTree{
 
         /**
          * Checks 5th rbtree rule on a node.
-         * @param  node Node to check.
+         * @param  rootNode Node to check.
+         * @param  blackCount how many black nodes.
+         * @param  pathCount The black nodes height.
          */
-        bool rule5(Node<T> * rootNode, int count, int * count2);
+        bool rule5(Node<T> * rootNode, int blackCount, int * pathCount);
 
     public:
 
@@ -121,7 +123,10 @@ class RBTree{
          */
         RBTree(int key, T data);
 
-
+        /**
+         * @breif Creates a red-black tree with the root Node being the given.
+         * @param node The root nodes.
+         */
         RBTree(Node<T> * node);
 
         /**
@@ -129,11 +134,15 @@ class RBTree{
          *        data was inserted correctly by returning true.
          *        If element is already in the tree, the multiplicity
          *        of the element will be increased.
-         *
          * @param  data The data to insert.
-         * @return      True if the insertion was made correctly.
          */
         bool insert(Node<T> * node);
+        bool insert(RBTree * rbt, Node<T> * node);
+        void insertCase1(RBTree * rbt, Node<T> * node);
+        void insertCase2(RBTree * rbt, Node<T> * node);
+        void insertCase3(RBTree * rbt, Node<T> * node);
+        void insertCase4(RBTree * rbt, Node<T> * node);
+        void insertCase5(RBTree * rbt, Node<T> * node);
 
         /**
          * @breif Determines wether an element exists in the tree, if
@@ -157,7 +166,7 @@ class RBTree{
          * @param  data Data to search and remove.
          * @return      True if element was removed.
          */
-        bool remove(Node<T> * node);
+        bool remove(int key);
 
         /**
          * @breif Returns the next element in the tree.
@@ -239,42 +248,6 @@ class RBTree{
          * @return The reference nodes right child.
          */
         Node<T> * rightChild(Node<T> * node);
-
-
-/*
-X        rbtree rbtree_create();
-        void* rbtree_lookup(rbtree t, void* , compare_func compare);
-        void rbtree_insert(rbtree t, void* , void* , compare_func compare);
-        void rbtree_delete(rbtree t, void* , compare_func compare);
-        node grandparent(node n);
-        node sibling(node n);
-        node uncle(node n);
-        void verify_properties(rbtree t);
-X        void verify_property_1(node root);
-X        void verify_property_2(node root);
-X        color node_color(node n);
-X        void verify_property_4(node root);
-X        void verify_property_5(node root);
-X        void verify_property_5_helper(node n, int , int*);
-X        node new_node(void* key, void* , color , node , node);
-        node lookup_node(rbtree t, void* , compare_func compare);
-        void rotate_left(rbtree t, node n);
-        void rotate_right(rbtree t, node n);
-X        void replace_node(rbtree t, node oldn, node newn);
-        void insert_case1(rbtree t, node n);
-        void insert_case2(rbtree t, node n);
-        void insert_case3(rbtree t, node n);
-        void insert_case4(rbtree t, node n);
-        void insert_case5(rbtree t, node n);
-        node maximum_node(node root);
-        void delete_case1(rbtree t, node n);
-        void delete_case2(rbtree t, node n);
-        void delete_case3(rbtree t, node n);
-        void delete_case4(rbtree t, node n);
-        void delete_case5(rbtree t, node n);
-        void delete_case6(rbtree t, node n);
-*/
-
 };
 
 template<typename T>
@@ -294,35 +267,60 @@ Node<T> * RBTree<T>::createNode(int key, T data, Node<T> * parent) {
 }
 
 template<typename T>
-void RBTree<T>::replaceNode(RBTree rbt, Node<T> * oldNode, Node<T> * newNode) {
+void RBTree<T>::replaceNode(RBTree * rbt, Node<T> * oldNode, Node<T> * newNode) {
     //So we are replacing the parent
-    if (oldNode->parent == NULL) { rbt->root = newNode; }
+    if (oldNode->getParent() == NULL) { rbt->root = newNode; }
     else {
-        if (oldNode->isLeft()) { oldNode->parent->left = newNode; }
-        else { oldNode->parent->right = newNode; }
+        if (oldNode->isLeft()) { oldNode->getParent()->setLeft(newNode); }
+        else { oldNode->getParent()->setRight(newNode); }
     }
-
-    if (newNode != NULL) { newNode->parent = oldNode->parent; }
+    if (newNode != NULL) {
+        if (newNode->getParent()->isLeft()) {
+            newNode->getParent()->getParent()->setLeft(oldNode->getParent());
+        } else {
+            newNode->getParent()->getParent()->setRight(oldNode->getParent());
+        }
+    }
 }
 
 template<typename T>
-void RBTree<T>::rotateLeft(RBTree rbt, Node<T> * node) {
-    Node<int> * r = node->right;
-    replaceNode(rbt, node, r);
-    node->right = r->left;
-    if (r->left != NULL) { r->left->parent = node; }
-    r->left = node;
-    node->parent = r;
+void RBTree<T>::rotateLeft(RBTree * rbt, Node<T> * node) {
+    Node<int> * r = node->getRight();
+    this->replaceNode(rbt, node, r);
+    node->setRight(r->getLeft());
+    if (r->getLeft() != NULL) {
+        if (r->getParent()->isLeft()) {
+            r->getParent()->getParent()->setLeft(node);
+        } else {
+            r->getParent()->getParent()->setRight(node);
+        }
+    }
+    r->setLeft(node);
+    if (node->getParent()->isLeft()) {
+        node->getParent()->getParent()->setLeft(r);
+    } else {
+        node->getParent()->getParent()->setRight(r);
+    }
 }
 
 template<typename T>
-void RBTree<T>::rotateRight(RBTree rbt, Node<T> * node) {
-    Node<int> * l = node->left;
-    replaceNode(rbt, node, l);
-    node->left = l->right;
-    if (l->right != NULL) { l->right->parent = node; }
-    l->right = node;
-    node->parent = l;
+void RBTree<T>::rotateRight(RBTree * rbt, Node<T> * node) {
+    Node<int> * r = node->getRight();
+    this->replaceNode(rbt, node, r);
+    node->setLeft(r->getRight());
+    if (r->getRight() != NULL) {
+        if (r->getParent()->isLeft()) {
+            r->getParent()->getParent()->setLeft(node);
+        } else {
+            r->getParent()->getParent()->setRight(node);
+        }
+    }
+    r->setRight(node);
+    if (node->getParent()->isLeft()) {
+        node->getParent()->getParent()->setLeft(r);
+    } else {
+        node->getParent()->getParent()->setRight(r);
+    }
 }
 
 template<typename T>
@@ -430,29 +428,47 @@ T RBTree<T>::extract(int key) {
             node = node->right;
         }
     }
+    T data = node->getData();
+    if (node->remove()) {
+        this->remove(key);
+    }
     return node->getData();
 }
 
 template<typename T>
 Node<T> * RBTree<T>::next(Node<T> * node) {
-    if (node->isLeft()) {
-        if (node->getRight() != NULL) {
-            return node->getParent();
-        } else {
-            return this->first(node->getRight());
-        }
+    if (node == NULL) {
+        return NULL;
     }
+    if (node->getRight() != NULL) {
+        return this->first(node->getRight());
+    }
+    Node<T> * a = node->getParent();
+    Node<T> * b = node;
+   while (a != NULL && b == a->getRight())
+   {
+       b = a;
+       a = a->getParent();
+   }
+   return a;
 }
 
 template<typename T>
 Node<T> * RBTree<T>::previous(Node<T> * node) {
-    if (node->isRight()) {
-        if (node->getLeft() != NULL) {
-            return node->getParent();
-        } else {
-            return this->last(node->getLeft());
-        }
+    if (node == NULL) {
+        return NULL;
     }
+    if (node->getLeft() != NULL) {
+        return this->last(node->getLeft());
+    }
+    Node<T> * a = node->getParent();
+    Node<T> * b = node;
+   while (a != NULL && b == a->getLeft())
+   {
+       b = a;
+       a = a->getParent();
+   }
+   return a;
 }
 
 template<typename T>
@@ -476,4 +492,123 @@ Node<T> * RBTree<T>::last() {
 }
 
 
+template<typename T>
+Node<T> * RBTree<T>::sibling(Node<T> * node) {
+    return node->isLeft() ? node->getParent()->getRight() : node->getParent()->getLeft();
+}
+
+template<typename T>
+Node<T> * RBTree<T>::parent(Node<T> * node) {
+    return node->getParent();
+}
+
+template<typename T>
+Node<T> * RBTree<T>::grandpa(Node<T> * node) {
+    return node->getParent()->getParent();
+}
+
+template<typename T>
+Node<T> * RBTree<T>::uncle(Node<T> * node) {
+    return node->getParent()->isLeft() ? this->grandpa(node)->getRight() : this->grandpa(node)->getLeft();
+}
+
+template<typename T>
+Node<T> * RBTree<T>::leftChild(Node<T> * node) {
+    return node->getLeft();
+}
+
+template<typename T>
+Node<T> * RBTree<T>::rightChild(Node<T> * node) {
+    return node->getRight();
+}
+
+template<typename T>
+bool RBTree<T>::insert(Node<T> * node) {
+    return this->insert(this, node);
+}
+
+template<typename T>
+bool RBTree<T>::insert(RBTree * rbt, Node<T> * node) {
+    if (rbt->root == NULL) {
+        rbt->root = node;
+    }
+    else {
+        Node<T> * rbtRoot = rbt->root;
+        while (true) {
+            //replace
+            if (node->getKey() == rbtRoot->getKey()) {
+                rbtRoot->add();
+                return true;
+            } else if (node->getKey() < rbtRoot->getKey()) {
+                if (rbtRoot->getLeft() == NULL) {
+                    rbtRoot->setLeft(node);
+                    break;
+                } else {
+                    rbtRoot = rbtRoot->getLeft();
+                }
+            } else {
+                if (rbtRoot->getRight() == NULL) {
+                    rbtRoot->setRight(node);
+                    break;
+                } else {
+                    rbtRoot = rbtRoot->getRight();
+                }
+            }
+        }
+        if (node->getParent()->isLeft()) {
+            node->getParent()->getParent()->setLeft(rbtRoot);
+        } else {
+            node->getParent()->getParent()->setRight(rbtRoot);
+        }
+    }
+    this->insertCase1(rbt, node);
+    return rule1() && rule2() && rule4() && rule5();
+}
+
+template<typename T>
+void RBTree<T>::insertCase1(RBTree * rbt, Node<T> * node) {
+    if (node->getParent() == NULL) node->recolor(BLACK);
+    else insertCase2(rbt, node);
+}
+
+template<typename T>
+void RBTree<T>::insertCase2(RBTree * rbt, Node<T> * node) {
+    if (node->getParent()->getColor() == BLACK) return;
+    else insertCase3(rbt, node);
+}
+
+template<typename T>
+void RBTree<T>::insertCase3(RBTree * rbt, Node<T> * node) {
+    if (this->uncle(node)->getColor() == RED) {
+        node->getParent()->recolor(BLACK);
+        this->uncle(node)->recolor(BLACK);
+        this->grandpa(node)->recolor(RED);
+        this->insertCase1(rbt, this->grandpa(node));
+    } else {
+        insertCase4(rbt, node);
+    }
+}
+
+template<typename T>
+void RBTree<T>::insertCase4(RBTree * rbt, Node<T> * node) {
+    if (node == node->getParent()->getRight() && node->getParent() == this->grandpa(node)->getLeft()) {
+        rotateLeft(rbt, node->getParent());
+        node = node->getLeft();
+    } else if (node == node->getParent()->getLeft() && node->getParent() == this->grandpa(node)->getRight()) {
+        rotateRight(rbt, node->getParent());
+        node = node->getRight();
+    }
+    insertCase5(rbt, node);
+}
+
+template<typename T>
+void RBTree<T>::insertCase5(RBTree * rbt, Node<T> * node) {
+    node->getParent()->recolor(BLACK);
+    this->grandpa(node)->recolor(RED);
+    if (node == node->getParent()->getLeft() && node->getParent() == grandpa(node)->getLeft()) {
+        rotateRight(rbt, grandpa(node));
+    } else {
+        rotateLeft(rbt, this->grandpa(node));
+    }
+}
 #endif

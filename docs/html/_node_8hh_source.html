@@ -278,16 +278,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a name="l00310"></a><span class="lineno"><a class="line" href="class_node.html#a614f99e8df6aebb91c9e17e204a8c170">  310</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_node.html#a614f99e8df6aebb91c9e17e204a8c170">Node&lt;T&gt;::isLeft</a>(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <span class="keywordflow">return</span> this-&gt;parent-&gt;leftChild == <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <span class="keywordflow">return</span> this-&gt;parent-&gt;left == <span class="keyword">this</span>;</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;}</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a name="l00315"></a><span class="lineno"><a class="line" href="class_node.html#ac8eeb9f7717618589d939491d87a04bf">  315</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_node.html#ac8eeb9f7717618589d939491d87a04bf">Node&lt;T&gt;::isRight</a>(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="keywordflow">return</span> this-&gt;parent-&gt;rightChild == <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="keywordflow">return</span> this-&gt;parent-&gt;right == <span class="keyword">this</span>;</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;}</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="keywordtype">int</span> compareKeys(<span class="keywordtype">int</span> * leftKey, <span class="keywordtype">int</span> * rightKey) {</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="keywordflow">if</span> (leftKey &lt; rightKey) <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (leftKey &gt; rightKey) <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (leftKey == rightKey) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;}</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="class_node_html_ae0a74454b02ab98b6c373dea65ac441e"><div class="ttname"><a href="class_node.html#ae0a74454b02ab98b6c373dea65ac441e">Node::addRight</a></div><div class="ttdeci">void addRight(Node&lt; T &gt; *right)</div><div class="ttdef"><b>Definition:</b> Node.hh:300</div></div>
 <div class="ttc" id="class_node_html_a2ab0ff5c5d882b57577c077ee897397e"><div class="ttname"><a href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">Node::getLeft</a></div><div class="ttdeci">Node * getLeft(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:243</div></div>
 <div class="ttc" id="class_node_html"><div class="ttname"><a href="class_node.html">Node</a></div><div class="ttdef"><b>Definition:</b> Node.hh:18</div></div>

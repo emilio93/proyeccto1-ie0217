@@ -43,7 +43,7 @@ int main(void) {
     Node<int> * e = new Node<int>(11,5);
     Node<int> * f = new Node<int>(15,5);
     Node<int> * g = new Node<int>(25,5);
-    Node<int> * h = new Node<int>(6,5);
+    Node<int> * h = new Node<int>(6,56);
     Node<int> * i = new Node<int>(22,5);
     Node<int> * j = new Node<int>(27,255);
 
@@ -53,6 +53,7 @@ int main(void) {
     d   e    f   g
      h          i j
      */
+    /*
     a->recolor();
     d->recolor();
     e->recolor();
@@ -78,6 +79,7 @@ int main(void) {
     cout << whichColor(a) << endl;
     cout << whichColor(b) << endl;
 
+
     RBTree<int> * rbt = new RBTree<int>(a);
 
     if (rbt->rule1()) { cout << "rule 1 ok" << endl; }
@@ -94,4 +96,12 @@ int main(void) {
 
     cout << "last is " << rbt->last()->getData() << endl;
     cout << "first is " << rbt->first()->getData() << endl;
+    cout << "next first is ";
+    cout << rbt->next(rbt->first())->getData() << endl;
+*/
+
+    RBTree<int> * tree = new RBTree<int>(13,5);\
+    cout << "RBT created" << endl;
+    tree->insert(b);
+
 }

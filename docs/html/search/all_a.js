@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['uncle',['uncle',['../class_r_b_tree.html#afad4eef004c3b4ed37fe1ee89f95da54',1,'RBTree']]]
+  ['uncle',['uncle',['../class_r_b_tree.html#af60f8017b52f69173e0af61c8e581b48',1,'RBTree']]]
 ];

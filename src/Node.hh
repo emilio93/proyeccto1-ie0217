@@ -308,13 +308,19 @@ void Node<T>::setRight(Node<T> * right) {
 
 template<typename T>
 bool Node<T>::isLeft(void) {
-    return this->parent->leftChild == this;
+    return this->parent->left == this;
 }
 
 template<typename T>
 bool Node<T>::isRight(void) {
-    return this->parent->rightChild == this;
+    return this->parent->right == this;
 }
 
+int compareKeys(int * leftKey, int * rightKey) {
+    if (leftKey < rightKey) return -1;
+    else if (leftKey > rightKey) return 1;
+    else if (leftKey == rightKey) return 0;
+    else return 0;
+}
 
 #endif
