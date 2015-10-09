@@ -1,0 +1,20 @@
+{
+    "name": "Build",
+    "cwd": "{FILE_ACTIVE_PATH}",
+    "cmd": "make",
+    "sh": false,
+    "targets": {
+        "clean": {
+            "cwd": "{FILE_ACTIVE_PATH}",
+            "cmd": "make",
+            "args": ["clean"],
+            "sh": false
+        },
+        "cleanWin": {
+            "cwd": "{FILE_ACTIVE_PATH}",
+            "cmd": "make",
+            "args": ["cleanWin"],
+            "sh": false
+        }
+    }
+}

@@ -1,0 +1,11 @@
+
+#ignored folders
+oldstuff/
+docs/
+
+#ignored file extensions
+*.exe
+
+#ignored files
+
+#allowed files
