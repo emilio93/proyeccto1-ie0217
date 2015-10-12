@@ -13,18 +13,18 @@ string whichColor(Node<T> * n) {return n->getColor() == RED? "RED": "BLACK";}
  * @breif Tests.
  */
 int main(void) {
-    Node<int> * a = new Node<int>(13,5);
-    Node<int> * b = new Node<int>(18,5);
-    Node<int> * c = new Node<int>(17,5);
-    Node<int> * d = new Node<int>(1,89);
-    Node<int> * e = new Node<int>(11,5);
-    Node<int> * f = new Node<int>(15,5);
-    Node<int> * g = new Node<int>(25,5);
-    Node<int> * h = new Node<int>(6,56);
-    Node<int> * i = new Node<int>(22,5);
-    Node<int> * j = new Node<int>(27,255);
+    Node<char> * a = new Node<char>(11, 'a');
+    Node<char> * b = new Node<char>(12, 'a');
+    Node<char> * c = new Node<char>(13, 'a');
+    Node<char> * d = new Node<char>(14, 'a');
+    Node<char> * e = new Node<char>(15, 'a');
+    Node<char> * f = new Node<char>(16, 'a');
+    Node<char> * g = new Node<char>(17, 'a');
+    Node<char> * h = new Node<char>(18, 'a');
+    Node<char> * i = new Node<char>(19, 'a');
+    Node<char> * j = new Node<char>(20, 'a');
 
-    RBTree<int> * rbt = new RBTree<int>(a);
+    RBTree<char> * rbt = new RBTree<char>(a);
     rbt->insert(b);
     rbt->insert(c);
     rbt->insert(d);
@@ -34,6 +34,6 @@ int main(void) {
     rbt->insert(h);
     rbt->insert(i);
     rbt->insert(j);
-    if(rbt->rules()) cout << "yeah";
+//    if(rbt->rules()) cout << "yeah";
 
 }

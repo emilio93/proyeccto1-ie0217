@@ -285,7 +285,7 @@ void RBTree<T>::replaceNode(RBTree * rbt, Node<T> * oldNode, Node<T> * newNode) 
 
 template<typename T>
 void RBTree<T>::rotateLeft(RBTree * rbt, Node<T> * node) {
-    Node<int> * r = node->getRight();
+    Node<T> * r = node->getRight();
     this->replaceNode(rbt, node, r);
     node->setRight(r->getLeft());
     if (r->getLeft() != NULL) {
@@ -305,7 +305,7 @@ void RBTree<T>::rotateLeft(RBTree * rbt, Node<T> * node) {
 
 template<typename T>
 void RBTree<T>::rotateRight(RBTree * rbt, Node<T> * node) {
-    Node<int> * r = node->getRight();
+    Node<T> * r = node->getRight();
     this->replaceNode(rbt, node, r);
     node->setLeft(r->getRight());
     if (r->getRight() != NULL) {
