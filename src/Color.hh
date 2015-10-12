@@ -2,6 +2,7 @@
 #define COLORS_ENUM
 #include <iostream>
 
+
 using namespace std;
 
 ///The two possible colors a node can take.

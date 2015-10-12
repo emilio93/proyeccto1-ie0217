@@ -23,9 +23,9 @@ int main(void) {
     Node<char> * h = new Node<char>(18, 'a');
     Node<char> * i = new Node<char>(19, 'a');
     Node<char> * j = new Node<char>(20, 'a');
-
     RBTree<char> * rbt = new RBTree<char>(a);
     rbt->insert(b);
+    
     rbt->insert(c);
     rbt->insert(d);
     rbt->insert(e);

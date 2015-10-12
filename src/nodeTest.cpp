@@ -77,4 +77,34 @@ int main(void) {
     printProprerties(node1->getParent(), "node2 via node1->getParent()");
     cout << endl;
 
+    //Should print 7 more lines(8 with the ast endl).
+    if (node1->isLeft()) {
+        cout << "Hi! I'm node1 and I just passed a test on being Left" << endl;
+    }
+
+    if (node2->isParent()) {
+        cout << "Hi! I'm node2 and I just passed a test on being a Parent" << endl;
+    }
+
+    if (!node1->isParent()) {
+        cout << "Hi! I'm node1 and I didn't pass a test on being a Parent" << endl;
+    }
+
+    if (node1->hasParent()) {
+        cout << "Hi! I'm node1 and I just passed a test on having a Parent" << endl;
+    }
+
+    if (!node2->hasParent()) {
+        cout << "Hi! I'm node2 and I didn't pass a test on having a Parent" << endl;
+    }
+
+    if (node2->hasLeft()) {
+        cout << "Hi! I'm node2 and I just passed a test on having a Left child" << endl;
+    }
+
+    if (!node1->hasLeft()) {
+        cout << "Hi! I'm node1 and I didn't pass a test on having a Left child" << endl;
+    }
+
+    //Pretty much Node class works OK
 }

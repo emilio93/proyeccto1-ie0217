@@ -16,13 +16,13 @@ template<typename T>
  * Some rules must be verified.
  * 	1 - A node is either red or black.
  *  2 - The root is black. This rule is sometimes omitted. Since the root can
- * always be changed from red to black, but not necessarily vice versa, this
- * rule has little effect on analysis.
+ *  	always be changed from red to black, but not necessarily vice versa, this
+ *   	rule has little effect on analysis.
  * 	3 - All leaves (NIL) are black.
  *  4 - If a node is red, then both its children are black.
  *  5 - Every path from a given node to any of its descendant NIL nodes contains
- * the same number of black nodes. The uniform number of black nodes in the
- * paths from root to leaves is called the black-height of the red–black tree.
+ *  	the same number of black nodes. The uniform number of black nodes in the
+ *   	paths from root to leaves is called the black-height of the red–black tree.
  */
 class RBTree{
     private:

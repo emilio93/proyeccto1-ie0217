@@ -17,6 +17,16 @@ template<typename T>
  */
 class Node{
     private:
+        /* CLASS ATTRIBUTES
+        1    int     key
+        2    T       data
+        3    int     multiplicity
+        4    Node    * parent
+        5    Node    * left
+        6    Node    * right
+        7    Colors  color
+         */
+
         /**
          * @breif The key of the Node defines it's position in the tree.
          */
@@ -24,14 +34,14 @@ class Node{
 
         /**
          * @breif This is the data contained in the Node. Keep in mind that
-         *        this class should have a way to be compared in order to arrange
-         *        the tree.
+         *        this class should have a way to be compared in order to
+         *        arrangethe tree.
          */
         T data;
 
         /**
-         * @breif This number indicates how many elements does the node contain(how
-         *        many can it provide).
+         * @breif This number indicates how many elements does the node contain
+         *        (how many can it provide).
          */
         int multiplicity;
 
@@ -43,12 +53,12 @@ class Node{
         /**
          * @breif Indicates the left child Node.
          */
-        Node * left;
+        Node * left = NULL;
 
         /**
          * @breif Indicates the right child Node.
          */
-        Node * right;
+        Node * right = NULL;
 
         /**
          * @breif Indicates the color of the Node.
@@ -77,6 +87,11 @@ class Node{
          */
         ~Node(void);
 
+        /**********************************************************************
+         *                                                                   **
+         * GETTERS                                                           **
+         *                                                                   **
+         **********************************************************************/
         /**
          * @breif Returns the Nodes key.
          * @return The Nodes key.
@@ -119,16 +134,61 @@ class Node{
          */
         Colors getColor(void);
 
-        /**
-         * @breif Toggle the Node's color.
-         */
-        void recolor(void);
+        /**********************************************************************
+         *                                                                   **
+         * SETTERS                                                           **
+         *                                                                   **
+         **********************************************************************/
+
+         /**
+          * @breif Sets the Node's key.
+          * @param key The key to set.
+          */
+         void setKey(int key);
+
+         /**
+          * @breif Sets the Nodes's data.
+          * @param data The data to set.
+          */
+         void setData(T data);
+
+         /**
+          * @breif Sets the Nodes's multiplicity.
+          * @param data The multiplicity to set.
+          */
+         void setMultiplicity(int multiplicity);
+
+         /**
+          * @breif Sets the parent node.
+          * @param parent The pointer to the node to add.
+          */
+         void setParent(Node<T> * node);
+
+         /**
+          * @breif Sets the child node on the left side, and indicates that
+          *        this Node is now it's parent.
+          * @param left The pointer to the node to add.
+          */
+         void setLeft(Node<T> * node);
+
+         /**
+          * @breif Sets the child node on the right side, and indicates that
+          *        this Node is now it's parent.
+          * @param right The pointer to the node to add.
+          */
+         void setRight(Node<T> * node);
 
         /**
          * @breif Changes the Node's color to a specific color.
          * @param c The color which the Node is going to have.
          */
-        void recolor(Colors c);
+        void setColor(Colors c);
+
+        /**********************************************************************
+         *                                                                   **
+         * OTHER METHODS                                                     **
+         *                                                                   **
+         **********************************************************************/
 
         /**
          * @breif Adds an element, this is, increases the multiplicity.
@@ -136,88 +196,95 @@ class Node{
         void add(void);
 
         /**
-         * @breif Removes an element, this is, decreases the multiplicity, when it
-         *        reaches 0, it indicates returning true.
-         * @return  True if the multipliciti reaches 0, ie, the Node must be deleted.
+         * @breif Removes an element, this is, decreases the multiplicity, when
+         *        it reaches 0, it indicates returning true.
+         * @return  True if the multiplicity reaches 0, ie, the Node must be
+         *               deleted.
          */
         bool remove(void);
 
         /**
-         * @breif Read the data within the Node.
-         * @return  Data within the node
+         * @breif Determines wheter Node is a Parent Node, it has either left or
+         *        right.
+         * @return  True if parent Node.
          */
-        const T * read(void);
+        bool isParent(void);
 
         /**
-         * @breif Adds a child node on the left side;
-         * @param left The pointer to the node to add.
-         */
-        void addLeft(Node<T> * left);
-
-        /**
-         * @breif Sets the child node on the left side;
-         * @param left The pointer to the node to add.
-         */
-        void setLeft(Node<T> * left);
-
-        /**
-         * @breif Adds a child node on the right side;
-         * @param left The pointer to the node to add.
-         */
-        void addRight(Node<T> * right);
-
-        /**
-         * @breif Sets the child node on the right side;
-         * @param right The pointer to the node to add.
-         */
-        void setRight(Node<T> * right);
-
-        /**
-         * @breif Determines wheter Node is a left Node.
+         * @breif Determines wheter Node is a left Node, it doesn't mean it's
+         *        right.
          * @return  True if left Node.
          */
         bool isLeft(void);
 
         /**
-         * @breif Determines wheter Node is a right Node.
+         * @breif Determines wheter Node is a right Node, it doesn't mean is
+         *        left.
          * @return  True if right Node.
          */
         bool isRight(void);
+
+        /**
+         * @breif Determines wheter Node has a Parent Node.
+         * @return  True if has parent Node.
+         */
+        bool hasParent(void);
+
+        /**
+         * @breif Determines wheter Node has a left Node.
+         * @return  True if has left Node.
+         */
+        bool hasLeft(void);
+
+        /**
+         * @breif Determines wheter Node has a right Node.
+         * @return  True if has right Node.
+         */
+        bool hasRight(void);
 };
 
 
-/******************************
- *                            *
- *  THE CLASS IMPLEMENTATION  *
- *                            *
- ******************************/
+/******************************************************************************
+ *                                                                           **
+ * CLASS IMPLEMENTATION                                                      **
+ *                                                                           **
+ ******************************************************************************/
 
 template<typename T>
 Node<T>::Node(int key, T data) {
-    this->key = key;
-    this->data = data;
-    this->parent = NULL;
-    this->left = NULL;
-    this->right = NULL;
-    this->color = RED;
+    this->setKey(key);
+    this->setData(data);
+
+    this->setMultiplicity(1);
+    this->setColor(RED);
 }
 
 template<typename T>
 Node<T>::Node(int key, T data, Node<T> * parent) {
-    this->key = key;
-    this->data = data;
-    this->parent = parent;
-    this->left = NULL;
-    this->right = NULL;
-    this->color = RED;
-    this->multiplicity = 1;
+    this->setKey(key);
+    this->setData(data);
+    this->setParent(parent);
+
+    this-setMultiplicity(1);
+    this->setColor(RED);
 }
 
 
 template<typename T>
 Node<T>::~Node(void) {
-    int a = 1;
+    // REMOVE ALL REFERENCES
+    this->setParent(NULL);
+    this->setLeft(NULL);
+    this->setRight(NULL);
+    // REMOVE ALL ELEMENTS**
+    while(this->remove() != true) { ;}
 }
+
+/******************************************************************************
+ *                                                                           **
+ * GETTERS                                                                   **
+ *                                                                           **
+ ******************************************************************************/
 
 template<typename T>
 int Node<T>::getKey(void) {
@@ -255,72 +322,113 @@ Colors Node<T>::getColor(void) {
     return this->color;
 }
 
-template<typename T>
-void Node<T>::recolor(void) {
-    if (this->color == RED) this->color = BLACK;
-    else this->color = RED;
-}
+/******************************************************************************
+ *                                                                           **
+ * SETTERS                                                                   **
+ *                                                                           **
+ ******************************************************************************/
 
-template<typename T>
-void Node<T>::recolor(Colors c) {
-    this->color = c;
-}
+ template<typename T>
+ void Node<T>::setKey(int key) {
+     this->key = key;
+ }
+
+ template<typename T>
+ void Node<T>::setData(T data) {
+     this->data = data;
+ }
+
+ template<typename T>
+ void Node<T>::setMultiplicity(int multiplicity) {
+     this->multiplicity = multiplicity;
+ }
+
+ template<typename T>
+ void Node<T>::setParent(Node<T> * node) {
+     this->parent = node;
+ }
+
+ template<typename T>
+ void Node<T>::setLeft(Node<T> * node) {
+     node->setParent(this);
+     this->left = node;
+ }
+
+ template<typename T>
+ void Node<T>::setRight(Node<T> * node) {
+     node->setParent(this);
+     this->right = node;
+ }
+
+ template<typename T>
+ void Node<T>::setColor(Colors color) {
+     this->color = color;
+ }
+
+/******************************************************************************
+ *                                                                           **
+ * OTHER METHODS                                                             **
+ *                                                                           **
+ ******************************************************************************/
 
 template<typename T>
 void Node<T>::add(void) {
-    ++this->multiplicity;
+    //this->setMultiplicity(this->getMultiplicity()+1);
+    // Shouldn't be below 0, if lesser or equal to 0, then value after adding
+    // is 1
+    int value = this->getMultiplicity() <= 0? 1: this->getMultiplicity() + 1;
+    this->setMultiplicity(value);
 }
 
 template<typename T>
 bool Node<T>::remove(void) {
-    bool empty = false;
-    --this->multiplicity;
-    if (this->multiplicity == 0) {
-        empty = true;
-    }
+    // Shouldn't be lesser than 0.
+    int value = this->getMultiplicity() <= 0? 0: this->getMultiplicity() - 1;
+    this->setMultiplicity(value);
+    bool empty = this->getMultiplicity() <= 0? true: false;
     return empty;
 }
 
 template<typename T>
-const T * Node<T>::read(void) {
-    return this->data;
-}
-
-template<typename T>
-void Node<T>::addLeft(Node<T> * left) {
-    if (this->left == NULL) this->left = left;
-}
-
-template<typename T>
-void Node<T>::setLeft(Node<T> * left) {
-    this->left = left;
-}
-
-template<typename T>
-void Node<T>::addRight(Node<T> * right) {
-    if (this->right == NULL) this->right = right;
-}
-
-template<typename T>
-void Node<T>::setRight(Node<T> * right) {
-    this->right = right;
+bool Node<T>::isParent(void) {
+    return this->hasLeft() || this->hasRight();
 }
 
 template<typename T>
 bool Node<T>::isLeft(void) {
-    return this->parent->left == this;
+    // Is neither left or right, then is-Not-Left, not meaning it's right
+    if (this->getParent() == NULL) return false;
+
+    // NULL shouldn't be left.
+    if (this->getParent()->getLeft() == NULL) return false;
+
+    return this->getParent()->getLeft() == this;
 }
 
 template<typename T>
 bool Node<T>::isRight(void) {
-    return this->parent->right == this;
+    // Is neither left or right, then is-Not-Right, not meaning it's left
+    if (this->getParent() == NULL) return false;
+
+    // NULL shouldn't be right.
+    if (this->getParent()->getRight() == NULL) return false;
+
+    return this->getParent()->getRight() == this;
 }
 
-int compareKeys(int * leftKey, int * rightKey) {
-    if (leftKey < rightKey) return -1;
-    else if (leftKey > rightKey) return 1;
-    else if (leftKey == rightKey) return 0;
-    else return 0;
+template<typename T>
+bool Node<T>::hasParent(void) {
+    return this->getParent() != NULL;
+}
+
+template<typename T>
+bool Node<T>::hasLeft(void) {
+    return this->getLeft() != NULL;
+}
+
+template<typename T>
+bool Node<T>::hasRight(void) {
+    return this->getRight() != NULL;
 }
 
 #endif
