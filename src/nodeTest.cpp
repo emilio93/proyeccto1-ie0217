@@ -16,6 +16,11 @@ string whichColor(Node<T> * node) {
 }
 
 template<typename T>
+/**
+ * @breif Prints all the properties a Node has.
+ * @param node    The node of which we are printing its properties.
+ * @param varName The name of the variable containing the node.
+ */
 void printProprerties(Node<T> * node,string varName) {
     if (node == NULL) return;//wont print a NULL Node, if that even makes sense.
     cout << "Printing the properties of " << varName << endl;
@@ -30,7 +35,7 @@ void printProprerties(Node<T> * node,string varName) {
 }
 
 /**
- * @breif Node tests.
+ * @breif Node tests. Tries to ensure the class works correctly.
  */
 int main(void) {
     Node<string> * node1 = new Node<string>(1,"foo");
