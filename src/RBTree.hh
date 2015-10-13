@@ -228,17 +228,6 @@ class RBTree{
         Node<T> * uncle(Node<T> * node);
 
 
-
-
-
-
-
-
-
-
-
-
-
         /**
          * @breif Inserts an element into the tree, indicates if
          *        data was inserted correctly by returning true.
@@ -247,12 +236,12 @@ class RBTree{
          * @param  data The data to insert.
          */
         bool insert(Node<T> * node);
-        bool insert(RBTree * rbt, Node<T> * node);
-        void insertCase1(RBTree * rbt, Node<T> * node);
-        void insertCase2(RBTree * rbt, Node<T> * node);
-        void insertCase3(RBTree * rbt, Node<T> * node);
-        void insertCase4(RBTree * rbt, Node<T> * node);
-        void insertCase5(RBTree * rbt, Node<T> * node);
+        bool insert(int key, T data);
+        void insertCase1(Node<T> * node);
+        void insertCase2(Node<T> * node);
+        void insertCase3(Node<T> * node);
+        void insertCase4(Node<T> * node);
+        void insertCase5(Node<T> * node);
 
 
 
@@ -308,8 +297,7 @@ void RBTree<T>::replaceNode(Node<T> * oldNode, Node<T> * newNode) {
     if (!oldNode->hasParent()) {
         this->setRoot(newNode);
         newNode->setParent(NULL);
-    }
-    else {
+    } else {
         if (oldNode->isLeft()) {
             oldNode->getParent()->setLeft(newNode);
         } else if (oldNode->isRight()) {
@@ -374,8 +362,10 @@ bool RBTree<T>::rule1(Node<T> * node) {
     a = node->getColor() == RED || node->getColor() == BLACK;
     b = true;
     c = true;
-    if (node->hasLeft()) { b = this->rule1(node->getLeft()); }
+    //cout<<node<<endl;
+    //cout<<node->getLeft()<<endl;
     if (node->hasRight()) { c = this->rule1(node->getRight()); }
+    if (node->hasLeft()) { b = this->rule1(node->getLeft()); }
     return a && b && c;
 }
 
@@ -570,7 +560,7 @@ T RBTree<T>::extract(int key) {
  template<typename T>
  Node<T> * RBTree<T>::grandpa(Node<T> * node) {
      Node<T> * grandpa = NULL;
-     if (node->hasParent() && node->getPrent()->hasParent()) {
+     if (node->hasParent() && node->getParent()->hasParent()) {
         grandpa = node->getParent()->getParent();
      }
      return grandpa;
@@ -595,96 +585,104 @@ T RBTree<T>::extract(int key) {
  *                                                                           **
  ******************************************************************************/
 
-/*
-template<typename T>
-bool RBTree<T>::insert(Node<T> * node) {
-    return this->insert(this, node);
-}
+ template<typename T>
+ bool RBTree<T>::insert(int key, T data) {
+     return this->insert(new Node<T>(key,data));
+ }
 
 template<typename T>
 bool RBTree<T>::insert(Node<T> * node) {
-    if (rbt->root == NULL) {
-        rbt->root = node;
-    }
-    else {
-        Node<T> * rbtRoot = rbt->root;
+    if (this->root == NULL) {
+        this->root = node;
+    } else {
+        Node<T> * root = this->getRoot();
+
+        //add where it belongs as if this was a bst
         while (true) {
-            //replace
-            if (node->getKey() == rbtRoot->getKey()) {
-                rbtRoot->add();
-                return true;
-            } else if (node->getKey() < rbtRoot->getKey()) {
-                if (rbtRoot->getLeft() == NULL) {
-                    rbtRoot->setLeft(node);
-                    break;
+            if (node->getKey() == root->getKey()) {
+                if (node->getData() == root->getData()) {
+                    root->add();
+                    return true;
                 } else {
-                    rbtRoot = rbtRoot->getLeft();
+                    return false;
+                }
+            } else if (node->getKey() < root->getKey()) {
+                if (root->hasLeft()) {
+                    root = root->getLeft();
+                } else {
+                    root->setLeft(node);
+                    break;
                 }
             } else {
-                if (rbtRoot->getRight() == NULL) {
-                    rbtRoot->setRight(node);
-                    break;
+                if (root->hasRight()) {
+                    root = root->getRight();
                 } else {
-                    rbtRoot = rbtRoot->getRight();
+                    root->setRight(node);
+                    break;
                 }
             }
         }
+
         if (node->getParent()->isLeft()) {
-            node->getParent()->getParent()->setLeft(rbtRoot);
-        } else {
-            node->getParent()->getParent()->setRight(rbtRoot);
+            this->grandpa(node)->setLeft(root);
+        } else if (node->getParent()->isRight()) {
+            this->grandpa(node)->setRight(root);
         }
     }
-    this->insertCase1(rbt, node);
-    return rule1() && rule2() && rule4() && rule5();
+    this->insertCase1(node);
+    return rules();
 }
 
 template<typename T>
 void RBTree<T>::insertCase1(Node<T> * node) {
-    if (node->getParent() == NULL) node->recolor(BLACK);
-    else insertCase2(rbt, node);
+    if (!node->hasParent()) {
+        node->setColor(BLACK);
+    } else {
+        this->insertCase2(node);
+    }
 }
 
 template<typename T>
 void RBTree<T>::insertCase2(Node<T> * node) {
-    if (node->getParent()->getColor() == BLACK) return;
-    else insertCase3(rbt, node);
+    if (node->getParent()->getColor() == BLACK) {
+        return;
+    } else {
+        this->insertCase3(node);
+    }
 }
 
 template<typename T>
 void RBTree<T>::insertCase3(Node<T> * node) {
     if (this->uncle(node)->getColor() == RED) {
-        node->getParent()->recolor(BLACK);
-        this->uncle(node)->recolor(BLACK);
-        this->grandpa(node)->recolor(RED);
-        this->insertCase1(rbt, this->grandpa(node));
+        node->getParent()->setColor(BLACK);
+        this->uncle(node)->setColor(BLACK);
+        this->grandpa(node)->setColor(RED);
+        this->insertCase1(this->grandpa(node));
     } else {
-        insertCase4(rbt, node);
+        insertCase4(node);
     }
 }
 
 template<typename T>
 void RBTree<T>::insertCase4(Node<T> * node) {
-    if (node == node->getParent()->getRight() && node->getParent() == this->grandpa(node)->getLeft()) {
-        rotateLeft(rbt, node->getParent());
+    if (node->isRight() && node->getParent()->isLeft()) {
+        rotateLeft(node->getParent());
         node = node->getLeft();
-    } else if (node == node->getParent()->getLeft() && node->getParent() == this->grandpa(node)->getRight()) {
-        rotateRight(rbt, node->getParent());
+    } else if (node->isLeft() && node->getParent()->isRight()) {
+        rotateRight(node->getParent());
         node = node->getRight();
     }
-    insertCase5(rbt, node);
+    insertCase5(node);
 }
 
 template<typename T>
 void RBTree<T>::insertCase5(Node<T> * node) {
-    node->getParent()->recolor(BLACK);
-    this->grandpa(node)->recolor(RED);
-    if (node == node->getParent()->getLeft() && node->getParent() == grandpa(node)->getLeft()) {
-        rotateRight(rbt, grandpa(node));
+    node->getParent()->setColor(BLACK);
+    this->grandpa(node)->setColor(RED);
+    if (node->isLeft() && node->getParent()->isLeft()) {
+        rotateRight(this->grandpa(node));
     } else {
-        rotateLeft(rbt, this->grandpa(node));
+        rotateLeft(this->grandpa(node));
     }
 }
-
-*/
 #endif

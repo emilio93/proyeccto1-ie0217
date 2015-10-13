@@ -40,6 +40,26 @@ void printProprerties(Node<T> * node,string varName) {
  */
 int main(void) {
     RBTree<string> * rbt = new RBTree<string>(5, "hola");
+    cout << "rbt created, 5 added" << endl;
+    rbt->insert(6,"soy 6");
+    cout << "6 added" << endl;
+    rbt->insert(4,"soy 4");
+    cout << "4 added" << endl;
+    rbt->insert(3,"soy 3");
+    cout << "3 added" << endl;
+    rbt->insert(2,"soy 2");
+    cout << "2 added" << endl;
+    rbt->insert(1,"soy 1");
+    cout << "1 added" << endl;
+
+    printProprerties(rbt->getRoot(),"root");
+    printProprerties(rbt->getRoot()->getLeft(),"roots left");
+    printProprerties(rbt->getRoot()->getRight(),"roots right");
+    printProprerties(rbt->getRoot()->getLeft()->getLeft(),"roots lefts left");
+    printProprerties(rbt->getRoot()->getLeft()->getRight(),"roots lefts right");
+    printProprerties(rbt->getRoot()->getLeft()->getRight(),"roots lefts right");
+    printProprerties(rbt->getRoot()->getLeft()->getLeft()->getLeft(),"roots lefts lefts left");
+    /*
     Node<string> * root = rbt->getRoot();
     Node<string> * rootLeft = new Node<string>(3, "soy 3");
     Node<string> * rootRight = new Node<string>(6, "soy 6");
@@ -53,7 +73,7 @@ int main(void) {
 
     rootLeft->setLeft(leftLeft);
     rootLeft->setRight(leftRight);
-
+    */
     /* tree structure now
                      |---------root-------|
             |----rootLeft----|         rootRight
@@ -61,6 +81,7 @@ int main(void) {
      */
 
     //ROTATION TEST
+    /*
     printProprerties(root, "root");
     printProprerties(rootLeft, "rootLeft");
     printProprerties(rootRight, "rootRight");
@@ -74,12 +95,13 @@ int main(void) {
     }
 
     rbt->rotateRight(root);
-
+    */
     /* tree structure now
                      |---------rootLeft-------|
                  leftLeft                 |----rootLeft----|
                                       leftRight        rootRight
      */
+    /*
     cout<<endl<<"Rotated right"<<endl;
     printProprerties(root, "root");
     printProprerties(rootLeft, "rootLeft");
@@ -92,7 +114,7 @@ int main(void) {
     } else {
         cout << "Tree DOESN'T follow the rules." << endl;
     }
-
+*/
 
 
 }

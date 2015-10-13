@@ -345,17 +345,29 @@ Colors Node<T>::getColor(void) {
 
  template<typename T>
  void Node<T>::setParent(Node<T> * node) {
+     if (node == NULL) {
+         this->parent = NULL;
+         return;
+     }
      this->parent = node;
  }
 
  template<typename T>
  void Node<T>::setLeft(Node<T> * node) {
+     if (node == NULL) {
+         this->left = NULL;
+         return;
+     }
      node->setParent(this);
      this->left = node;
  }
 
  template<typename T>
  void Node<T>::setRight(Node<T> * node) {
+     if (node == NULL) {
+         this->right = NULL;
+         return;
+     }
      node->setParent(this);
      this->right = node;
  }
