@@ -59,62 +59,12 @@ int main(void) {
     printProprerties(rbt->getRoot()->getLeft()->getRight(),"roots lefts right");
     printProprerties(rbt->getRoot()->getLeft()->getRight(),"roots lefts right");
     printProprerties(rbt->getRoot()->getLeft()->getLeft()->getLeft(),"roots lefts lefts left");
-    /*
-    Node<string> * root = rbt->getRoot();
-    Node<string> * rootLeft = new Node<string>(3, "soy 3");
-    Node<string> * rootRight = new Node<string>(6, "soy 6");
-    Node<string> * leftLeft = new Node<string>(2, "soy 2");
-    Node<string> * leftRight = new Node<string>(4, "soy 4");
-    rootLeft->setColor(BLACK);
-    rootRight->setColor(BLACK);
 
-    root->setLeft(rootLeft);
-    root->setRight(rootRight);
+    cout << endl << "min value is: " << rbt->first()->getKey() << " and it's data is: " << rbt->first()->getData() << endl;
+    cout << endl << "next min value is: " << rbt->next(rbt->first())->getKey() << " and it's data is: " << rbt->next(rbt->first())->getData() << endl;
 
-    rootLeft->setLeft(leftLeft);
-    rootLeft->setRight(leftRight);
-    */
-    /* tree structure now
-                     |---------root-------|
-            |----rootLeft----|         rootRight
-        leftLeft         leftRight
-     */
-
-    //ROTATION TEST
-    /*
-    printProprerties(root, "root");
-    printProprerties(rootLeft, "rootLeft");
-    printProprerties(rootRight, "rootRight");
-    printProprerties(leftLeft, "leftLeft");
-    printProprerties(leftRight, "leftRight");
-
-    if (rbt->rules()) {
-        cout << "Tree follows the rules." << endl;
-    } else {
-        cout << "Tree DOESN'T follow the rules." << endl;
-    }
-
-    rbt->rotateRight(root);
-    */
-    /* tree structure now
-                     |---------rootLeft-------|
-                 leftLeft                 |----rootLeft----|
-                                      leftRight        rootRight
-     */
-    /*
-    cout<<endl<<"Rotated right"<<endl;
-    printProprerties(root, "root");
-    printProprerties(rootLeft, "rootLeft");
-    printProprerties(rootRight, "rootRight");
-    printProprerties(leftLeft, "leftLeft");
-    printProprerties(leftRight, "leftRight");
-
-    if (rbt->rules()) {
-        cout << "Tree follows the rules." << endl;
-    } else {
-        cout << "Tree DOESN'T follow the rules." << endl;
-    }
-*/
+    cout << endl << "max value is: " << rbt->last()->getKey() << " and it's data is: " << rbt->last()->getData() << endl;
+    cout << endl << "previous max value is: " << rbt->previous(rbt->last())->getKey() << " and it's data is: " << rbt->previous(rbt->last())->getData() << endl;
 
 
 }

@@ -242,15 +242,6 @@ class RBTree{
         void insertCase3(Node<T> * node);
         void insertCase4(Node<T> * node);
         void insertCase5(Node<T> * node);
-
-
-
-        /**
-         * @breif Removes an element from the tree, this will remove the element
-         * @param  data Data to search and remove.
-         * @return      True if element was removed.
-         */
-        bool remove(int key);
 };
 
 /******************************************************************************
@@ -362,8 +353,6 @@ bool RBTree<T>::rule1(Node<T> * node) {
     a = node->getColor() == RED || node->getColor() == BLACK;
     b = true;
     c = true;
-    //cout<<node<<endl;
-    //cout<<node->getLeft()<<endl;
     if (node->hasRight()) { c = this->rule1(node->getRight()); }
     if (node->hasLeft()) { b = this->rule1(node->getLeft()); }
     return a && b && c;
