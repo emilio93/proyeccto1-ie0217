@@ -1,9 +1,9 @@
 CC = g++
-OBJS = nodeTest.cpp
+OBJS = test.cpp
 DEBUG = -g
 CFLAGS = -Wall -c $(DEBUG) -pedantic
 LFLAGS = -Wall $(DEBUG) -pedantic
-TARGET = nodeTest
+TARGET = test
 
 $(TARGET) : $(OBJS)
 	$(CC) $(LFLAGS) $(OBJS) -o $(TARGET)

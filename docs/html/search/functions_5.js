@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['last',['last',['../class_r_b_tree.html#ad559890dcf3ef921173e63da2fdb0a22',1,'RBTree::last(Node&lt; T &gt; *node)'],['../class_r_b_tree.html#ab381a71f2306578d907f31b408da0761',1,'RBTree::last()']]],
-  ['leftchild',['leftChild',['../class_r_b_tree.html#a0ebb4015ec0066a0740dada8c7083921',1,'RBTree']]]
+  ['insert',['insert',['../class_r_b_tree.html#a8f67ba964a14d252ff6851a46576399e',1,'RBTree']]],
+  ['isleft',['isLeft',['../class_node.html#a614f99e8df6aebb91c9e17e204a8c170',1,'Node']]],
+  ['isparent',['isParent',['../class_node.html#ab0a293cb425b4f8be5f2d8efb08df1e8',1,'Node']]],
+  ['isright',['isRight',['../class_node.html#ac8eeb9f7717618589d939491d87a04bf',1,'Node']]]
 ];

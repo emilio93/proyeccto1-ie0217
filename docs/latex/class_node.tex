@@ -45,9 +45,17 @@ void \hyperlink{class_node_aef85f7c8d30881449f35ac5fda836438}{add} (void)
 \item 
 bool \hyperlink{class_node_a2f77a48dceae8b8268826483f9671e1a}{remove} (void)
 \item 
+bool \hyperlink{class_node_ab0a293cb425b4f8be5f2d8efb08df1e8}{is\+Parent} (void)
+\item 
 bool \hyperlink{class_node_a614f99e8df6aebb91c9e17e204a8c170}{is\+Left} (void)
 \item 
 bool \hyperlink{class_node_ac8eeb9f7717618589d939491d87a04bf}{is\+Right} (void)
+\item 
+bool \hyperlink{class_node_af2f59b20b80ab306d379c785b3e95325}{has\+Parent} (void)
+\item 
+bool \hyperlink{class_node_aa03aef3064a78fd8de1d421bdbcdef57}{has\+Left} (void)
+\item 
+bool \hyperlink{class_node_ae7f5a8aff0b15f311397f9588a84101b}{has\+Right} (void)
 \end{DoxyCompactItemize}
 
 
@@ -175,6 +183,36 @@ The parent node.
 Returns right child node. \begin{DoxyReturn}{Returns}
 The right child node. 
 \end{DoxyReturn}
+\hypertarget{class_node_aa03aef3064a78fd8de1d421bdbcdef57}{}\index{Node@{Node}!has\+Left@{has\+Left}}
+\index{has\+Left@{has\+Left}!Node@{Node}}
+\subsubsection[{has\+Left(void)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf Node}$<$ T $>$\+::has\+Left (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{class_node_aa03aef3064a78fd8de1d421bdbcdef57}
+Determines wheter \hyperlink{class_node}{Node} has a left \hyperlink{class_node}{Node}. \begin{DoxyReturn}{Returns}
+True if has left \hyperlink{class_node}{Node}. 
+\end{DoxyReturn}
+\hypertarget{class_node_af2f59b20b80ab306d379c785b3e95325}{}\index{Node@{Node}!has\+Parent@{has\+Parent}}
+\index{has\+Parent@{has\+Parent}!Node@{Node}}
+\subsubsection[{has\+Parent(void)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf Node}$<$ T $>$\+::has\+Parent (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{class_node_af2f59b20b80ab306d379c785b3e95325}
+Determines wheter \hyperlink{class_node}{Node} has a Parent \hyperlink{class_node}{Node}. \begin{DoxyReturn}{Returns}
+True if has parent \hyperlink{class_node}{Node}. 
+\end{DoxyReturn}
+\hypertarget{class_node_ae7f5a8aff0b15f311397f9588a84101b}{}\index{Node@{Node}!has\+Right@{has\+Right}}
+\index{has\+Right@{has\+Right}!Node@{Node}}
+\subsubsection[{has\+Right(void)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf Node}$<$ T $>$\+::has\+Right (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{class_node_ae7f5a8aff0b15f311397f9588a84101b}
+Determines wheter \hyperlink{class_node}{Node} has a right \hyperlink{class_node}{Node}. \begin{DoxyReturn}{Returns}
+True if has right \hyperlink{class_node}{Node}. 
+\end{DoxyReturn}
 \hypertarget{class_node_a614f99e8df6aebb91c9e17e204a8c170}{}\index{Node@{Node}!is\+Left@{is\+Left}}
 \index{is\+Left@{is\+Left}!Node@{Node}}
 \subsubsection[{is\+Left(void)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf Node}$<$ T $>$\+::is\+Left (
@@ -184,6 +222,16 @@ The right child node.
 )}\label{class_node_a614f99e8df6aebb91c9e17e204a8c170}
 Determines wheter \hyperlink{class_node}{Node} is a left \hyperlink{class_node}{Node}, it doesn\textquotesingle{}t mean it\textquotesingle{}s right. \begin{DoxyReturn}{Returns}
 True if left \hyperlink{class_node}{Node}. 
+\end{DoxyReturn}
+\hypertarget{class_node_ab0a293cb425b4f8be5f2d8efb08df1e8}{}\index{Node@{Node}!is\+Parent@{is\+Parent}}
+\index{is\+Parent@{is\+Parent}!Node@{Node}}
+\subsubsection[{is\+Parent(void)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf Node}$<$ T $>$\+::is\+Parent (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{class_node_ab0a293cb425b4f8be5f2d8efb08df1e8}
+Determines wheter \hyperlink{class_node}{Node} is a Parent \hyperlink{class_node}{Node}, it has either left or right. \begin{DoxyReturn}{Returns}
+True if parent \hyperlink{class_node}{Node}. 
 \end{DoxyReturn}
 \hypertarget{class_node_ac8eeb9f7717618589d939491d87a04bf}{}\index{Node@{Node}!is\+Right@{is\+Right}}
 \index{is\+Right@{is\+Right}!Node@{Node}}

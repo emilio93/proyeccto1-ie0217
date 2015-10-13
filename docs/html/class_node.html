@@ -132,10 +132,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aef85f7c8d30881449f35ac5fda836438"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f77a48dceae8b8268826483f9671e1a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a2f77a48dceae8b8268826483f9671e1a">remove</a> (void)</td></tr>
 <tr class="separator:a2f77a48dceae8b8268826483f9671e1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0a293cb425b4f8be5f2d8efb08df1e8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#ab0a293cb425b4f8be5f2d8efb08df1e8">isParent</a> (void)</td></tr>
+<tr class="separator:ab0a293cb425b4f8be5f2d8efb08df1e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a614f99e8df6aebb91c9e17e204a8c170"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a614f99e8df6aebb91c9e17e204a8c170">isLeft</a> (void)</td></tr>
 <tr class="separator:a614f99e8df6aebb91c9e17e204a8c170"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8eeb9f7717618589d939491d87a04bf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#ac8eeb9f7717618589d939491d87a04bf">isRight</a> (void)</td></tr>
 <tr class="separator:ac8eeb9f7717618589d939491d87a04bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2f59b20b80ab306d379c785b3e95325"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#af2f59b20b80ab306d379c785b3e95325">hasParent</a> (void)</td></tr>
+<tr class="separator:af2f59b20b80ab306d379c785b3e95325"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa03aef3064a78fd8de1d421bdbcdef57"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#aa03aef3064a78fd8de1d421bdbcdef57">hasLeft</a> (void)</td></tr>
+<tr class="separator:aa03aef3064a78fd8de1d421bdbcdef57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7f5a8aff0b15f311397f9588a84101b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#ae7f5a8aff0b15f311397f9588a84101b">hasRight</a> (void)</td></tr>
+<tr class="separator:ae7f5a8aff0b15f311397f9588a84101b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
@@ -391,6 +399,63 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="aa03aef3064a78fd8de1d421bdbcdef57"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_node.html">Node</a>&lt; T &gt;::hasLeft </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Determines wheter <a class="el" href="class_node.html">Node</a> has a left <a class="el" href="class_node.html">Node</a>. </p><dl class="section return"><dt>Returns</dt><dd>True if has left <a class="el" href="class_node.html">Node</a>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af2f59b20b80ab306d379c785b3e95325"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_node.html">Node</a>&lt; T &gt;::hasParent </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Determines wheter <a class="el" href="class_node.html">Node</a> has a Parent <a class="el" href="class_node.html">Node</a>. </p><dl class="section return"><dt>Returns</dt><dd>True if has parent <a class="el" href="class_node.html">Node</a>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae7f5a8aff0b15f311397f9588a84101b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_node.html">Node</a>&lt; T &gt;::hasRight </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Determines wheter <a class="el" href="class_node.html">Node</a> has a right <a class="el" href="class_node.html">Node</a>. </p><dl class="section return"><dt>Returns</dt><dd>True if has right <a class="el" href="class_node.html">Node</a>. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a614f99e8df6aebb91c9e17e204a8c170"></a>
 <div class="memitem">
 <div class="memproto">
@@ -407,6 +472,25 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 <p>Determines wheter <a class="el" href="class_node.html">Node</a> is a left <a class="el" href="class_node.html">Node</a>, it doesn't mean it's right. </p><dl class="section return"><dt>Returns</dt><dd>True if left <a class="el" href="class_node.html">Node</a>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab0a293cb425b4f8be5f2d8efb08df1e8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_node.html">Node</a>&lt; T &gt;::isParent </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Determines wheter <a class="el" href="class_node.html">Node</a> is a Parent <a class="el" href="class_node.html">Node</a>, it has either left or right. </p><dl class="section return"><dt>Returns</dt><dd>True if parent <a class="el" href="class_node.html">Node</a>. </dd></dl>
 
 </div>
 </div>
