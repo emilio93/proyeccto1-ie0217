@@ -163,498 +163,489 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <a class="code" href="class_node.html">Node&lt;T&gt;</a> * uncle(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node);</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keywordtype">bool</span> insert(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node);</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <span class="keywordtype">void</span> insertCase1(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node);</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="keywordtype">void</span> insertCase2(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node);</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <span class="keywordtype">void</span> insertCase3(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node);</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keywordtype">void</span> insertCase4(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node);</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keywordtype">void</span> insertCase5(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node);</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="keywordtype">bool</span> <span class="keyword">remove</span>(<span class="keywordtype">int</span> key);</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;};</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="keywordtype">bool</span> insert(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="keywordtype">bool</span> insert(<span class="keywordtype">int</span> key, T data);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="keywordtype">void</span> insertCase1(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="keywordtype">void</span> insertCase2(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <span class="keywordtype">void</span> insertCase3(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="keywordtype">void</span> insertCase4(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keywordtype">void</span> insertCase5(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;};</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="comment">/******************************************************************************</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="comment"> *                                                                           **</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="comment"> * CLASS IMPLEMENTATION                                                      **</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="comment"> *                                                                           **</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00254"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a743575c444246d79b343bf7f8090eb9f">  254</a></span>&#160;<a class="code" href="class_r_b_tree.html#a00a0aeb1b39260cb068efaa65797d6bc">RBTree&lt;T&gt;::RBTree</a>(<span class="keywordtype">int</span> key, T data) {</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <a class="code" href="class_node.html">Node&lt;T&gt;</a> * node = <span class="keyword">new</span> <a class="code" href="class_node.html">Node&lt;T&gt;</a>(key, data);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    node-&gt;<a class="code" href="class_node.html#a96c1038d58f6f7089271afe3fa3e9288">setColor</a>(BLACK);<span class="comment">//root element is BLACK</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    this-&gt;setRoot(node);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;}</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00261"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#afd8831000cdef5cd6215e17d0684f6f1">  261</a></span>&#160;<a class="code" href="class_r_b_tree.html#a00a0aeb1b39260cb068efaa65797d6bc">RBTree&lt;T&gt;::RBTree</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    node-&gt;<a class="code" href="class_node.html#a96c1038d58f6f7089271afe3fa3e9288">setColor</a>(BLACK);<span class="comment">//root element is BLACK</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    this-&gt;setRoot(node);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;}</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="comment">/******************************************************************************</span></div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="comment"> *                                                                           **</span></div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="comment"> * CLASS IMPLEMENTATION                                                      **</span></div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="comment"> *                                                                           **</span></div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00273"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a743575c444246d79b343bf7f8090eb9f">  273</a></span>&#160;<a class="code" href="class_r_b_tree.html#a00a0aeb1b39260cb068efaa65797d6bc">RBTree&lt;T&gt;::RBTree</a>(<span class="keywordtype">int</span> key, T data) {</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <a class="code" href="class_node.html">Node&lt;T&gt;</a> * node = <span class="keyword">new</span> <a class="code" href="class_node.html">Node&lt;T&gt;</a>(key, data);</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    node-&gt;<a class="code" href="class_node.html#a96c1038d58f6f7089271afe3fa3e9288">setColor</a>(BLACK);<span class="comment">//root element is BLACK</span></div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    this-&gt;setRoot(node);</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;}</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00280"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#afd8831000cdef5cd6215e17d0684f6f1">  280</a></span>&#160;<a class="code" href="class_r_b_tree.html#a00a0aeb1b39260cb068efaa65797d6bc">RBTree&lt;T&gt;::RBTree</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    node-&gt;<a class="code" href="class_node.html#a96c1038d58f6f7089271afe3fa3e9288">setColor</a>(BLACK);<span class="comment">//root element is BLACK</span></div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    this-&gt;setRoot(node);</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;}</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00286"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a00a0aeb1b39260cb068efaa65797d6bc">  286</a></span>&#160;<a class="code" href="class_r_b_tree.html#a00a0aeb1b39260cb068efaa65797d6bc">RBTree&lt;T&gt;::RBTree</a>(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    ;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;}</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00291"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#ac79abd8464ef7926dfd071f30c189e0e">  291</a></span>&#160;<a class="code" href="class_r_b_tree.html#ac79abd8464ef7926dfd071f30c189e0e">RBTree&lt;T&gt;::~RBTree</a>(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    ;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;}</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00296"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a64c300beb5a2e7bd312a3204d49d2d79">  296</a></span>&#160;<a class="code" href="class_node.html">Node&lt;T&gt;</a> * <a class="code" href="class_r_b_tree.html#a64c300beb5a2e7bd312a3204d49d2d79">RBTree&lt;T&gt;::getRoot</a>(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordflow">return</span> this-&gt;root;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;}</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00301"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#ab95534142bf0d1960d68dc56403794f3">  301</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_r_b_tree.html#ab95534142bf0d1960d68dc56403794f3">RBTree&lt;T&gt;::setRoot</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    this-&gt;root = node;</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;}</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00306"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a9fab96c10f78263a054cacc9d9b4b997">  306</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_r_b_tree.html#a9fab96c10f78263a054cacc9d9b4b997">RBTree&lt;T&gt;::replaceNode</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * oldNode, <a class="code" href="class_node.html">Node&lt;T&gt;</a> * newNode) {</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordflow">if</span> (!oldNode-&gt;<a class="code" href="class_node.html#af2f59b20b80ab306d379c785b3e95325">hasParent</a>()) {</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        this-&gt;setRoot(newNode);</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        newNode-&gt;<a class="code" href="class_node.html#a78162c98233ea6c275412a9ff0571260">setParent</a>(NULL);</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    }</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <span class="keywordflow">if</span> (oldNode-&gt;<a class="code" href="class_node.html#a614f99e8df6aebb91c9e17e204a8c170">isLeft</a>()) {</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            oldNode-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#a9afbeb2daea8798e71e9acc0967256a3">setLeft</a>(newNode);</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (oldNode-&gt;<a class="code" href="class_node.html#ac8eeb9f7717618589d939491d87a04bf">isRight</a>()) {</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            oldNode-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#a1cf0e5397a347fee789c4b57dfb7624a">setRight</a>(newNode);</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        }</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00267"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a00a0aeb1b39260cb068efaa65797d6bc">  267</a></span>&#160;<a class="code" href="class_r_b_tree.html#a00a0aeb1b39260cb068efaa65797d6bc">RBTree&lt;T&gt;::RBTree</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    ;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;}</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00272"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#ac79abd8464ef7926dfd071f30c189e0e">  272</a></span>&#160;<a class="code" href="class_r_b_tree.html#ac79abd8464ef7926dfd071f30c189e0e">RBTree&lt;T&gt;::~RBTree</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    ;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;}</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00277"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a64c300beb5a2e7bd312a3204d49d2d79">  277</a></span>&#160;<a class="code" href="class_node.html">Node&lt;T&gt;</a> * <a class="code" href="class_r_b_tree.html#a64c300beb5a2e7bd312a3204d49d2d79">RBTree&lt;T&gt;::getRoot</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordflow">return</span> this-&gt;root;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;}</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00282"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#ab95534142bf0d1960d68dc56403794f3">  282</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_r_b_tree.html#ab95534142bf0d1960d68dc56403794f3">RBTree&lt;T&gt;::setRoot</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    this-&gt;root = node;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;}</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00287"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a9fab96c10f78263a054cacc9d9b4b997">  287</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_r_b_tree.html#a9fab96c10f78263a054cacc9d9b4b997">RBTree&lt;T&gt;::replaceNode</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * oldNode, <a class="code" href="class_node.html">Node&lt;T&gt;</a> * newNode) {</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keywordflow">if</span> (!oldNode-&gt;<a class="code" href="class_node.html#af2f59b20b80ab306d379c785b3e95325">hasParent</a>()) {</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        this-&gt;setRoot(newNode);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        newNode-&gt;<a class="code" href="class_node.html#a78162c98233ea6c275412a9ff0571260">setParent</a>(NULL);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keywordflow">if</span> (oldNode-&gt;<a class="code" href="class_node.html#a614f99e8df6aebb91c9e17e204a8c170">isLeft</a>()) {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            oldNode-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#a9afbeb2daea8798e71e9acc0967256a3">setLeft</a>(newNode);</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (oldNode-&gt;<a class="code" href="class_node.html#ac8eeb9f7717618589d939491d87a04bf">isRight</a>()) {</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            oldNode-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#a1cf0e5397a347fee789c4b57dfb7624a">setRight</a>(newNode);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        }</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    }</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordflow">if</span> (newNode != NULL) {</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        newNode-&gt;<a class="code" href="class_node.html#a78162c98233ea6c275412a9ff0571260">setParent</a>(oldNode-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>());</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    }</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;}</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="comment">/******************************************************************************</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="comment"> *                                                                           **</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="comment"> * ROTATIONS                                                                 **</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<span class="comment"> *                                                                           **</span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00311"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a9c273ccbb0be52e1342335df9d27c3fd">  311</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_r_b_tree.html#a9c273ccbb0be52e1342335df9d27c3fd">RBTree&lt;T&gt;::rotateLeft</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * rootPivot) {</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <a class="code" href="class_node.html">Node&lt;T&gt;</a> * right = rootPivot-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>();</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    this-&gt;replaceNode(rootPivot, right);</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    rootPivot-&gt;<a class="code" href="class_node.html#a1cf0e5397a347fee789c4b57dfb7624a">setRight</a>(right-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>());</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keywordflow">if</span> (right-&gt;<a class="code" href="class_node.html#aa03aef3064a78fd8de1d421bdbcdef57">hasLeft</a>()) {</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        right-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>()-&gt;<a class="code" href="class_node.html#a78162c98233ea6c275412a9ff0571260">setParent</a>(rootPivot);</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    }</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordflow">if</span> (newNode != NULL) {</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        newNode-&gt;<a class="code" href="class_node.html#a78162c98233ea6c275412a9ff0571260">setParent</a>(oldNode-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>());</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    }</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;}</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="comment">/******************************************************************************</span></div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="comment"> *                                                                           **</span></div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<span class="comment"> * ROTATIONS                                                                 **</span></div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="comment"> *                                                                           **</span></div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00331"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a9c273ccbb0be52e1342335df9d27c3fd">  331</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_r_b_tree.html#a9c273ccbb0be52e1342335df9d27c3fd">RBTree&lt;T&gt;::rotateLeft</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * rootPivot) {</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <a class="code" href="class_node.html">Node&lt;T&gt;</a> * right = rootPivot-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>();</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    this-&gt;replaceNode(rootPivot, right);</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    rootPivot-&gt;<a class="code" href="class_node.html#a1cf0e5397a347fee789c4b57dfb7624a">setRight</a>(right-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>());</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keywordflow">if</span> (right-&gt;<a class="code" href="class_node.html#aa03aef3064a78fd8de1d421bdbcdef57">hasLeft</a>()) {</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        right-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>()-&gt;<a class="code" href="class_node.html#a78162c98233ea6c275412a9ff0571260">setParent</a>(rootPivot);</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    }</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    right-&gt;<a class="code" href="class_node.html#a9afbeb2daea8798e71e9acc0967256a3">setLeft</a>(rootPivot);</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    rootPivot-&gt;<a class="code" href="class_node.html#a78162c98233ea6c275412a9ff0571260">setParent</a>(right);</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;}</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00343"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a92bd8bf1b99ff9837b2888182c3819ce">  343</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_r_b_tree.html#a92bd8bf1b99ff9837b2888182c3819ce">RBTree&lt;T&gt;::rotateRight</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * rootPivot) {</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <a class="code" href="class_node.html">Node&lt;T&gt;</a> * left = rootPivot-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>();</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    this-&gt;replaceNode(rootPivot, left);</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    rootPivot-&gt;<a class="code" href="class_node.html#a9afbeb2daea8798e71e9acc0967256a3">setLeft</a>(left-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>());</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="keywordflow">if</span> (left-&gt;<a class="code" href="class_node.html#ae7f5a8aff0b15f311397f9588a84101b">hasRight</a>()) {</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        left-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>()-&gt;<a class="code" href="class_node.html#a78162c98233ea6c275412a9ff0571260">setParent</a>(rootPivot);</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    }</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    left-&gt;<a class="code" href="class_node.html#a1cf0e5397a347fee789c4b57dfb7624a">setRight</a>(rootPivot);</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    rootPivot-&gt;<a class="code" href="class_node.html#a78162c98233ea6c275412a9ff0571260">setParent</a>(left);</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;}</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="comment">/******************************************************************************</span></div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="comment"> *                                                                           **</span></div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="comment"> * TREE RULES                                                                **</span></div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="comment"> *  1 - A node is either red or black.                                       **</span></div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;<span class="comment"> *  2 - The root is black. This rule is sometimes omitted. Since the root    **</span></div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;<span class="comment"> *      can always be changed from red to black, but not necessarily vice    **</span></div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;<span class="comment"> *      versa, this rule has little effect on analysis.                      **</span></div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="comment"> *  3 - All leaves (NIL) are black.                                          **</span></div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="comment"> *  4 - If a node is red, then both its children are black.                  **</span></div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="comment"> *  5 - Every path from a given node to any of its descendant NIL nodes      **</span></div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;<span class="comment"> *      contains the same number of black nodes. The uniform number of       **</span></div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="comment"> *      black nodes in the paths from root to leaves is called the           **</span></div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="comment"> *      black-height of the red–black tree.                                  **</span></div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="comment"> *                                                                           **</span></div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00371"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a2c1f95cd704de8c87f60dd02d54c3b04">  371</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_r_b_tree.html#ac5ef6ef34686c9e1036c35d3bf56f8cf">RBTree&lt;T&gt;::rule1</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <span class="keywordtype">bool</span> a, b, c;</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    a = node-&gt;<a class="code" href="class_node.html#a9c209bbcd6a8c1e07914a0c6bea3a6f4">getColor</a>() == RED || node-&gt;<a class="code" href="class_node.html#a9c209bbcd6a8c1e07914a0c6bea3a6f4">getColor</a>() == BLACK;</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    b = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    c = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#aa03aef3064a78fd8de1d421bdbcdef57">hasLeft</a>()) { b = this-&gt;rule1(node-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>()); }</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#ae7f5a8aff0b15f311397f9588a84101b">hasRight</a>()) { c = this-&gt;rule1(node-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>()); }</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keywordflow">return</span> a &amp;&amp; b &amp;&amp; c;</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;}</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00382"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#ac5ef6ef34686c9e1036c35d3bf56f8cf">  382</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_r_b_tree.html#ac5ef6ef34686c9e1036c35d3bf56f8cf">RBTree&lt;T&gt;::rule1</a>() {</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="keywordflow">return</span> this-&gt;rule1(this-&gt;getRoot());</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;}</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00387"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a922765a4307e414802cb20bf9f405f7e">  387</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_r_b_tree.html#a922765a4307e414802cb20bf9f405f7e">RBTree&lt;T&gt;::rule2</a>() {</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="keywordflow">return</span> this-&gt;getRoot()-&gt;getColor() == BLACK;</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;}</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00392"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a140f3511962683d74d040f726d8554d4">  392</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_r_b_tree.html#acc448bf2bc24f8fdb83d293dca4f4810">RBTree&lt;T&gt;::rule4</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <span class="keywordflow">if</span> (node == NULL) {</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;<span class="comment">//pretty basic</span></div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    }</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keywordtype">bool</span> a, b, c;</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    a = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#a9c209bbcd6a8c1e07914a0c6bea3a6f4">getColor</a>() == RED) {</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        a = a &amp;&amp; node-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>()-&gt;<a class="code" href="class_node.html#a9c209bbcd6a8c1e07914a0c6bea3a6f4">getColor</a>() == BLACK;</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        a = a &amp;&amp; node-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>()-&gt;<a class="code" href="class_node.html#a9c209bbcd6a8c1e07914a0c6bea3a6f4">getColor</a>() == BLACK;</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        a = a &amp;&amp; node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#a9c209bbcd6a8c1e07914a0c6bea3a6f4">getColor</a>() == BLACK;</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    }</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#aa03aef3064a78fd8de1d421bdbcdef57">hasLeft</a>()) {</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        b = this-&gt;rule4(node-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>());</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    }</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#ae7f5a8aff0b15f311397f9588a84101b">hasRight</a>()) {</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        c = this-&gt;rule4(node-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>());</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    }</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <span class="keywordflow">return</span> a &amp;&amp; b &amp;&amp; c;</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;}</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00413"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#acc448bf2bc24f8fdb83d293dca4f4810">  413</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_r_b_tree.html#acc448bf2bc24f8fdb83d293dca4f4810">RBTree&lt;T&gt;::rule4</a>(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    <span class="keywordflow">return</span> this-&gt;rule4(this-&gt;getRoot());</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;}</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00418"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a8a776aabd7e674ad2cb97e9b67abcaad">  418</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_r_b_tree.html#ad37bc2fd3c7b14c5d49862d4a3377b76">RBTree&lt;T&gt;::rule5</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    <span class="keywordtype">int</span> pathCount = -1;<span class="comment">//the number of black nodes to get &#39;+here+&#39;</span></div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    <span class="keywordflow">return</span> this-&gt;rule5(node, 0, &amp;pathCount);</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;}</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00424"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#ae3e4ffd3d8b99d79daec0e95ed443bfe">  424</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_r_b_tree.html#ad37bc2fd3c7b14c5d49862d4a3377b76">RBTree&lt;T&gt;::rule5</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node, <span class="keywordtype">int</span> blackCount, <span class="keywordtype">int</span> * pathCount) {</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <span class="keywordtype">bool</span> a, b, c;</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    a = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    b = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    c = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#a9c209bbcd6a8c1e07914a0c6bea3a6f4">getColor</a>() == BLACK) {</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;        ++blackCount;</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    }</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    <span class="keywordflow">if</span> (node == NULL) {</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        <span class="keywordflow">if</span> (*pathCount == -1) {</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;            *pathCount = blackCount;</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (blackCount != *pathCount) {</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;            a = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;        }</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    }</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    <span class="keywordflow">if</span>(node != NULL) {</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;        b = this-&gt;rule5(node-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>(), blackCount, pathCount);</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;        c = this-&gt;rule5(node-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>(), blackCount, pathCount);</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    }</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    <span class="keywordflow">return</span> a &amp;&amp; b &amp;&amp; c;</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;}</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00447"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#ad37bc2fd3c7b14c5d49862d4a3377b76">  447</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_r_b_tree.html#ad37bc2fd3c7b14c5d49862d4a3377b76">RBTree&lt;T&gt;::rule5</a>(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    <span class="keywordflow">return</span> this-&gt;rule5(this-&gt;getRoot());</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;}</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00452"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a81a8300e35c048934b586935223abaff">  452</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_r_b_tree.html#a81a8300e35c048934b586935223abaff">RBTree&lt;T&gt;::rules</a>(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    <span class="keywordflow">return</span> this-&gt;rule1() &amp;&amp; this-&gt;rule2() &amp;&amp; this-&gt;rule4() &amp;&amp; this-&gt;rule5();</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;}</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;<span class="comment">/******************************************************************************</span></div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;<span class="comment"> *                                                                           **</span></div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;<span class="comment"> * MISC                                                                      **</span></div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;<span class="comment"> *                                                                           **</span></div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00463"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a9a006660b7780a180fc87f2f8c89d1c9">  463</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_r_b_tree.html#a9a006660b7780a180fc87f2f8c89d1c9">RBTree&lt;T&gt;::exists</a>(<span class="keywordtype">int</span> key) {</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    <a class="code" href="class_node.html">Node&lt;T&gt;</a> * node = this-&gt;root;</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    <span class="keywordflow">while</span> (node != NULL) {</div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;        <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#a5ff3a3dd66edef87867616d1bc44838f">getKey</a>() == key) {</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#a5ff3a3dd66edef87867616d1bc44838f">getKey</a>() &lt; key) {</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;            node = node-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>();</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;            node = node-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>();</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;        }</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    }</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;    <span class="keywordflow">return</span> node-&gt;<a class="code" href="class_node.html#ab83eb1cc81f91a5641693eb22712f8c8">getMultiplicity</a>();</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;}</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00478"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#ac21009120411c393b499893d6874370c">  478</a></span>&#160;T <a class="code" href="class_r_b_tree.html#ac21009120411c393b499893d6874370c">RBTree&lt;T&gt;::extract</a>(<span class="keywordtype">int</span> key) {</div>
-<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    <a class="code" href="class_node.html">Node&lt;T&gt;</a> * node = this-&gt;root;</div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;    <span class="keywordflow">while</span> (node != NULL) {</div>
-<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;        <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#a5ff3a3dd66edef87867616d1bc44838f">getKey</a>() == key) {</div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#a5ff3a3dd66edef87867616d1bc44838f">getKey</a>() == key &lt; 0) {</div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;            node = node-&gt;left;</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;            node = node-&gt;right;</div>
-<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;        }</div>
-<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;    }</div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;    T data = node-&gt;<a class="code" href="class_node.html#ad89031c2899fe91646652ce4c2e79ab6">getData</a>();</div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#a2f77a48dceae8b8268826483f9671e1a">remove</a>()) {</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;        <span class="comment">//this-&gt;delete(key);</span></div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    }</div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    <span class="keywordflow">return</span> data;</div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;}</div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;<span class="comment">/******************************************************************************</span></div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;<span class="comment"> *                                                                           **</span></div>
-<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;<span class="comment"> * RELATIONS                                                                 **</span></div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;<span class="comment"> *                                                                           **</span></div>
-<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
-<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;</div>
-<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160; <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00503"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a5c8cbef68755a4029cc2af88fd7f5d9f">  503</a></span>&#160; <a class="code" href="class_node.html">Node&lt;T&gt;</a> * <a class="code" href="class_r_b_tree.html#a5c8cbef68755a4029cc2af88fd7f5d9f">RBTree&lt;T&gt;::next</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
-<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;     <span class="keywordflow">if</span> (node == NULL) {</div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;         <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    right-&gt;<a class="code" href="class_node.html#a9afbeb2daea8798e71e9acc0967256a3">setLeft</a>(rootPivot);</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    rootPivot-&gt;<a class="code" href="class_node.html#a78162c98233ea6c275412a9ff0571260">setParent</a>(right);</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;}</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00323"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a92bd8bf1b99ff9837b2888182c3819ce">  323</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_r_b_tree.html#a92bd8bf1b99ff9837b2888182c3819ce">RBTree&lt;T&gt;::rotateRight</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * rootPivot) {</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <a class="code" href="class_node.html">Node&lt;T&gt;</a> * left = rootPivot-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>();</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    this-&gt;replaceNode(rootPivot, left);</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    rootPivot-&gt;<a class="code" href="class_node.html#a9afbeb2daea8798e71e9acc0967256a3">setLeft</a>(left-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>());</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keywordflow">if</span> (left-&gt;<a class="code" href="class_node.html#ae7f5a8aff0b15f311397f9588a84101b">hasRight</a>()) {</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        left-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>()-&gt;<a class="code" href="class_node.html#a78162c98233ea6c275412a9ff0571260">setParent</a>(rootPivot);</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    }</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    left-&gt;<a class="code" href="class_node.html#a1cf0e5397a347fee789c4b57dfb7624a">setRight</a>(rootPivot);</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    rootPivot-&gt;<a class="code" href="class_node.html#a78162c98233ea6c275412a9ff0571260">setParent</a>(left);</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;}</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;<span class="comment">/******************************************************************************</span></div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="comment"> *                                                                           **</span></div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;<span class="comment"> * TREE RULES                                                                **</span></div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="comment"> *  1 - A node is either red or black.                                       **</span></div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;<span class="comment"> *  2 - The root is black. This rule is sometimes omitted. Since the root    **</span></div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;<span class="comment"> *      can always be changed from red to black, but not necessarily vice    **</span></div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="comment"> *      versa, this rule has little effect on analysis.                      **</span></div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;<span class="comment"> *  3 - All leaves (NIL) are black.                                          **</span></div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="comment"> *  4 - If a node is red, then both its children are black.                  **</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;<span class="comment"> *  5 - Every path from a given node to any of its descendant NIL nodes      **</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="comment"> *      contains the same number of black nodes. The uniform number of       **</span></div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="comment"> *      black nodes in the paths from root to leaves is called the           **</span></div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="comment"> *      black-height of the red–black tree.                                  **</span></div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="comment"> *                                                                           **</span></div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00351"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a2c1f95cd704de8c87f60dd02d54c3b04">  351</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_r_b_tree.html#ac5ef6ef34686c9e1036c35d3bf56f8cf">RBTree&lt;T&gt;::rule1</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keywordtype">bool</span> a, b, c;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    a = node-&gt;<a class="code" href="class_node.html#a9c209bbcd6a8c1e07914a0c6bea3a6f4">getColor</a>() == RED || node-&gt;<a class="code" href="class_node.html#a9c209bbcd6a8c1e07914a0c6bea3a6f4">getColor</a>() == BLACK;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    b = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    c = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#ae7f5a8aff0b15f311397f9588a84101b">hasRight</a>()) { c = this-&gt;rule1(node-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>()); }</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#aa03aef3064a78fd8de1d421bdbcdef57">hasLeft</a>()) { b = this-&gt;rule1(node-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>()); }</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <span class="keywordflow">return</span> a &amp;&amp; b &amp;&amp; c;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;}</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00362"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#ac5ef6ef34686c9e1036c35d3bf56f8cf">  362</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_r_b_tree.html#ac5ef6ef34686c9e1036c35d3bf56f8cf">RBTree&lt;T&gt;::rule1</a>() {</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keywordflow">return</span> this-&gt;rule1(this-&gt;getRoot());</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;}</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00367"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a922765a4307e414802cb20bf9f405f7e">  367</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_r_b_tree.html#a922765a4307e414802cb20bf9f405f7e">RBTree&lt;T&gt;::rule2</a>() {</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keywordflow">return</span> this-&gt;getRoot()-&gt;getColor() == BLACK;</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;}</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00372"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a140f3511962683d74d040f726d8554d4">  372</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_r_b_tree.html#acc448bf2bc24f8fdb83d293dca4f4810">RBTree&lt;T&gt;::rule4</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keywordflow">if</span> (node == NULL) {</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;<span class="comment">//pretty basic</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    }</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="keywordtype">bool</span> a, b, c;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    a = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#a9c209bbcd6a8c1e07914a0c6bea3a6f4">getColor</a>() == RED) {</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        a = a &amp;&amp; node-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>()-&gt;<a class="code" href="class_node.html#a9c209bbcd6a8c1e07914a0c6bea3a6f4">getColor</a>() == BLACK;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        a = a &amp;&amp; node-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>()-&gt;<a class="code" href="class_node.html#a9c209bbcd6a8c1e07914a0c6bea3a6f4">getColor</a>() == BLACK;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        a = a &amp;&amp; node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#a9c209bbcd6a8c1e07914a0c6bea3a6f4">getColor</a>() == BLACK;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    }</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#aa03aef3064a78fd8de1d421bdbcdef57">hasLeft</a>()) {</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        b = this-&gt;rule4(node-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>());</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    }</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#ae7f5a8aff0b15f311397f9588a84101b">hasRight</a>()) {</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        c = this-&gt;rule4(node-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>());</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    }</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordflow">return</span> a &amp;&amp; b &amp;&amp; c;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;}</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00393"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#acc448bf2bc24f8fdb83d293dca4f4810">  393</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_r_b_tree.html#acc448bf2bc24f8fdb83d293dca4f4810">RBTree&lt;T&gt;::rule4</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    <span class="keywordflow">return</span> this-&gt;rule4(this-&gt;getRoot());</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;}</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00398"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a8a776aabd7e674ad2cb97e9b67abcaad">  398</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_r_b_tree.html#ad37bc2fd3c7b14c5d49862d4a3377b76">RBTree&lt;T&gt;::rule5</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    <span class="keywordtype">int</span> pathCount = -1;<span class="comment">//the number of black nodes to get &#39;+here+&#39;</span></div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="keywordflow">return</span> this-&gt;rule5(node, 0, &amp;pathCount);</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;}</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00404"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#ae3e4ffd3d8b99d79daec0e95ed443bfe">  404</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_r_b_tree.html#ad37bc2fd3c7b14c5d49862d4a3377b76">RBTree&lt;T&gt;::rule5</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node, <span class="keywordtype">int</span> blackCount, <span class="keywordtype">int</span> * pathCount) {</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="keywordtype">bool</span> a, b, c;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    a = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    b = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    c = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#a9c209bbcd6a8c1e07914a0c6bea3a6f4">getColor</a>() == BLACK) {</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        ++blackCount;</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    }</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    <span class="keywordflow">if</span> (node == NULL) {</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;        <span class="keywordflow">if</span> (*pathCount == -1) {</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;            *pathCount = blackCount;</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (blackCount != *pathCount) {</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;            a = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        }</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    }</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    <span class="keywordflow">if</span>(node != NULL) {</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        b = this-&gt;rule5(node-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>(), blackCount, pathCount);</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;        c = this-&gt;rule5(node-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>(), blackCount, pathCount);</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    }</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    <span class="keywordflow">return</span> a &amp;&amp; b &amp;&amp; c;</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;}</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00427"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#ad37bc2fd3c7b14c5d49862d4a3377b76">  427</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_r_b_tree.html#ad37bc2fd3c7b14c5d49862d4a3377b76">RBTree&lt;T&gt;::rule5</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    <span class="keywordflow">return</span> this-&gt;rule5(this-&gt;getRoot());</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;}</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00432"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a81a8300e35c048934b586935223abaff">  432</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_r_b_tree.html#a81a8300e35c048934b586935223abaff">RBTree&lt;T&gt;::rules</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    <span class="keywordflow">return</span> this-&gt;rule1() &amp;&amp; this-&gt;rule2() &amp;&amp; this-&gt;rule4() &amp;&amp; this-&gt;rule5();</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;}</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;<span class="comment">/******************************************************************************</span></div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;<span class="comment"> *                                                                           **</span></div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;<span class="comment"> * MISC                                                                      **</span></div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;<span class="comment"> *                                                                           **</span></div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00443"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a9a006660b7780a180fc87f2f8c89d1c9">  443</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_r_b_tree.html#a9a006660b7780a180fc87f2f8c89d1c9">RBTree&lt;T&gt;::exists</a>(<span class="keywordtype">int</span> key) {</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    <a class="code" href="class_node.html">Node&lt;T&gt;</a> * node = this-&gt;root;</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    <span class="keywordflow">while</span> (node != NULL) {</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;        <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#a5ff3a3dd66edef87867616d1bc44838f">getKey</a>() == key) {</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#a5ff3a3dd66edef87867616d1bc44838f">getKey</a>() &lt; key) {</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;            node = node-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>();</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;            node = node-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>();</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;        }</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    }</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    <span class="keywordflow">return</span> node-&gt;<a class="code" href="class_node.html#ab83eb1cc81f91a5641693eb22712f8c8">getMultiplicity</a>();</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;}</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00458"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#ac21009120411c393b499893d6874370c">  458</a></span>&#160;T <a class="code" href="class_r_b_tree.html#ac21009120411c393b499893d6874370c">RBTree&lt;T&gt;::extract</a>(<span class="keywordtype">int</span> key) {</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    <a class="code" href="class_node.html">Node&lt;T&gt;</a> * node = this-&gt;root;</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    <span class="keywordflow">while</span> (node != NULL) {</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;        <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#a5ff3a3dd66edef87867616d1bc44838f">getKey</a>() == key) {</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#a5ff3a3dd66edef87867616d1bc44838f">getKey</a>() == key &lt; 0) {</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;            node = node-&gt;left;</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;            node = node-&gt;right;</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;        }</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    }</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    T data = node-&gt;<a class="code" href="class_node.html#ad89031c2899fe91646652ce4c2e79ab6">getData</a>();</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#a2f77a48dceae8b8268826483f9671e1a">remove</a>()) {</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;        <span class="comment">//this-&gt;delete(key);</span></div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    }</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    <span class="keywordflow">return</span> data;</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;}</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;<span class="comment">/******************************************************************************</span></div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;<span class="comment"> *                                                                           **</span></div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;<span class="comment"> * RELATIONS                                                                 **</span></div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;<span class="comment"> *                                                                           **</span></div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160; <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00483"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a5c8cbef68755a4029cc2af88fd7f5d9f">  483</a></span>&#160; <a class="code" href="class_node.html">Node&lt;T&gt;</a> * <a class="code" href="class_r_b_tree.html#a5c8cbef68755a4029cc2af88fd7f5d9f">RBTree&lt;T&gt;::next</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;     <span class="keywordflow">if</span> (node == NULL) {</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;         <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;     }</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;     <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#ae7f5a8aff0b15f311397f9588a84101b">hasRight</a>()) {</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;         <span class="keywordflow">return</span> this-&gt;first(node-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>());</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;     }</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;     <a class="code" href="class_node.html">Node&lt;T&gt;</a> * a = node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>();</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;     <a class="code" href="class_node.html">Node&lt;T&gt;</a> * b = node;</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;     <span class="keywordflow">while</span> (a != NULL &amp;&amp; b == a-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>()) {</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;         b = a;</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;         a = a-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>();</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;     }</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;     <span class="keywordflow">return</span> a;</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160; }</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160; <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00500"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#ac7a8ea33e99ba8dfcc8379a18e44da7f">  500</a></span>&#160; <a class="code" href="class_node.html">Node&lt;T&gt;</a> * <a class="code" href="class_r_b_tree.html#ac7a8ea33e99ba8dfcc8379a18e44da7f">RBTree&lt;T&gt;::previous</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;     <span class="keywordflow">if</span> (node == NULL) {</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;         <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;     }</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;     <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>() != NULL) {</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;         <span class="keywordflow">return</span> this-&gt;last(node-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>());</div>
 <div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;     }</div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;     <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#ae7f5a8aff0b15f311397f9588a84101b">hasRight</a>()) {</div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;         <span class="keywordflow">return</span> this-&gt;first(node-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>());</div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;     }</div>
-<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;     <a class="code" href="class_node.html">Node&lt;T&gt;</a> * a = node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>();</div>
-<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;     <a class="code" href="class_node.html">Node&lt;T&gt;</a> * b = node;</div>
-<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;     <span class="keywordflow">while</span> (a != NULL &amp;&amp; b == a-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>()) {</div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;         b = a;</div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;         a = a-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>();</div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;     }</div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;     <span class="keywordflow">return</span> a;</div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160; }</div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;</div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160; <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00520"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#ac7a8ea33e99ba8dfcc8379a18e44da7f">  520</a></span>&#160; <a class="code" href="class_node.html">Node&lt;T&gt;</a> * <a class="code" href="class_r_b_tree.html#ac7a8ea33e99ba8dfcc8379a18e44da7f">RBTree&lt;T&gt;::previous</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
-<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;     <span class="keywordflow">if</span> (node == NULL) {</div>
-<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;         <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;     }</div>
-<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;     <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>() != NULL) {</div>
-<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;         <span class="keywordflow">return</span> this-&gt;last(node-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>());</div>
-<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;     }</div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;     <a class="code" href="class_node.html">Node&lt;T&gt;</a> * a = node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>();</div>
-<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;     <a class="code" href="class_node.html">Node&lt;T&gt;</a> * b = node;</div>
-<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;    <span class="keywordflow">while</span> (a != NULL &amp;&amp; b == a-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>()) {</div>
-<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;        b = a;</div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;        a = a-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>();</div>
-<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;    }</div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    <span class="keywordflow">return</span> a;</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;     <a class="code" href="class_node.html">Node&lt;T&gt;</a> * a = node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>();</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;     <a class="code" href="class_node.html">Node&lt;T&gt;</a> * b = node;</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    <span class="keywordflow">while</span> (a != NULL &amp;&amp; b == a-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>()) {</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;        b = a;</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;        a = a-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>();</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;    }</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    <span class="keywordflow">return</span> a;</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160; }</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160; <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00517"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a920561ef98e659233f743817a4780946">  517</a></span>&#160; <a class="code" href="class_node.html">Node&lt;T&gt;</a> * <a class="code" href="class_r_b_tree.html#a69b25e832b54c369c3d4bb84bad9bf71">RBTree&lt;T&gt;::first</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;     <span class="keywordflow">return</span> node-&gt;<a class="code" href="class_node.html#aa03aef3064a78fd8de1d421bdbcdef57">hasLeft</a>()? this-&gt;first(node-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>()): node;</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160; }</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160; <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00522"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a69b25e832b54c369c3d4bb84bad9bf71">  522</a></span>&#160; <a class="code" href="class_node.html">Node&lt;T&gt;</a> * <a class="code" href="class_r_b_tree.html#a69b25e832b54c369c3d4bb84bad9bf71">RBTree&lt;T&gt;::first</a>() {</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;     <span class="keywordflow">return</span> this-&gt;first(this-&gt;getRoot());</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160; }</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160; <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00527"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#ad559890dcf3ef921173e63da2fdb0a22">  527</a></span>&#160; <a class="code" href="class_node.html">Node&lt;T&gt;</a> * <a class="code" href="class_r_b_tree.html#ab381a71f2306578d907f31b408da0761">RBTree&lt;T&gt;::last</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;     <span class="keywordflow">return</span> node-&gt;<a class="code" href="class_node.html#ae7f5a8aff0b15f311397f9588a84101b">hasRight</a>()? this-&gt;last(node-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>()): node;</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160; }</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160; <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00532"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#ab381a71f2306578d907f31b408da0761">  532</a></span>&#160; <a class="code" href="class_node.html">Node&lt;T&gt;</a> * <a class="code" href="class_r_b_tree.html#ab381a71f2306578d907f31b408da0761">RBTree&lt;T&gt;::last</a>() {</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;     <span class="keywordflow">return</span> this-&gt;last(this-&gt;getRoot());</div>
 <div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160; }</div>
 <div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;</div>
 <div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160; <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00537"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a920561ef98e659233f743817a4780946">  537</a></span>&#160; <a class="code" href="class_node.html">Node&lt;T&gt;</a> * <a class="code" href="class_r_b_tree.html#a69b25e832b54c369c3d4bb84bad9bf71">RBTree&lt;T&gt;::first</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
-<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;     <span class="keywordflow">return</span> node-&gt;<a class="code" href="class_node.html#aa03aef3064a78fd8de1d421bdbcdef57">hasLeft</a>()? this-&gt;first(node-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>()): node;</div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160; }</div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;</div>
-<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160; <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00542"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a69b25e832b54c369c3d4bb84bad9bf71">  542</a></span>&#160; <a class="code" href="class_node.html">Node&lt;T&gt;</a> * <a class="code" href="class_r_b_tree.html#a69b25e832b54c369c3d4bb84bad9bf71">RBTree&lt;T&gt;::first</a>() {</div>
-<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;     <span class="keywordflow">return</span> this-&gt;first(this-&gt;getRoot());</div>
-<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160; }</div>
-<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;</div>
-<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160; <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00547"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#ad559890dcf3ef921173e63da2fdb0a22">  547</a></span>&#160; <a class="code" href="class_node.html">Node&lt;T&gt;</a> * <a class="code" href="class_r_b_tree.html#ab381a71f2306578d907f31b408da0761">RBTree&lt;T&gt;::last</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
-<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;     <span class="keywordflow">return</span> node-&gt;<a class="code" href="class_node.html#ae7f5a8aff0b15f311397f9588a84101b">hasRight</a>()? this-&gt;last(node-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>()): node;</div>
-<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160; }</div>
-<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;</div>
-<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160; <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00552"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#ab381a71f2306578d907f31b408da0761">  552</a></span>&#160; <a class="code" href="class_node.html">Node&lt;T&gt;</a> * <a class="code" href="class_r_b_tree.html#ab381a71f2306578d907f31b408da0761">RBTree&lt;T&gt;::last</a>() {</div>
-<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;     <span class="keywordflow">return</span> this-&gt;last(this-&gt;getRoot());</div>
-<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160; }</div>
-<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;</div>
-<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160; <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00557"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a6385e8c4d17abbd7050e53776075c26b">  557</a></span>&#160; <a class="code" href="class_node.html">Node&lt;T&gt;</a> * <a class="code" href="class_r_b_tree.html#a6385e8c4d17abbd7050e53776075c26b">RBTree&lt;T&gt;::sibling</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
-<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;     <a class="code" href="class_node.html">Node&lt;T&gt;</a> * sibling = NULL;</div>
-<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;     <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#a614f99e8df6aebb91c9e17e204a8c170">isLeft</a>()) sibling = node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>();</div>
-<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;     <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#ac8eeb9f7717618589d939491d87a04bf">isRight</a>()) sibling = node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>();</div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;     <span class="keywordflow">return</span> sibling;</div>
-<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160; }</div>
-<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;</div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160; <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00565"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#aabfe3497ee633a9864ec84fdb153c67d">  565</a></span>&#160; <a class="code" href="class_node.html">Node&lt;T&gt;</a> * <a class="code" href="class_r_b_tree.html#aabfe3497ee633a9864ec84fdb153c67d">RBTree&lt;T&gt;::parent</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
-<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;     <span class="keywordflow">return</span> node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>();</div>
-<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160; }</div>
-<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;</div>
-<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160; <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00570"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a9c1ef0de31b6bf2617a458a0e9d0bcef">  570</a></span>&#160; <a class="code" href="class_node.html">Node&lt;T&gt;</a> * <a class="code" href="class_r_b_tree.html#a9c1ef0de31b6bf2617a458a0e9d0bcef">RBTree&lt;T&gt;::grandpa</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
-<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;     <a class="code" href="class_node.html">Node&lt;T&gt;</a> * grandpa = NULL;</div>
-<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;     <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#af2f59b20b80ab306d379c785b3e95325">hasParent</a>() &amp;&amp; node-&gt;getPrent()-&gt;<a class="code" href="class_node.html#af2f59b20b80ab306d379c785b3e95325">hasParent</a>()) {</div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;        grandpa = node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>();</div>
-<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;     }</div>
-<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;     <span class="keywordflow">return</span> grandpa;</div>
-<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160; }</div>
-<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;</div>
-<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160; <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00579"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#af60f8017b52f69173e0af61c8e581b48">  579</a></span>&#160; <a class="code" href="class_node.html">Node&lt;T&gt;</a> * <a class="code" href="class_r_b_tree.html#af60f8017b52f69173e0af61c8e581b48">RBTree&lt;T&gt;::uncle</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
-<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;     <a class="code" href="class_node.html">Node&lt;T&gt;</a> * uncle = NULL;</div>
-<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;     <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#af2f59b20b80ab306d379c785b3e95325">hasParent</a>() &amp;&amp; node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#af2f59b20b80ab306d379c785b3e95325">hasParent</a>()) {</div>
-<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;         <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#a614f99e8df6aebb91c9e17e204a8c170">isLeft</a>()) {</div>
-<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;             uncle = this-&gt;grandpa(node)-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>();</div>
-<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;         } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#ac8eeb9f7717618589d939491d87a04bf">isRight</a>()) {</div>
-<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;             uncle = this-&gt;grandpa(node)-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>();</div>
-<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;         }</div>
-<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;     }</div>
-<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;     <span class="keywordflow">return</span> uncle;</div>
-<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160; }</div>
-<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;</div>
-<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;<span class="comment">/******************************************************************************</span></div>
-<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;<span class="comment"> *                                                                           **</span></div>
-<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;<span class="comment"> * INSERTION                                                                 **</span></div>
-<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;<span class="comment"> *                                                                           **</span></div>
-<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
-<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;</div>
-<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00598"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a8f67ba964a14d252ff6851a46576399e">  598</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_r_b_tree.html#a8f67ba964a14d252ff6851a46576399e">RBTree&lt;T&gt;::insert</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
-<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;    <span class="keywordflow">return</span> this-&gt;insert(<span class="keyword">this</span>, node);</div>
-<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;}</div>
-<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;</div>
-<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_r_b_tree.html#a8f67ba964a14d252ff6851a46576399e">RBTree&lt;T&gt;::insert</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
-<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;    <span class="keywordflow">if</span> (this-&gt;root == NULL) {</div>
-<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;        this-&gt;root = node;</div>
-<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;    }</div>
-<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;    <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;        <a class="code" href="class_node.html">Node&lt;T&gt;</a> * rbtRoot = rbt-&gt;root;</div>
-<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
-<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;            <span class="comment">//replace</span></div>
-<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;            <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#a5ff3a3dd66edef87867616d1bc44838f">getKey</a>() == rbtRoot-&gt;<a class="code" href="class_node.html#a5ff3a3dd66edef87867616d1bc44838f">getKey</a>()) {</div>
-<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;                rbtRoot-&gt;<a class="code" href="class_node.html#aef85f7c8d30881449f35ac5fda836438">add</a>();</div>
-<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#a5ff3a3dd66edef87867616d1bc44838f">getKey</a>() &lt; rbtRoot-&gt;<a class="code" href="class_node.html#a5ff3a3dd66edef87867616d1bc44838f">getKey</a>()) {</div>
-<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;                <span class="keywordflow">if</span> (rbtRoot-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>() == NULL) {</div>
-<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;                    rbtRoot-&gt;<a class="code" href="class_node.html#a9afbeb2daea8798e71e9acc0967256a3">setLeft</a>(node);</div>
-<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;                    rbtRoot = rbtRoot-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>();</div>
-<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;                }</div>
-<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;                <span class="keywordflow">if</span> (rbtRoot-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>() == NULL) {</div>
-<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;                    rbtRoot-&gt;<a class="code" href="class_node.html#a1cf0e5397a347fee789c4b57dfb7624a">setRight</a>(node);</div>
-<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;                    rbtRoot = rbtRoot-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>();</div>
-<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;                }</div>
-<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;            }</div>
-<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;        }</div>
-<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;        <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#a614f99e8df6aebb91c9e17e204a8c170">isLeft</a>()) {</div>
-<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;            node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#a9afbeb2daea8798e71e9acc0967256a3">setLeft</a>(rbtRoot);</div>
-<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;            node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#a1cf0e5397a347fee789c4b57dfb7624a">setRight</a>(rbtRoot);</div>
-<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;        }</div>
-<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;    }</div>
-<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;    this-&gt;insertCase1(rbt, node);</div>
-<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;    <span class="keywordflow">return</span> rule1() &amp;&amp; rule2() &amp;&amp; rule4() &amp;&amp; rule5();</div>
-<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;}</div>
-<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;<span class="comment">template&lt;typename T&gt;</span></div>
-<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;<span class="comment">void RBTree&lt;T&gt;::insertCase1(Node&lt;T&gt; * node) {</span></div>
-<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;<span class="comment">    if (node-&gt;getParent() == NULL) node-&gt;recolor(BLACK);</span></div>
-<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;<span class="comment">    else insertCase2(rbt, node);</span></div>
-<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;<span class="comment">}</span></div>
-<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;<span class="comment">template&lt;typename T&gt;</span></div>
-<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;<span class="comment">void RBTree&lt;T&gt;::insertCase2(Node&lt;T&gt; * node) {</span></div>
-<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;<span class="comment">    if (node-&gt;getParent()-&gt;getColor() == BLACK) return;</span></div>
-<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;<span class="comment">    else insertCase3(rbt, node);</span></div>
-<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;<span class="comment">}</span></div>
-<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;<span class="comment">template&lt;typename T&gt;</span></div>
-<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;<span class="comment">void RBTree&lt;T&gt;::insertCase3(Node&lt;T&gt; * node) {</span></div>
-<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;<span class="comment">    if (this-&gt;uncle(node)-&gt;getColor() == RED) {</span></div>
-<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;<span class="comment">        node-&gt;getParent()-&gt;recolor(BLACK);</span></div>
-<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;<span class="comment">        this-&gt;uncle(node)-&gt;recolor(BLACK);</span></div>
-<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;<span class="comment">        this-&gt;grandpa(node)-&gt;recolor(RED);</span></div>
-<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;<span class="comment">        this-&gt;insertCase1(rbt, this-&gt;grandpa(node));</span></div>
-<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;<span class="comment">    } else {</span></div>
-<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;<span class="comment">        insertCase4(rbt, node);</span></div>
-<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;<span class="comment">    }</span></div>
-<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;<span class="comment">}</span></div>
-<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;<span class="comment">template&lt;typename T&gt;</span></div>
-<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;<span class="comment">void RBTree&lt;T&gt;::insertCase4(Node&lt;T&gt; * node) {</span></div>
-<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;<span class="comment">    if (node == node-&gt;getParent()-&gt;getRight() &amp;&amp; node-&gt;getParent() == this-&gt;grandpa(node)-&gt;getLeft()) {</span></div>
-<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;<span class="comment">        rotateLeft(rbt, node-&gt;getParent());</span></div>
-<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;<span class="comment">        node = node-&gt;getLeft();</span></div>
-<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;<span class="comment">    } else if (node == node-&gt;getParent()-&gt;getLeft() &amp;&amp; node-&gt;getParent() == this-&gt;grandpa(node)-&gt;getRight()) {</span></div>
-<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;<span class="comment">        rotateRight(rbt, node-&gt;getParent());</span></div>
-<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;<span class="comment">        node = node-&gt;getRight();</span></div>
-<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;<span class="comment">    }</span></div>
-<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;<span class="comment">    insertCase5(rbt, node);</span></div>
-<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;<span class="comment">}</span></div>
-<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;<span class="comment">template&lt;typename T&gt;</span></div>
-<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;<span class="comment">void RBTree&lt;T&gt;::insertCase5(</span></div>
-<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;<span class="comment">Node&lt;T&gt; * node) {</span></div>
-<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;<span class="comment">    node-&gt;getParent()-&gt;recolor(BLACK);</span></div>
-<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;<span class="comment">    this-&gt;grandpa(node)-&gt;recolor(RED);</span></div>
-<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;<span class="comment">    if (node == node-&gt;getParent()-&gt;getLeft() &amp;&amp; node-&gt;getParent() == grandpa(node)-&gt;getLeft()) {</span></div>
-<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;<span class="comment">        rotateRight(rbt, grandpa(node));</span></div>
-<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;<span class="comment">    } else {</span></div>
-<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;<span class="comment">        rotateLeft(rbt, this-&gt;grandpa(node));</span></div>
-<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;<span class="comment">    }</span></div>
-<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;<span class="comment">}</span></div>
-<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="class_r_b_tree_html_a5c8cbef68755a4029cc2af88fd7f5d9f"><div class="ttname"><a href="class_r_b_tree.html#a5c8cbef68755a4029cc2af88fd7f5d9f">RBTree::next</a></div><div class="ttdeci">Node&lt; T &gt; * next(Node&lt; T &gt; *node)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:503</div></div>
+<div class="line"><a name="l00537"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a6385e8c4d17abbd7050e53776075c26b">  537</a></span>&#160; <a class="code" href="class_node.html">Node&lt;T&gt;</a> * <a class="code" href="class_r_b_tree.html#a6385e8c4d17abbd7050e53776075c26b">RBTree&lt;T&gt;::sibling</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;     <a class="code" href="class_node.html">Node&lt;T&gt;</a> * sibling = NULL;</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;     <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#a614f99e8df6aebb91c9e17e204a8c170">isLeft</a>()) sibling = node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>();</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;     <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#ac8eeb9f7717618589d939491d87a04bf">isRight</a>()) sibling = node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>();</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;     <span class="keywordflow">return</span> sibling;</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160; }</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160; <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00545"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#aabfe3497ee633a9864ec84fdb153c67d">  545</a></span>&#160; <a class="code" href="class_node.html">Node&lt;T&gt;</a> * <a class="code" href="class_r_b_tree.html#aabfe3497ee633a9864ec84fdb153c67d">RBTree&lt;T&gt;::parent</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;     <span class="keywordflow">return</span> node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>();</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160; }</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160; <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00550"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a9c1ef0de31b6bf2617a458a0e9d0bcef">  550</a></span>&#160; <a class="code" href="class_node.html">Node&lt;T&gt;</a> * <a class="code" href="class_r_b_tree.html#a9c1ef0de31b6bf2617a458a0e9d0bcef">RBTree&lt;T&gt;::grandpa</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;     <a class="code" href="class_node.html">Node&lt;T&gt;</a> * grandpa = NULL;</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;     <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#af2f59b20b80ab306d379c785b3e95325">hasParent</a>() &amp;&amp; node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#af2f59b20b80ab306d379c785b3e95325">hasParent</a>()) {</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;        grandpa = node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>();</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;     }</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;     <span class="keywordflow">return</span> grandpa;</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160; }</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160; <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00559"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#af60f8017b52f69173e0af61c8e581b48">  559</a></span>&#160; <a class="code" href="class_node.html">Node&lt;T&gt;</a> * <a class="code" href="class_r_b_tree.html#af60f8017b52f69173e0af61c8e581b48">RBTree&lt;T&gt;::uncle</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;     <a class="code" href="class_node.html">Node&lt;T&gt;</a> * uncle = NULL;</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;     <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#af2f59b20b80ab306d379c785b3e95325">hasParent</a>() &amp;&amp; node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#af2f59b20b80ab306d379c785b3e95325">hasParent</a>()) {</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;         <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#a614f99e8df6aebb91c9e17e204a8c170">isLeft</a>()) {</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;             uncle = this-&gt;grandpa(node)-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>();</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;         } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#ac8eeb9f7717618589d939491d87a04bf">isRight</a>()) {</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;             uncle = this-&gt;grandpa(node)-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>();</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;         }</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;     }</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;     <span class="keywordflow">return</span> uncle;</div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160; }</div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;<span class="comment">/******************************************************************************</span></div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;<span class="comment"> *                                                                           **</span></div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;<span class="comment"> * INSERTION                                                                 **</span></div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;<span class="comment"> *                                                                           **</span></div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160; <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160; <span class="keywordtype">bool</span> <a class="code" href="class_r_b_tree.html#a8f67ba964a14d252ff6851a46576399e">RBTree&lt;T&gt;::insert</a>(<span class="keywordtype">int</span> key, T data) {</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;     <span class="keywordflow">return</span> this-&gt;insert(<span class="keyword">new</span> <a class="code" href="class_node.html">Node&lt;T&gt;</a>(key,data));</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160; }</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;</div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00583"></a><span class="lineno"><a class="line" href="class_r_b_tree.html#a8f67ba964a14d252ff6851a46576399e">  583</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_r_b_tree.html#a8f67ba964a14d252ff6851a46576399e">RBTree&lt;T&gt;::insert</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;    <span class="keywordflow">if</span> (this-&gt;root == NULL) {</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;        this-&gt;root = node;</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;        <a class="code" href="class_node.html">Node&lt;T&gt;</a> * root = this-&gt;getRoot();</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;        <span class="comment">//add where it belongs as if this was a bst</span></div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;            <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#a5ff3a3dd66edef87867616d1bc44838f">getKey</a>() == root-&gt;<a class="code" href="class_node.html#a5ff3a3dd66edef87867616d1bc44838f">getKey</a>()) {</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;                <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#ad89031c2899fe91646652ce4c2e79ab6">getData</a>() == root-&gt;<a class="code" href="class_node.html#ad89031c2899fe91646652ce4c2e79ab6">getData</a>()) {</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;                    root-&gt;<a class="code" href="class_node.html#aef85f7c8d30881449f35ac5fda836438">add</a>();</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;                }</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#a5ff3a3dd66edef87867616d1bc44838f">getKey</a>() &lt; root-&gt;<a class="code" href="class_node.html#a5ff3a3dd66edef87867616d1bc44838f">getKey</a>()) {</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;                <span class="keywordflow">if</span> (root-&gt;<a class="code" href="class_node.html#aa03aef3064a78fd8de1d421bdbcdef57">hasLeft</a>()) {</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;                    root = root-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>();</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;                    root-&gt;<a class="code" href="class_node.html#a9afbeb2daea8798e71e9acc0967256a3">setLeft</a>(node);</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;                }</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;                <span class="keywordflow">if</span> (root-&gt;<a class="code" href="class_node.html#ae7f5a8aff0b15f311397f9588a84101b">hasRight</a>()) {</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;                    root = root-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>();</div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;                    root-&gt;<a class="code" href="class_node.html#a1cf0e5397a347fee789c4b57dfb7624a">setRight</a>(node);</div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;                }</div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;            }</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;        }</div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;</div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;        <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#a614f99e8df6aebb91c9e17e204a8c170">isLeft</a>()) {</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;            this-&gt;grandpa(node)-&gt;setLeft(root);</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#ac8eeb9f7717618589d939491d87a04bf">isRight</a>()) {</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;            this-&gt;grandpa(node)-&gt;setRight(root);</div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;        }</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;    }</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;    this-&gt;insertCase1(node);</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;    <span class="keywordflow">return</span> rules();</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;}</div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_r_b_tree.html">RBTree&lt;T&gt;::insertCase1</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;    <span class="keywordflow">if</span> (!node-&gt;<a class="code" href="class_node.html#af2f59b20b80ab306d379c785b3e95325">hasParent</a>()) {</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;        node-&gt;<a class="code" href="class_node.html#a96c1038d58f6f7089271afe3fa3e9288">setColor</a>(BLACK);</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;        this-&gt;insertCase2(node);</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;    }</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;}</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;</div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_r_b_tree.html">RBTree&lt;T&gt;::insertCase2</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;    <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#a9c209bbcd6a8c1e07914a0c6bea3a6f4">getColor</a>() == BLACK) {</div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;        this-&gt;insertCase3(node);</div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;    }</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;}</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_r_b_tree.html">RBTree&lt;T&gt;::insertCase3</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;    <span class="keywordflow">if</span> (this-&gt;uncle(node)-&gt;getColor() == RED) {</div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;        node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#a96c1038d58f6f7089271afe3fa3e9288">setColor</a>(BLACK);</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;        this-&gt;uncle(node)-&gt;setColor(BLACK);</div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;        this-&gt;grandpa(node)-&gt;setColor(RED);</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;        this-&gt;insertCase1(this-&gt;grandpa(node));</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;        insertCase4(node);</div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;    }</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;}</div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_r_b_tree.html">RBTree&lt;T&gt;::insertCase4</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;    <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#ac8eeb9f7717618589d939491d87a04bf">isRight</a>() &amp;&amp; node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#a614f99e8df6aebb91c9e17e204a8c170">isLeft</a>()) {</div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;        rotateLeft(node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>());</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;        node = node-&gt;<a class="code" href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">getLeft</a>();</div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (node-&gt;isLeft() &amp;&amp; node-&gt;getParent()-&gt;isRight()) {</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;        rotateRight(node-&gt;getParent());</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;        node = node-&gt;<a class="code" href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">getRight</a>();</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;    }</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;    insertCase5(node);</div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;}</div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_r_b_tree.html">RBTree&lt;T&gt;::insertCase5</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;    node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#a96c1038d58f6f7089271afe3fa3e9288">setColor</a>(BLACK);</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;    this-&gt;grandpa(node)-&gt;setColor(RED);</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;    <span class="keywordflow">if</span> (node-&gt;<a class="code" href="class_node.html#a614f99e8df6aebb91c9e17e204a8c170">isLeft</a>() &amp;&amp; node-&gt;<a class="code" href="class_node.html#ad6543650b2b521ced0456014d0344e3c">getParent</a>()-&gt;<a class="code" href="class_node.html#a614f99e8df6aebb91c9e17e204a8c170">isLeft</a>()) {</div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;        rotateRight(this-&gt;grandpa(node));</div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;        rotateLeft(this-&gt;grandpa(node));</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;    }</div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;}</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_r_b_tree_html_a5c8cbef68755a4029cc2af88fd7f5d9f"><div class="ttname"><a href="class_r_b_tree.html#a5c8cbef68755a4029cc2af88fd7f5d9f">RBTree::next</a></div><div class="ttdeci">Node&lt; T &gt; * next(Node&lt; T &gt; *node)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:483</div></div>
 <div class="ttc" id="class_node_html_a2ab0ff5c5d882b57577c077ee897397e"><div class="ttname"><a href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">Node::getLeft</a></div><div class="ttdeci">Node * getLeft(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:310</div></div>
-<div class="ttc" id="class_r_b_tree_html_af60f8017b52f69173e0af61c8e581b48"><div class="ttname"><a href="class_r_b_tree.html#af60f8017b52f69173e0af61c8e581b48">RBTree::uncle</a></div><div class="ttdeci">Node&lt; T &gt; * uncle(Node&lt; T &gt; *node)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:579</div></div>
-<div class="ttc" id="class_r_b_tree_html_aabfe3497ee633a9864ec84fdb153c67d"><div class="ttname"><a href="class_r_b_tree.html#aabfe3497ee633a9864ec84fdb153c67d">RBTree::parent</a></div><div class="ttdeci">Node&lt; T &gt; * parent(Node&lt; T &gt; *node)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:565</div></div>
-<div class="ttc" id="class_r_b_tree_html_ab95534142bf0d1960d68dc56403794f3"><div class="ttname"><a href="class_r_b_tree.html#ab95534142bf0d1960d68dc56403794f3">RBTree::setRoot</a></div><div class="ttdeci">void setRoot(Node&lt; T &gt; *rootNode)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:301</div></div>
+<div class="ttc" id="class_r_b_tree_html_af60f8017b52f69173e0af61c8e581b48"><div class="ttname"><a href="class_r_b_tree.html#af60f8017b52f69173e0af61c8e581b48">RBTree::uncle</a></div><div class="ttdeci">Node&lt; T &gt; * uncle(Node&lt; T &gt; *node)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:559</div></div>
+<div class="ttc" id="class_r_b_tree_html_aabfe3497ee633a9864ec84fdb153c67d"><div class="ttname"><a href="class_r_b_tree.html#aabfe3497ee633a9864ec84fdb153c67d">RBTree::parent</a></div><div class="ttdeci">Node&lt; T &gt; * parent(Node&lt; T &gt; *node)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:545</div></div>
+<div class="ttc" id="class_r_b_tree_html_ab95534142bf0d1960d68dc56403794f3"><div class="ttname"><a href="class_r_b_tree.html#ab95534142bf0d1960d68dc56403794f3">RBTree::setRoot</a></div><div class="ttdeci">void setRoot(Node&lt; T &gt; *rootNode)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:282</div></div>
 <div class="ttc" id="class_node_html"><div class="ttname"><a href="class_node.html">Node</a></div><div class="ttdef"><b>Definition:</b> Node.hh:18</div></div>
-<div class="ttc" id="class_node_html_a96c1038d58f6f7089271afe3fa3e9288"><div class="ttname"><a href="class_node.html#a96c1038d58f6f7089271afe3fa3e9288">Node::setColor</a></div><div class="ttdeci">void setColor(Colors c)</div><div class="ttdef"><b>Definition:</b> Node.hh:364</div></div>
-<div class="ttc" id="class_r_b_tree_html_ac5ef6ef34686c9e1036c35d3bf56f8cf"><div class="ttname"><a href="class_r_b_tree.html#ac5ef6ef34686c9e1036c35d3bf56f8cf">RBTree::rule1</a></div><div class="ttdeci">bool rule1(void)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:382</div></div>
+<div class="ttc" id="class_node_html_a96c1038d58f6f7089271afe3fa3e9288"><div class="ttname"><a href="class_node.html#a96c1038d58f6f7089271afe3fa3e9288">Node::setColor</a></div><div class="ttdeci">void setColor(Colors c)</div><div class="ttdef"><b>Definition:</b> Node.hh:376</div></div>
+<div class="ttc" id="class_r_b_tree_html_ac5ef6ef34686c9e1036c35d3bf56f8cf"><div class="ttname"><a href="class_r_b_tree.html#ac5ef6ef34686c9e1036c35d3bf56f8cf">RBTree::rule1</a></div><div class="ttdeci">bool rule1(void)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:362</div></div>
 <div class="ttc" id="class_node_html_ab83eb1cc81f91a5641693eb22712f8c8"><div class="ttname"><a href="class_node.html#ab83eb1cc81f91a5641693eb22712f8c8">Node::getMultiplicity</a></div><div class="ttdeci">int getMultiplicity(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:300</div></div>
 <div class="ttc" id="class_node_html_a5ff3a3dd66edef87867616d1bc44838f"><div class="ttname"><a href="class_node.html#a5ff3a3dd66edef87867616d1bc44838f">Node::getKey</a></div><div class="ttdeci">int getKey(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:290</div></div>
-<div class="ttc" id="class_r_b_tree_html_a9c1ef0de31b6bf2617a458a0e9d0bcef"><div class="ttname"><a href="class_r_b_tree.html#a9c1ef0de31b6bf2617a458a0e9d0bcef">RBTree::grandpa</a></div><div class="ttdeci">Node&lt; T &gt; * grandpa(Node&lt; T &gt; *node)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:570</div></div>
+<div class="ttc" id="class_r_b_tree_html_a9c1ef0de31b6bf2617a458a0e9d0bcef"><div class="ttname"><a href="class_r_b_tree.html#a9c1ef0de31b6bf2617a458a0e9d0bcef">RBTree::grandpa</a></div><div class="ttdeci">Node&lt; T &gt; * grandpa(Node&lt; T &gt; *node)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:550</div></div>
 <div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdoc">STL namespace. </div></div>
-<div class="ttc" id="class_r_b_tree_html_a00a0aeb1b39260cb068efaa65797d6bc"><div class="ttname"><a href="class_r_b_tree.html#a00a0aeb1b39260cb068efaa65797d6bc">RBTree::RBTree</a></div><div class="ttdeci">RBTree(void)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:286</div></div>
-<div class="ttc" id="class_r_b_tree_html_acc448bf2bc24f8fdb83d293dca4f4810"><div class="ttname"><a href="class_r_b_tree.html#acc448bf2bc24f8fdb83d293dca4f4810">RBTree::rule4</a></div><div class="ttdeci">bool rule4(void)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:413</div></div>
-<div class="ttc" id="class_r_b_tree_html_ad37bc2fd3c7b14c5d49862d4a3377b76"><div class="ttname"><a href="class_r_b_tree.html#ad37bc2fd3c7b14c5d49862d4a3377b76">RBTree::rule5</a></div><div class="ttdeci">bool rule5(void)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:447</div></div>
+<div class="ttc" id="class_r_b_tree_html_a00a0aeb1b39260cb068efaa65797d6bc"><div class="ttname"><a href="class_r_b_tree.html#a00a0aeb1b39260cb068efaa65797d6bc">RBTree::RBTree</a></div><div class="ttdeci">RBTree(void)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:267</div></div>
+<div class="ttc" id="class_r_b_tree_html_acc448bf2bc24f8fdb83d293dca4f4810"><div class="ttname"><a href="class_r_b_tree.html#acc448bf2bc24f8fdb83d293dca4f4810">RBTree::rule4</a></div><div class="ttdeci">bool rule4(void)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:393</div></div>
+<div class="ttc" id="class_r_b_tree_html_ad37bc2fd3c7b14c5d49862d4a3377b76"><div class="ttname"><a href="class_r_b_tree.html#ad37bc2fd3c7b14c5d49862d4a3377b76">RBTree::rule5</a></div><div class="ttdeci">bool rule5(void)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:427</div></div>
 <div class="ttc" id="class_r_b_tree_html"><div class="ttname"><a href="class_r_b_tree.html">RBTree</a></div><div class="ttdef"><b>Definition:</b> RBTree.hh:28</div></div>
-<div class="ttc" id="class_r_b_tree_html_ac21009120411c393b499893d6874370c"><div class="ttname"><a href="class_r_b_tree.html#ac21009120411c393b499893d6874370c">RBTree::extract</a></div><div class="ttdeci">T extract(int key)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:478</div></div>
-<div class="ttc" id="class_r_b_tree_html_ac79abd8464ef7926dfd071f30c189e0e"><div class="ttname"><a href="class_r_b_tree.html#ac79abd8464ef7926dfd071f30c189e0e">RBTree::~RBTree</a></div><div class="ttdeci">~RBTree(void)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:291</div></div>
-<div class="ttc" id="class_node_html_aef85f7c8d30881449f35ac5fda836438"><div class="ttname"><a href="class_node.html#aef85f7c8d30881449f35ac5fda836438">Node::add</a></div><div class="ttdeci">void add(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:375</div></div>
-<div class="ttc" id="class_node_html_af2f59b20b80ab306d379c785b3e95325"><div class="ttname"><a href="class_node.html#af2f59b20b80ab306d379c785b3e95325">Node::hasParent</a></div><div class="ttdeci">bool hasParent(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:420</div></div>
-<div class="ttc" id="class_r_b_tree_html_a9fab96c10f78263a054cacc9d9b4b997"><div class="ttname"><a href="class_r_b_tree.html#a9fab96c10f78263a054cacc9d9b4b997">RBTree::replaceNode</a></div><div class="ttdeci">void replaceNode(Node&lt; T &gt; *oldNode, Node&lt; T &gt; *newNode)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:306</div></div>
+<div class="ttc" id="class_r_b_tree_html_ac21009120411c393b499893d6874370c"><div class="ttname"><a href="class_r_b_tree.html#ac21009120411c393b499893d6874370c">RBTree::extract</a></div><div class="ttdeci">T extract(int key)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:458</div></div>
+<div class="ttc" id="class_r_b_tree_html_ac79abd8464ef7926dfd071f30c189e0e"><div class="ttname"><a href="class_r_b_tree.html#ac79abd8464ef7926dfd071f30c189e0e">RBTree::~RBTree</a></div><div class="ttdeci">~RBTree(void)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:272</div></div>
+<div class="ttc" id="class_node_html_aef85f7c8d30881449f35ac5fda836438"><div class="ttname"><a href="class_node.html#aef85f7c8d30881449f35ac5fda836438">Node::add</a></div><div class="ttdeci">void add(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:387</div></div>
+<div class="ttc" id="class_node_html_af2f59b20b80ab306d379c785b3e95325"><div class="ttname"><a href="class_node.html#af2f59b20b80ab306d379c785b3e95325">Node::hasParent</a></div><div class="ttdeci">bool hasParent(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:432</div></div>
+<div class="ttc" id="class_r_b_tree_html_a9fab96c10f78263a054cacc9d9b4b997"><div class="ttname"><a href="class_r_b_tree.html#a9fab96c10f78263a054cacc9d9b4b997">RBTree::replaceNode</a></div><div class="ttdeci">void replaceNode(Node&lt; T &gt; *oldNode, Node&lt; T &gt; *newNode)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:287</div></div>
 <div class="ttc" id="class_node_html_a78162c98233ea6c275412a9ff0571260"><div class="ttname"><a href="class_node.html#a78162c98233ea6c275412a9ff0571260">Node::setParent</a></div><div class="ttdeci">void setParent(Node&lt; T &gt; *node)</div><div class="ttdef"><b>Definition:</b> Node.hh:347</div></div>
-<div class="ttc" id="class_r_b_tree_html_a64c300beb5a2e7bd312a3204d49d2d79"><div class="ttname"><a href="class_r_b_tree.html#a64c300beb5a2e7bd312a3204d49d2d79">RBTree::getRoot</a></div><div class="ttdeci">Node&lt; T &gt; * getRoot(void)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:296</div></div>
-<div class="ttc" id="class_r_b_tree_html_ac7a8ea33e99ba8dfcc8379a18e44da7f"><div class="ttname"><a href="class_r_b_tree.html#ac7a8ea33e99ba8dfcc8379a18e44da7f">RBTree::previous</a></div><div class="ttdeci">Node&lt; T &gt; * previous(Node&lt; T &gt; *node)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:520</div></div>
-<div class="ttc" id="class_r_b_tree_html_a8f67ba964a14d252ff6851a46576399e"><div class="ttname"><a href="class_r_b_tree.html#a8f67ba964a14d252ff6851a46576399e">RBTree::insert</a></div><div class="ttdeci">bool insert(Node&lt; T &gt; *node)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:598</div></div>
-<div class="ttc" id="class_node_html_ae7f5a8aff0b15f311397f9588a84101b"><div class="ttname"><a href="class_node.html#ae7f5a8aff0b15f311397f9588a84101b">Node::hasRight</a></div><div class="ttdeci">bool hasRight(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:430</div></div>
+<div class="ttc" id="class_r_b_tree_html_a64c300beb5a2e7bd312a3204d49d2d79"><div class="ttname"><a href="class_r_b_tree.html#a64c300beb5a2e7bd312a3204d49d2d79">RBTree::getRoot</a></div><div class="ttdeci">Node&lt; T &gt; * getRoot(void)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:277</div></div>
+<div class="ttc" id="class_r_b_tree_html_ac7a8ea33e99ba8dfcc8379a18e44da7f"><div class="ttname"><a href="class_r_b_tree.html#ac7a8ea33e99ba8dfcc8379a18e44da7f">RBTree::previous</a></div><div class="ttdeci">Node&lt; T &gt; * previous(Node&lt; T &gt; *node)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:500</div></div>
+<div class="ttc" id="class_r_b_tree_html_a8f67ba964a14d252ff6851a46576399e"><div class="ttname"><a href="class_r_b_tree.html#a8f67ba964a14d252ff6851a46576399e">RBTree::insert</a></div><div class="ttdeci">bool insert(Node&lt; T &gt; *node)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:583</div></div>
+<div class="ttc" id="class_node_html_ae7f5a8aff0b15f311397f9588a84101b"><div class="ttname"><a href="class_node.html#ae7f5a8aff0b15f311397f9588a84101b">Node::hasRight</a></div><div class="ttdeci">bool hasRight(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:442</div></div>
 <div class="ttc" id="class_node_html_a19f6f466f04ca1dc6a314b25c3d13c99"><div class="ttname"><a href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">Node::getRight</a></div><div class="ttdeci">Node * getRight(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:315</div></div>
-<div class="ttc" id="class_r_b_tree_html_a6385e8c4d17abbd7050e53776075c26b"><div class="ttname"><a href="class_r_b_tree.html#a6385e8c4d17abbd7050e53776075c26b">RBTree::sibling</a></div><div class="ttdeci">Node&lt; T &gt; * sibling(Node&lt; T &gt; *node)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:557</div></div>
-<div class="ttc" id="class_r_b_tree_html_a922765a4307e414802cb20bf9f405f7e"><div class="ttname"><a href="class_r_b_tree.html#a922765a4307e414802cb20bf9f405f7e">RBTree::rule2</a></div><div class="ttdeci">bool rule2(void)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:387</div></div>
-<div class="ttc" id="class_r_b_tree_html_a81a8300e35c048934b586935223abaff"><div class="ttname"><a href="class_r_b_tree.html#a81a8300e35c048934b586935223abaff">RBTree::rules</a></div><div class="ttdeci">bool rules(void)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:452</div></div>
-<div class="ttc" id="class_r_b_tree_html_a9c273ccbb0be52e1342335df9d27c3fd"><div class="ttname"><a href="class_r_b_tree.html#a9c273ccbb0be52e1342335df9d27c3fd">RBTree::rotateLeft</a></div><div class="ttdeci">void rotateLeft(Node&lt; T &gt; *rootPivot)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:331</div></div>
-<div class="ttc" id="class_node_html_ac8eeb9f7717618589d939491d87a04bf"><div class="ttname"><a href="class_node.html#ac8eeb9f7717618589d939491d87a04bf">Node::isRight</a></div><div class="ttdeci">bool isRight(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:409</div></div>
-<div class="ttc" id="class_node_html_a1cf0e5397a347fee789c4b57dfb7624a"><div class="ttname"><a href="class_node.html#a1cf0e5397a347fee789c4b57dfb7624a">Node::setRight</a></div><div class="ttdeci">void setRight(Node&lt; T &gt; *node)</div><div class="ttdef"><b>Definition:</b> Node.hh:358</div></div>
-<div class="ttc" id="class_r_b_tree_html_a69b25e832b54c369c3d4bb84bad9bf71"><div class="ttname"><a href="class_r_b_tree.html#a69b25e832b54c369c3d4bb84bad9bf71">RBTree::first</a></div><div class="ttdeci">Node&lt; T &gt; * first()</div><div class="ttdef"><b>Definition:</b> RBTree.hh:542</div></div>
+<div class="ttc" id="class_r_b_tree_html_a6385e8c4d17abbd7050e53776075c26b"><div class="ttname"><a href="class_r_b_tree.html#a6385e8c4d17abbd7050e53776075c26b">RBTree::sibling</a></div><div class="ttdeci">Node&lt; T &gt; * sibling(Node&lt; T &gt; *node)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:537</div></div>
+<div class="ttc" id="class_r_b_tree_html_a922765a4307e414802cb20bf9f405f7e"><div class="ttname"><a href="class_r_b_tree.html#a922765a4307e414802cb20bf9f405f7e">RBTree::rule2</a></div><div class="ttdeci">bool rule2(void)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:367</div></div>
+<div class="ttc" id="class_r_b_tree_html_a81a8300e35c048934b586935223abaff"><div class="ttname"><a href="class_r_b_tree.html#a81a8300e35c048934b586935223abaff">RBTree::rules</a></div><div class="ttdeci">bool rules(void)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:432</div></div>
+<div class="ttc" id="class_r_b_tree_html_a9c273ccbb0be52e1342335df9d27c3fd"><div class="ttname"><a href="class_r_b_tree.html#a9c273ccbb0be52e1342335df9d27c3fd">RBTree::rotateLeft</a></div><div class="ttdeci">void rotateLeft(Node&lt; T &gt; *rootPivot)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:311</div></div>
+<div class="ttc" id="class_node_html_ac8eeb9f7717618589d939491d87a04bf"><div class="ttname"><a href="class_node.html#ac8eeb9f7717618589d939491d87a04bf">Node::isRight</a></div><div class="ttdeci">bool isRight(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:421</div></div>
+<div class="ttc" id="class_node_html_a1cf0e5397a347fee789c4b57dfb7624a"><div class="ttname"><a href="class_node.html#a1cf0e5397a347fee789c4b57dfb7624a">Node::setRight</a></div><div class="ttdeci">void setRight(Node&lt; T &gt; *node)</div><div class="ttdef"><b>Definition:</b> Node.hh:366</div></div>
+<div class="ttc" id="class_r_b_tree_html_a69b25e832b54c369c3d4bb84bad9bf71"><div class="ttname"><a href="class_r_b_tree.html#a69b25e832b54c369c3d4bb84bad9bf71">RBTree::first</a></div><div class="ttdeci">Node&lt; T &gt; * first()</div><div class="ttdef"><b>Definition:</b> RBTree.hh:522</div></div>
 <div class="ttc" id="class_node_html_a9c209bbcd6a8c1e07914a0c6bea3a6f4"><div class="ttname"><a href="class_node.html#a9c209bbcd6a8c1e07914a0c6bea3a6f4">Node::getColor</a></div><div class="ttdeci">Colors getColor(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:320</div></div>
-<div class="ttc" id="class_node_html_a2f77a48dceae8b8268826483f9671e1a"><div class="ttname"><a href="class_node.html#a2f77a48dceae8b8268826483f9671e1a">Node::remove</a></div><div class="ttdeci">bool remove(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:384</div></div>
-<div class="ttc" id="class_node_html_a614f99e8df6aebb91c9e17e204a8c170"><div class="ttname"><a href="class_node.html#a614f99e8df6aebb91c9e17e204a8c170">Node::isLeft</a></div><div class="ttdeci">bool isLeft(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:398</div></div>
-<div class="ttc" id="class_r_b_tree_html_a9a006660b7780a180fc87f2f8c89d1c9"><div class="ttname"><a href="class_r_b_tree.html#a9a006660b7780a180fc87f2f8c89d1c9">RBTree::exists</a></div><div class="ttdeci">int exists(int key)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:463</div></div>
+<div class="ttc" id="class_node_html_a2f77a48dceae8b8268826483f9671e1a"><div class="ttname"><a href="class_node.html#a2f77a48dceae8b8268826483f9671e1a">Node::remove</a></div><div class="ttdeci">bool remove(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:396</div></div>
+<div class="ttc" id="class_node_html_a614f99e8df6aebb91c9e17e204a8c170"><div class="ttname"><a href="class_node.html#a614f99e8df6aebb91c9e17e204a8c170">Node::isLeft</a></div><div class="ttdeci">bool isLeft(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:410</div></div>
+<div class="ttc" id="class_r_b_tree_html_a9a006660b7780a180fc87f2f8c89d1c9"><div class="ttname"><a href="class_r_b_tree.html#a9a006660b7780a180fc87f2f8c89d1c9">RBTree::exists</a></div><div class="ttdeci">int exists(int key)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:443</div></div>
 <div class="ttc" id="class_node_html_ad89031c2899fe91646652ce4c2e79ab6"><div class="ttname"><a href="class_node.html#ad89031c2899fe91646652ce4c2e79ab6">Node::getData</a></div><div class="ttdeci">T getData(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:295</div></div>
-<div class="ttc" id="class_node_html_aa03aef3064a78fd8de1d421bdbcdef57"><div class="ttname"><a href="class_node.html#aa03aef3064a78fd8de1d421bdbcdef57">Node::hasLeft</a></div><div class="ttdeci">bool hasLeft(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:425</div></div>
-<div class="ttc" id="class_node_html_a9afbeb2daea8798e71e9acc0967256a3"><div class="ttname"><a href="class_node.html#a9afbeb2daea8798e71e9acc0967256a3">Node::setLeft</a></div><div class="ttdeci">void setLeft(Node&lt; T &gt; *node)</div><div class="ttdef"><b>Definition:</b> Node.hh:352</div></div>
-<div class="ttc" id="class_r_b_tree_html_a92bd8bf1b99ff9837b2888182c3819ce"><div class="ttname"><a href="class_r_b_tree.html#a92bd8bf1b99ff9837b2888182c3819ce">RBTree::rotateRight</a></div><div class="ttdeci">void rotateRight(Node&lt; T &gt; *rootPivot)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:343</div></div>
-<div class="ttc" id="class_r_b_tree_html_ab381a71f2306578d907f31b408da0761"><div class="ttname"><a href="class_r_b_tree.html#ab381a71f2306578d907f31b408da0761">RBTree::last</a></div><div class="ttdeci">Node&lt; T &gt; * last()</div><div class="ttdef"><b>Definition:</b> RBTree.hh:552</div></div>
+<div class="ttc" id="class_node_html_aa03aef3064a78fd8de1d421bdbcdef57"><div class="ttname"><a href="class_node.html#aa03aef3064a78fd8de1d421bdbcdef57">Node::hasLeft</a></div><div class="ttdeci">bool hasLeft(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:437</div></div>
+<div class="ttc" id="class_node_html_a9afbeb2daea8798e71e9acc0967256a3"><div class="ttname"><a href="class_node.html#a9afbeb2daea8798e71e9acc0967256a3">Node::setLeft</a></div><div class="ttdeci">void setLeft(Node&lt; T &gt; *node)</div><div class="ttdef"><b>Definition:</b> Node.hh:356</div></div>
+<div class="ttc" id="class_r_b_tree_html_a92bd8bf1b99ff9837b2888182c3819ce"><div class="ttname"><a href="class_r_b_tree.html#a92bd8bf1b99ff9837b2888182c3819ce">RBTree::rotateRight</a></div><div class="ttdeci">void rotateRight(Node&lt; T &gt; *rootPivot)</div><div class="ttdef"><b>Definition:</b> RBTree.hh:323</div></div>
+<div class="ttc" id="class_r_b_tree_html_ab381a71f2306578d907f31b408da0761"><div class="ttname"><a href="class_r_b_tree.html#ab381a71f2306578d907f31b408da0761">RBTree::last</a></div><div class="ttdeci">Node&lt; T &gt; * last()</div><div class="ttdef"><b>Definition:</b> RBTree.hh:532</div></div>
 <div class="ttc" id="class_node_html_ad6543650b2b521ced0456014d0344e3c"><div class="ttname"><a href="class_node.html#ad6543650b2b521ced0456014d0344e3c">Node::getParent</a></div><div class="ttdeci">Node * getParent(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:305</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

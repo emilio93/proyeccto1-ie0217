@@ -1,7 +1,7 @@
 var searchData=
 [
   ['rbtree',['RBTree',['../class_r_b_tree.html',1,'RBTree&lt; T &gt;'],['../class_r_b_tree.html#a743575c444246d79b343bf7f8090eb9f',1,'RBTree::RBTree(int key, T data)'],['../class_r_b_tree.html#afd8831000cdef5cd6215e17d0684f6f1',1,'RBTree::RBTree(Node&lt; T &gt; *node)'],['../class_r_b_tree.html#a00a0aeb1b39260cb068efaa65797d6bc',1,'RBTree::RBTree(void)']]],
-  ['remove',['remove',['../class_node.html#a2f77a48dceae8b8268826483f9671e1a',1,'Node::remove()'],['../class_r_b_tree.html#a9a20aef5e8862b34bccc3d1f1c47a321',1,'RBTree::remove()']]],
+  ['remove',['remove',['../class_node.html#a2f77a48dceae8b8268826483f9671e1a',1,'Node']]],
   ['replacenode',['replaceNode',['../class_r_b_tree.html#a9fab96c10f78263a054cacc9d9b4b997',1,'RBTree']]],
   ['rotateleft',['rotateLeft',['../class_r_b_tree.html#a9c273ccbb0be52e1342335df9d27c3fd',1,'RBTree']]],
   ['rotateright',['rotateRight',['../class_r_b_tree.html#a92bd8bf1b99ff9837b2888182c3819ce',1,'RBTree']]],

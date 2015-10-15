@@ -292,116 +292,128 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160; <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a name="l00347"></a><span class="lineno"><a class="line" href="class_node.html#a78162c98233ea6c275412a9ff0571260">  347</a></span>&#160; <span class="keywordtype">void</span> <a class="code" href="class_node.html#a78162c98233ea6c275412a9ff0571260">Node&lt;T&gt;::setParent</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;     this-&gt;parent = node;</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160; }</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00352"></a><span class="lineno"><a class="line" href="class_node.html#a9afbeb2daea8798e71e9acc0967256a3">  352</a></span>&#160; <span class="keywordtype">void</span> <a class="code" href="class_node.html#a9afbeb2daea8798e71e9acc0967256a3">Node&lt;T&gt;::setLeft</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;     node-&gt;<a class="code" href="class_node.html#a78162c98233ea6c275412a9ff0571260">setParent</a>(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;     this-&gt;left = node;</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160; }</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160; <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00358"></a><span class="lineno"><a class="line" href="class_node.html#a1cf0e5397a347fee789c4b57dfb7624a">  358</a></span>&#160; <span class="keywordtype">void</span> <a class="code" href="class_node.html#a1cf0e5397a347fee789c4b57dfb7624a">Node&lt;T&gt;::setRight</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;     node-&gt;<a class="code" href="class_node.html#a78162c98233ea6c275412a9ff0571260">setParent</a>(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;     this-&gt;right = node;</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160; }</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160; <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00364"></a><span class="lineno"><a class="line" href="class_node.html#a96c1038d58f6f7089271afe3fa3e9288">  364</a></span>&#160; <span class="keywordtype">void</span> <a class="code" href="class_node.html#a96c1038d58f6f7089271afe3fa3e9288">Node&lt;T&gt;::setColor</a>(Colors color) {</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;     this-&gt;color = color;</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160; }</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="comment">/******************************************************************************</span></div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="comment"> *                                                                           **</span></div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="comment"> * OTHER METHODS                                                             **</span></div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="comment"> *                                                                           **</span></div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00375"></a><span class="lineno"><a class="line" href="class_node.html#aef85f7c8d30881449f35ac5fda836438">  375</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_node.html#aef85f7c8d30881449f35ac5fda836438">Node&lt;T&gt;::add</a>(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="comment">//this-&gt;setMultiplicity(this-&gt;getMultiplicity()+1);</span></div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="comment">// Shouldn&#39;t be below 0, if lesser or equal to 0, then value after adding</span></div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="comment">// is 1</span></div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="keywordtype">int</span> value = this-&gt;getMultiplicity() &lt;= 0? 1: this-&gt;getMultiplicity() + 1;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    this-&gt;setMultiplicity(value);</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;}</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00384"></a><span class="lineno"><a class="line" href="class_node.html#a2f77a48dceae8b8268826483f9671e1a">  384</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_node.html#a2f77a48dceae8b8268826483f9671e1a">Node&lt;T&gt;::remove</a>(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    <span class="comment">// Shouldn&#39;t be lesser than 0.</span></div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keywordtype">int</span> value = this-&gt;getMultiplicity() &lt;= 0? 0: this-&gt;getMultiplicity() - 1;</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    this-&gt;setMultiplicity(value);</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="keywordtype">bool</span> empty = this-&gt;getMultiplicity() &lt;= 0? <span class="keyword">true</span>: <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordflow">return</span> empty;</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;}</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00393"></a><span class="lineno"><a class="line" href="class_node.html#ab0a293cb425b4f8be5f2d8efb08df1e8">  393</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_node.html#ab0a293cb425b4f8be5f2d8efb08df1e8">Node&lt;T&gt;::isParent</a>(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    <span class="keywordflow">return</span> this-&gt;hasLeft() || this-&gt;hasRight();</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;}</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00398"></a><span class="lineno"><a class="line" href="class_node.html#a614f99e8df6aebb91c9e17e204a8c170">  398</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_node.html#a614f99e8df6aebb91c9e17e204a8c170">Node&lt;T&gt;::isLeft</a>(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    <span class="comment">// Is neither left or right, then is-Not-Left, not meaning it&#39;s right</span></div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="keywordflow">if</span> (this-&gt;getParent() == NULL) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <span class="comment">// NULL shouldn&#39;t be left.</span></div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <span class="keywordflow">if</span> (this-&gt;getParent()-&gt;getLeft() == NULL) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="keywordflow">return</span> this-&gt;getParent()-&gt;getLeft() == <span class="keyword">this</span>;</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;}</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00409"></a><span class="lineno"><a class="line" href="class_node.html#ac8eeb9f7717618589d939491d87a04bf">  409</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_node.html#ac8eeb9f7717618589d939491d87a04bf">Node&lt;T&gt;::isRight</a>(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="comment">// Is neither left or right, then is-Not-Right, not meaning it&#39;s left</span></div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    <span class="keywordflow">if</span> (this-&gt;getParent() == NULL) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    <span class="comment">// NULL shouldn&#39;t be right.</span></div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    <span class="keywordflow">if</span> (this-&gt;getParent()-&gt;getRight() == NULL) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    <span class="keywordflow">return</span> this-&gt;getParent()-&gt;getRight() == <span class="keyword">this</span>;</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;}</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00420"></a><span class="lineno"><a class="line" href="class_node.html#af2f59b20b80ab306d379c785b3e95325">  420</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_node.html#af2f59b20b80ab306d379c785b3e95325">Node&lt;T&gt;::hasParent</a>(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    <span class="keywordflow">return</span> this-&gt;getParent() != NULL;</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;}</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00425"></a><span class="lineno"><a class="line" href="class_node.html#aa03aef3064a78fd8de1d421bdbcdef57">  425</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_node.html#aa03aef3064a78fd8de1d421bdbcdef57">Node&lt;T&gt;::hasLeft</a>(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    <span class="keywordflow">return</span> this-&gt;getLeft() != NULL;</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;}</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00430"></a><span class="lineno"><a class="line" href="class_node.html#ae7f5a8aff0b15f311397f9588a84101b">  430</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_node.html#ae7f5a8aff0b15f311397f9588a84101b">Node&lt;T&gt;::hasRight</a>(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    <span class="keywordflow">return</span> this-&gt;getRight() != NULL;</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;}</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;     <span class="keywordflow">if</span> (node == NULL) {</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;         this-&gt;parent = NULL;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;         <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;     }</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;     this-&gt;parent = node;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160; }</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160; <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00356"></a><span class="lineno"><a class="line" href="class_node.html#a9afbeb2daea8798e71e9acc0967256a3">  356</a></span>&#160; <span class="keywordtype">void</span> <a class="code" href="class_node.html#a9afbeb2daea8798e71e9acc0967256a3">Node&lt;T&gt;::setLeft</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;     <span class="keywordflow">if</span> (node == NULL) {</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;         this-&gt;left = NULL;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;         <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;     }</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;     node-&gt;<a class="code" href="class_node.html#a78162c98233ea6c275412a9ff0571260">setParent</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;     this-&gt;left = node;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160; }</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160; <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00366"></a><span class="lineno"><a class="line" href="class_node.html#a1cf0e5397a347fee789c4b57dfb7624a">  366</a></span>&#160; <span class="keywordtype">void</span> <a class="code" href="class_node.html#a1cf0e5397a347fee789c4b57dfb7624a">Node&lt;T&gt;::setRight</a>(<a class="code" href="class_node.html">Node&lt;T&gt;</a> * node) {</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;     <span class="keywordflow">if</span> (node == NULL) {</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;         this-&gt;right = NULL;</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;         <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;     }</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;     node-&gt;<a class="code" href="class_node.html#a78162c98233ea6c275412a9ff0571260">setParent</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;     this-&gt;right = node;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160; }</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160; <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00376"></a><span class="lineno"><a class="line" href="class_node.html#a96c1038d58f6f7089271afe3fa3e9288">  376</a></span>&#160; <span class="keywordtype">void</span> <a class="code" href="class_node.html#a96c1038d58f6f7089271afe3fa3e9288">Node&lt;T&gt;::setColor</a>(Colors color) {</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;     this-&gt;color = color;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160; }</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="comment">/******************************************************************************</span></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="comment"> *                                                                           **</span></div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="comment"> * OTHER METHODS                                                             **</span></div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="comment"> *                                                                           **</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00387"></a><span class="lineno"><a class="line" href="class_node.html#aef85f7c8d30881449f35ac5fda836438">  387</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_node.html#aef85f7c8d30881449f35ac5fda836438">Node&lt;T&gt;::add</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="comment">//this-&gt;setMultiplicity(this-&gt;getMultiplicity()+1);</span></div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="comment">// Shouldn&#39;t be below 0, if lesser or equal to 0, then value after adding</span></div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="comment">// is 1</span></div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <span class="keywordtype">int</span> value = this-&gt;getMultiplicity() &lt;= 0? 1: this-&gt;getMultiplicity() + 1;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    this-&gt;setMultiplicity(value);</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;}</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00396"></a><span class="lineno"><a class="line" href="class_node.html#a2f77a48dceae8b8268826483f9671e1a">  396</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_node.html#a2f77a48dceae8b8268826483f9671e1a">Node&lt;T&gt;::remove</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="comment">// Shouldn&#39;t be lesser than 0.</span></div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <span class="keywordtype">int</span> value = this-&gt;getMultiplicity() &lt;= 0? 0: this-&gt;getMultiplicity() - 1;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    this-&gt;setMultiplicity(value);</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="keywordtype">bool</span> empty = this-&gt;getMultiplicity() &lt;= 0? <span class="keyword">true</span>: <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    <span class="keywordflow">return</span> empty;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;}</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00405"></a><span class="lineno"><a class="line" href="class_node.html#ab0a293cb425b4f8be5f2d8efb08df1e8">  405</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_node.html#ab0a293cb425b4f8be5f2d8efb08df1e8">Node&lt;T&gt;::isParent</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    <span class="keywordflow">return</span> this-&gt;hasLeft() || this-&gt;hasRight();</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;}</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00410"></a><span class="lineno"><a class="line" href="class_node.html#a614f99e8df6aebb91c9e17e204a8c170">  410</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_node.html#a614f99e8df6aebb91c9e17e204a8c170">Node&lt;T&gt;::isLeft</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    <span class="comment">// Is neither left or right, then is-Not-Left, not meaning it&#39;s right</span></div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    <span class="keywordflow">if</span> (this-&gt;getParent() == NULL) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    <span class="comment">// NULL shouldn&#39;t be left.</span></div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    <span class="keywordflow">if</span> (this-&gt;getParent()-&gt;getLeft() == NULL) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    <span class="keywordflow">return</span> this-&gt;getParent()-&gt;getLeft() == <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;}</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00421"></a><span class="lineno"><a class="line" href="class_node.html#ac8eeb9f7717618589d939491d87a04bf">  421</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_node.html#ac8eeb9f7717618589d939491d87a04bf">Node&lt;T&gt;::isRight</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    <span class="comment">// Is neither left or right, then is-Not-Right, not meaning it&#39;s left</span></div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    <span class="keywordflow">if</span> (this-&gt;getParent() == NULL) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <span class="comment">// NULL shouldn&#39;t be right.</span></div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    <span class="keywordflow">if</span> (this-&gt;getParent()-&gt;getRight() == NULL) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    <span class="keywordflow">return</span> this-&gt;getParent()-&gt;getRight() == <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;}</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00432"></a><span class="lineno"><a class="line" href="class_node.html#af2f59b20b80ab306d379c785b3e95325">  432</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_node.html#af2f59b20b80ab306d379c785b3e95325">Node&lt;T&gt;::hasParent</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    <span class="keywordflow">return</span> this-&gt;getParent() != NULL;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;}</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00437"></a><span class="lineno"><a class="line" href="class_node.html#aa03aef3064a78fd8de1d421bdbcdef57">  437</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_node.html#aa03aef3064a78fd8de1d421bdbcdef57">Node&lt;T&gt;::hasLeft</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    <span class="keywordflow">return</span> this-&gt;getLeft() != NULL;</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;}</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00442"></a><span class="lineno"><a class="line" href="class_node.html#ae7f5a8aff0b15f311397f9588a84101b">  442</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_node.html#ae7f5a8aff0b15f311397f9588a84101b">Node&lt;T&gt;::hasRight</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    <span class="keywordflow">return</span> this-&gt;getRight() != NULL;</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;}</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="class_node_html_a2ab0ff5c5d882b57577c077ee897397e"><div class="ttname"><a href="class_node.html#a2ab0ff5c5d882b57577c077ee897397e">Node::getLeft</a></div><div class="ttdeci">Node * getLeft(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:310</div></div>
 <div class="ttc" id="class_node_html"><div class="ttname"><a href="class_node.html">Node</a></div><div class="ttdef"><b>Definition:</b> Node.hh:18</div></div>
 <div class="ttc" id="class_node_html_a1fd640805e263fe8c792c901467580c7"><div class="ttname"><a href="class_node.html#a1fd640805e263fe8c792c901467580c7">Node::setKey</a></div><div class="ttdeci">void setKey(int key)</div><div class="ttdef"><b>Definition:</b> Node.hh:332</div></div>
-<div class="ttc" id="class_node_html_a96c1038d58f6f7089271afe3fa3e9288"><div class="ttname"><a href="class_node.html#a96c1038d58f6f7089271afe3fa3e9288">Node::setColor</a></div><div class="ttdeci">void setColor(Colors c)</div><div class="ttdef"><b>Definition:</b> Node.hh:364</div></div>
+<div class="ttc" id="class_node_html_a96c1038d58f6f7089271afe3fa3e9288"><div class="ttname"><a href="class_node.html#a96c1038d58f6f7089271afe3fa3e9288">Node::setColor</a></div><div class="ttdeci">void setColor(Colors c)</div><div class="ttdef"><b>Definition:</b> Node.hh:376</div></div>
 <div class="ttc" id="class_node_html_ab83eb1cc81f91a5641693eb22712f8c8"><div class="ttname"><a href="class_node.html#ab83eb1cc81f91a5641693eb22712f8c8">Node::getMultiplicity</a></div><div class="ttdeci">int getMultiplicity(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:300</div></div>
 <div class="ttc" id="class_node_html_a5ff3a3dd66edef87867616d1bc44838f"><div class="ttname"><a href="class_node.html#a5ff3a3dd66edef87867616d1bc44838f">Node::getKey</a></div><div class="ttdeci">int getKey(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:290</div></div>
 <div class="ttc" id="class_node_html_a3955130f36c0a6d39641dee186caf2a3"><div class="ttname"><a href="class_node.html#a3955130f36c0a6d39641dee186caf2a3">Node::setData</a></div><div class="ttdeci">void setData(T data)</div><div class="ttdef"><b>Definition:</b> Node.hh:337</div></div>
-<div class="ttc" id="class_node_html_aef85f7c8d30881449f35ac5fda836438"><div class="ttname"><a href="class_node.html#aef85f7c8d30881449f35ac5fda836438">Node::add</a></div><div class="ttdeci">void add(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:375</div></div>
-<div class="ttc" id="class_node_html_af2f59b20b80ab306d379c785b3e95325"><div class="ttname"><a href="class_node.html#af2f59b20b80ab306d379c785b3e95325">Node::hasParent</a></div><div class="ttdeci">bool hasParent(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:420</div></div>
+<div class="ttc" id="class_node_html_aef85f7c8d30881449f35ac5fda836438"><div class="ttname"><a href="class_node.html#aef85f7c8d30881449f35ac5fda836438">Node::add</a></div><div class="ttdeci">void add(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:387</div></div>
+<div class="ttc" id="class_node_html_af2f59b20b80ab306d379c785b3e95325"><div class="ttname"><a href="class_node.html#af2f59b20b80ab306d379c785b3e95325">Node::hasParent</a></div><div class="ttdeci">bool hasParent(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:432</div></div>
 <div class="ttc" id="class_node_html_a78162c98233ea6c275412a9ff0571260"><div class="ttname"><a href="class_node.html#a78162c98233ea6c275412a9ff0571260">Node::setParent</a></div><div class="ttdeci">void setParent(Node&lt; T &gt; *node)</div><div class="ttdef"><b>Definition:</b> Node.hh:347</div></div>
-<div class="ttc" id="class_node_html_ae7f5a8aff0b15f311397f9588a84101b"><div class="ttname"><a href="class_node.html#ae7f5a8aff0b15f311397f9588a84101b">Node::hasRight</a></div><div class="ttdeci">bool hasRight(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:430</div></div>
+<div class="ttc" id="class_node_html_ae7f5a8aff0b15f311397f9588a84101b"><div class="ttname"><a href="class_node.html#ae7f5a8aff0b15f311397f9588a84101b">Node::hasRight</a></div><div class="ttdeci">bool hasRight(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:442</div></div>
 <div class="ttc" id="class_node_html_a19f6f466f04ca1dc6a314b25c3d13c99"><div class="ttname"><a href="class_node.html#a19f6f466f04ca1dc6a314b25c3d13c99">Node::getRight</a></div><div class="ttdeci">Node * getRight(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:315</div></div>
 <div class="ttc" id="class_node_html_a40d6e9db35a69683afc2a960f96c1109"><div class="ttname"><a href="class_node.html#a40d6e9db35a69683afc2a960f96c1109">Node::Node</a></div><div class="ttdeci">Node(int key, T data)</div><div class="ttdef"><b>Definition:</b> Node.hh:254</div></div>
-<div class="ttc" id="class_node_html_ac8eeb9f7717618589d939491d87a04bf"><div class="ttname"><a href="class_node.html#ac8eeb9f7717618589d939491d87a04bf">Node::isRight</a></div><div class="ttdeci">bool isRight(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:409</div></div>
-<div class="ttc" id="class_node_html_a1cf0e5397a347fee789c4b57dfb7624a"><div class="ttname"><a href="class_node.html#a1cf0e5397a347fee789c4b57dfb7624a">Node::setRight</a></div><div class="ttdeci">void setRight(Node&lt; T &gt; *node)</div><div class="ttdef"><b>Definition:</b> Node.hh:358</div></div>
+<div class="ttc" id="class_node_html_ac8eeb9f7717618589d939491d87a04bf"><div class="ttname"><a href="class_node.html#ac8eeb9f7717618589d939491d87a04bf">Node::isRight</a></div><div class="ttdeci">bool isRight(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:421</div></div>
+<div class="ttc" id="class_node_html_a1cf0e5397a347fee789c4b57dfb7624a"><div class="ttname"><a href="class_node.html#a1cf0e5397a347fee789c4b57dfb7624a">Node::setRight</a></div><div class="ttdeci">void setRight(Node&lt; T &gt; *node)</div><div class="ttdef"><b>Definition:</b> Node.hh:366</div></div>
 <div class="ttc" id="class_node_html_a9c209bbcd6a8c1e07914a0c6bea3a6f4"><div class="ttname"><a href="class_node.html#a9c209bbcd6a8c1e07914a0c6bea3a6f4">Node::getColor</a></div><div class="ttdeci">Colors getColor(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:320</div></div>
-<div class="ttc" id="class_node_html_a2f77a48dceae8b8268826483f9671e1a"><div class="ttname"><a href="class_node.html#a2f77a48dceae8b8268826483f9671e1a">Node::remove</a></div><div class="ttdeci">bool remove(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:384</div></div>
-<div class="ttc" id="class_node_html_a614f99e8df6aebb91c9e17e204a8c170"><div class="ttname"><a href="class_node.html#a614f99e8df6aebb91c9e17e204a8c170">Node::isLeft</a></div><div class="ttdeci">bool isLeft(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:398</div></div>
+<div class="ttc" id="class_node_html_a2f77a48dceae8b8268826483f9671e1a"><div class="ttname"><a href="class_node.html#a2f77a48dceae8b8268826483f9671e1a">Node::remove</a></div><div class="ttdeci">bool remove(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:396</div></div>
+<div class="ttc" id="class_node_html_a614f99e8df6aebb91c9e17e204a8c170"><div class="ttname"><a href="class_node.html#a614f99e8df6aebb91c9e17e204a8c170">Node::isLeft</a></div><div class="ttdeci">bool isLeft(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:410</div></div>
 <div class="ttc" id="class_node_html_ad89031c2899fe91646652ce4c2e79ab6"><div class="ttname"><a href="class_node.html#ad89031c2899fe91646652ce4c2e79ab6">Node::getData</a></div><div class="ttdeci">T getData(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:295</div></div>
-<div class="ttc" id="class_node_html_ab0a293cb425b4f8be5f2d8efb08df1e8"><div class="ttname"><a href="class_node.html#ab0a293cb425b4f8be5f2d8efb08df1e8">Node::isParent</a></div><div class="ttdeci">bool isParent(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:393</div></div>
-<div class="ttc" id="class_node_html_aa03aef3064a78fd8de1d421bdbcdef57"><div class="ttname"><a href="class_node.html#aa03aef3064a78fd8de1d421bdbcdef57">Node::hasLeft</a></div><div class="ttdeci">bool hasLeft(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:425</div></div>
+<div class="ttc" id="class_node_html_ab0a293cb425b4f8be5f2d8efb08df1e8"><div class="ttname"><a href="class_node.html#ab0a293cb425b4f8be5f2d8efb08df1e8">Node::isParent</a></div><div class="ttdeci">bool isParent(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:405</div></div>
+<div class="ttc" id="class_node_html_aa03aef3064a78fd8de1d421bdbcdef57"><div class="ttname"><a href="class_node.html#aa03aef3064a78fd8de1d421bdbcdef57">Node::hasLeft</a></div><div class="ttdeci">bool hasLeft(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:437</div></div>
 <div class="ttc" id="class_node_html_a496d3786e0f7939676f30e2cead4ca29"><div class="ttname"><a href="class_node.html#a496d3786e0f7939676f30e2cead4ca29">Node::setMultiplicity</a></div><div class="ttdeci">void setMultiplicity(int multiplicity)</div><div class="ttdef"><b>Definition:</b> Node.hh:342</div></div>
-<div class="ttc" id="class_node_html_a9afbeb2daea8798e71e9acc0967256a3"><div class="ttname"><a href="class_node.html#a9afbeb2daea8798e71e9acc0967256a3">Node::setLeft</a></div><div class="ttdeci">void setLeft(Node&lt; T &gt; *node)</div><div class="ttdef"><b>Definition:</b> Node.hh:352</div></div>
+<div class="ttc" id="class_node_html_a9afbeb2daea8798e71e9acc0967256a3"><div class="ttname"><a href="class_node.html#a9afbeb2daea8798e71e9acc0967256a3">Node::setLeft</a></div><div class="ttdeci">void setLeft(Node&lt; T &gt; *node)</div><div class="ttdef"><b>Definition:</b> Node.hh:356</div></div>
 <div class="ttc" id="class_node_html_a5fc413278a0bd22eb84e03c0ae90e22a"><div class="ttname"><a href="class_node.html#a5fc413278a0bd22eb84e03c0ae90e22a">Node::~Node</a></div><div class="ttdeci">~Node(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:274</div></div>
 <div class="ttc" id="class_node_html_ad6543650b2b521ced0456014d0344e3c"><div class="ttname"><a href="class_node.html#ad6543650b2b521ced0456014d0344e3c">Node::getParent</a></div><div class="ttdeci">Node * getParent(void)</div><div class="ttdef"><b>Definition:</b> Node.hh:305</div></div>
 </div><!-- fragment --></div><!-- contents -->

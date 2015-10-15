@@ -69,6 +69,9 @@ T \hyperlink{class_r_b_tree_ac21009120411c393b499893d6874370c}{extract} (int key
 \item 
 bool \hyperlink{class_r_b_tree_a8f67ba964a14d252ff6851a46576399e}{insert} (\hyperlink{class_node}{Node}$<$ T $>$ $\ast$node)
 \item 
+\hypertarget{class_r_b_tree_a8e7398a4728854fa2500bf707a499dcf}{}bool {\bfseries insert} (int key, T data)\label{class_r_b_tree_a8e7398a4728854fa2500bf707a499dcf}
+
+\item 
 \hypertarget{class_r_b_tree_af588082e194aecea7a6c2438f685f2cd}{}void {\bfseries insert\+Case1} (\hyperlink{class_node}{Node}$<$ T $>$ $\ast$node)\label{class_r_b_tree_af588082e194aecea7a6c2438f685f2cd}
 
 \item 
@@ -83,8 +86,6 @@ bool \hyperlink{class_r_b_tree_a8f67ba964a14d252ff6851a46576399e}{insert} (\hype
 \item 
 \hypertarget{class_r_b_tree_ab1d1644cf1e55879f32aeb1415c24b18}{}void {\bfseries insert\+Case5} (\hyperlink{class_node}{Node}$<$ T $>$ $\ast$node)\label{class_r_b_tree_ab1d1644cf1e55879f32aeb1415c24b18}
 
-\item 
-bool \hyperlink{class_r_b_tree_a9a20aef5e8862b34bccc3d1f1c47a321}{remove} (int key)
 \end{DoxyCompactItemize}
 
 
@@ -301,21 +302,6 @@ Returns the previous element in the tree.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 The node preceding the reference node. 
-\end{DoxyReturn}
-\hypertarget{class_r_b_tree_a9a20aef5e8862b34bccc3d1f1c47a321}{}\index{R\+B\+Tree@{R\+B\+Tree}!remove@{remove}}
-\index{remove@{remove}!R\+B\+Tree@{R\+B\+Tree}}
-\subsubsection[{remove(int key)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf R\+B\+Tree}$<$ T $>$\+::remove (
-\begin{DoxyParamCaption}
-\item[{int}]{key}
-\end{DoxyParamCaption}
-)}\label{class_r_b_tree_a9a20aef5e8862b34bccc3d1f1c47a321}
-Removes an element from the tree, this will remove the element 
-\begin{DoxyParams}{Parameters}
-{\em data} & Data to search and remove. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-True if element was removed. 
 \end{DoxyReturn}
 \hypertarget{class_r_b_tree_a9fab96c10f78263a054cacc9d9b4b997}{}\index{R\+B\+Tree@{R\+B\+Tree}!replace\+Node@{replace\+Node}}
 \index{replace\+Node@{replace\+Node}!R\+B\+Tree@{R\+B\+Tree}}

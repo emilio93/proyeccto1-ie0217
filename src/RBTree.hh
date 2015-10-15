@@ -233,9 +233,19 @@ class RBTree{
          *        data was inserted correctly by returning true.
          *        If element is already in the tree, the multiplicity
          *        of the element will be increased.
-         * @param  data The data to insert.
+         * @param  node The node to insert.
          */
         bool insert(Node<T> * node);
+
+        /**
+         * @breif Inserts a key-data pair into the tree, indicates if
+         *        data was inserted correctly by returning true.
+         *        If element is already in the tree, the multiplicity
+         *        of the element will be increased(according to comparator
+         *        overload).
+         * @param key The key value to insert.
+         * @param data The data to insert.
+         */
         bool insert(int key, T data);
         void insertCase1(Node<T> * node);
         void insertCase2(Node<T> * node);

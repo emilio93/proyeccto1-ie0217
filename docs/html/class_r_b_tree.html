@@ -156,6 +156,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af60f8017b52f69173e0af61c8e581b48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f67ba964a14d252ff6851a46576399e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#a8f67ba964a14d252ff6851a46576399e">insert</a> (<a class="el" href="class_node.html">Node</a>&lt; T &gt; *node)</td></tr>
 <tr class="separator:a8f67ba964a14d252ff6851a46576399e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e7398a4728854fa2500bf707a499dcf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e7398a4728854fa2500bf707a499dcf"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>insert</b> (int key, T data)</td></tr>
+<tr class="separator:a8e7398a4728854fa2500bf707a499dcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af588082e194aecea7a6c2438f685f2cd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af588082e194aecea7a6c2438f685f2cd"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>insertCase1</b> (<a class="el" href="class_node.html">Node</a>&lt; T &gt; *node)</td></tr>
 <tr class="separator:af588082e194aecea7a6c2438f685f2cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,8 +174,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>insertCase4</b> (<a c
 <tr class="memitem:ab1d1644cf1e55879f32aeb1415c24b18"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1d1644cf1e55879f32aeb1415c24b18"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>insertCase5</b> (<a class="el" href="class_node.html">Node</a>&lt; T &gt; *node)</td></tr>
 <tr class="separator:ab1d1644cf1e55879f32aeb1415c24b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a20aef5e8862b34bccc3d1f1c47a321"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_r_b_tree.html#a9a20aef5e8862b34bccc3d1f1c47a321">remove</a> (int key)</td></tr>
-<tr class="separator:a9a20aef5e8862b34bccc3d1f1c47a321"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
@@ -555,31 +556,6 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The node preceding the reference node. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a9a20aef5e8862b34bccc3d1f1c47a321"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="class_r_b_tree.html">RBTree</a>&lt; T &gt;::remove </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>key</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Removes an element from the tree, this will remove the element </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">data</td><td>Data to search and remove. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>True if element was removed. </dd></dl>
 
 </div>
 </div>
